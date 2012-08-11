@@ -1,0 +1,47 @@
+@bgColor: #222
+
+.clearer {
+  clear: both;
+}
+
+.contentSeparator {
+  /* define the separator for content */
+}
+
+.widgetSeparator {
+  /* define the separator for widgets */
+}
+
+.centerMargin {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container(@width, @radius) {
+    width:@width    
+    .centerMargin;
+    float: left;
+    
+    -webkit-border-radius:@radius;
+    -moz-border-radius:@radius;
+    border-radius:@radius;
+}
+
+.widget(@width, @radius) {
+    width:@width;
+    margin: inherit;
+    float: right;
+    
+    -webkit-border-radius:@radius;
+    -moz-border-radius:@radius;
+    border-radius:@radius;
+}
+
+.mediaContainer(@width, @radius) {
+    .container(@width, @radius);
+    font-family: "Century Gothic", sans-serif;
+    font-size: 14px;
+}
+
+
+

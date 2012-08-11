@@ -1,0 +1,52 @@
+@charset "UTF-8
+html { overflow: scroll-y; font-size: 100%; }
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #222;
+}
+
+.clear { clear: both; }
+
+#page 
+{
+	width: 80%;
+	height: auto;
+	margin: 1%;
+	margin-left: auto;
+	margin-right: auto;	
+	border: 1px solid #000;
+	min-height: 200px;
+	background-color: #fff;
+}
+
+#header 
+{
+	width: 96%;
+	height: auto;
+	min-height: 100px;
+	border: 2px solid #535;
+	margin: inherit;
+	background-color: #bbb;
+}
+
+#content {
+	width: 100%;
+	height: auto;
+	margin: inherit;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #aaa;
+	float: left;
+}
+
+.sidebar
+{
+	width: 100px;
+	height: auto;
+	padding: 10px;
+	margin: 5px;
+	float: left;
+	border: 1px solid #000;
+}
