@@ -1,46 +1,53 @@
-@bgColor: #222
+// constants
+@background-Base: #222;
+@page-Width: 1280px;
+@page-Height: auto;
+@radius: 5px;
+@default-font-family: "Century Gothic";
+@default-font-size: 18px;
+@default-font-weight: normal;
 
-.clearer {
-  clear: both;
+
+// containers
+.rounded_container(@width, @radius, @thickness, @color, @fill-color: #FFF) {
+  width: @width;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+  border: @thickness solid @color;
+  background-color: @fill-color;
 }
 
-.contentSeparator {
-  /* define the separator for content */
+.font(@font-family: @default-font-family, @font-size: @default-font-size, @font-weight: @default-font-weight) {
+  font-family: @font-family;
+  font-size: @font-size;
+  font-weight: @font-weight;
 }
 
-.widgetSeparator {
-  /* define the separator for widgets */
+// clearer hack 
+.clearer { clear: both; }
+   
+
+//TODO: DO this later!
+.contentSeparator { 
+  // define the separator for content 
+}
+.widgetSeparator { 
+  // define the separator for widgets 
 }
 
-.centerMargin {
-    margin-left: auto;
-    margin-right: auto;
+// page layout
+#page {
+  width: @page-width;
+  height: @page-height;
+  margin-left: auto;
+  margin-right: auto;
+  .font
 }
 
-.container(@width, @radius) {
-    width:@width    
-    .centerMargin;
-    float: left;
-    
-    -webkit-border-radius:@radius;
-    -moz-border-radius:@radius;
-    border-radius:@radius;
-}
-
-.widget(@width, @radius) {
-    width:@width;
-    margin: inherit;
-    float: right;
-    
-    -webkit-border-radius:@radius;
-    -moz-border-radius:@radius;
-    border-radius:@radius;
-}
-
-.mediaContainer(@width, @radius) {
-    .container(@width, @radius);
-    font-family: "Century Gothic", sans-serif;
-    font-size: 14px;
+// page content
+#content {
+  .rounded_container(1200px, 5px, 1px, #000);
 }
 
 
