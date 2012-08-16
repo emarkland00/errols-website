@@ -1,47 +1,122 @@
-@bgColor: #222
+// constants
+@default-page-width: 1280px;
+@default-page-height: auto;
 
-.clearer {
+@default-container-radius: 5px;
+@default-background-color: #444;
+@default-fill-color: #000;
+@default-border-color: #000;
+@default-separator-color: @default-background-color;
+
+//@default-font-family: 'Century Gothic', sans-serif;
+@default-font-family: 'News Cycle', sans-serif;
+@default-font-size: 48px;
+@default-font-weight: normal;
+@default-font-color: #000;
+
+.center-margin() {
+  margin-right: auto;
+  margin-left: auto;
+}
+// containers methods
+.rounded-container(@width, @radius, @thickness, @color, @fill-color: #FFF) {
+  width: @width;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+  border: @thickness solid @color;
+  background-color: @fill-color;
+}
+
+.floated-container(@float: @default-float, @width, @radius, @thickness, @color, @fill-color: @default-fill-color) {
+  float: @float;
+  .rounded-container(@width, @radius, @thickness, @color, @fill-color);
+}
+
+
+// separator methods
+.content-separator(@margin, @separator-color: @default-separator-color) { 
+  .content-separator(@margin, @margin, @separator-color);
+}
+
+.content-separator(@margin-sides, @margin-top-bottom, @separator-color: @default-separator-color) {
+  .content-separator(@margin-sides, @margin-sides, @margin-top-bottom, @margin-top-bottom, @separator-color);
+}
+
+.content-separator(@margin-left, @margin-right, @margin-top, @margin-bottom, @separator-color: @default-separator-color) {
+  margin-left: @margin-left;
+  margin-right: @margin-right;
+  margin-top: @margin-top;
+  margin-bottom: @margin-bottom;
+  border-top: 1px solid @separator-color;
   clear: both;
 }
 
-.contentSeparator {
-  /* define the separator for content */
+
+// padding methods
+.container-padding(@padding) {
+  .container-padding(@padding, @padding);
 }
 
-.widgetSeparator {
-  /* define the separator for widgets */
+.container-padding(@padding-sides, @padding-top-bottom) {
+  .container-padding(@padding-sides, @padding-sides, @padding-top-bottom, @padding-top-bottom);
 }
 
-.centerMargin {
-    margin-left: auto;
-    margin-right: auto;
+.container-padding(@padding-left, @padding-right, @padding-top, @padding-bottom) {
+  padding-left: @padding-left;
+  padding-right: @padding-right;
+  padding-top: @padding-top;
+  padding-bottom: @padding-bottom;
 }
 
-.container(@width, @radius) {
-    width:@width    
-    .centerMargin;
-    float: left;
-    
-    -webkit-border-radius:@radius;
-    -moz-border-radius:@radius;
-    border-radius:@radius;
+// font methods
+.font(@font-family: @default-font-family, @font-size: @default-font-size, @font-weight: @default-font-weight, @font-color: @default-font-color) {
+  font-family: @font-family;
+  font-size: @font-size;
+  font-weight: @font-weight;
+  color: @font-color;
+}   
+// END LESS definitions
+  
+// page layout;
+#page {
+  width: @default-page-width;
+  height: @default-page-height;
+  .center-margin;
+  .font
 }
 
-.widget(@width, @radius) {
-    width:@width;
-    margin: inherit;
-    float: right;
-    
-    -webkit-border-radius:@radius;
-    -moz-border-radius:@radius;
-    border-radius:@radius;
+body {
+  background-color: @default-background-color;
 }
 
-.mediaContainer(@width, @radius) {
-    .container(@width, @radius);
-    font-family: "Century Gothic", sans-serif;
-    font-size: 14px;
+// page content
+#content {
+  .floated-container(left, floor(@default-page-width * (2/3)), 5px, 3px, @default-border-color, #ddd);
+  .container-padding(5px);
+  
 }
 
+#sidebar {
+  .floated-container(right, floor(@default-page-width * (1/3)) - 40px, 5px, 3px, @default-border-color, #ddd);
+  .container-padding(5px);
+  
+}
 
+#header {
+  .rounded-container(@default-page-width - 16px, 5px, 3px, @default-border-color, #888);
+  .container-padding(5px, 1px);
+  .font(@default-font-family, 90px, bold, #131);
+}
 
+#footer {
+  .rounded-container(@default-page-width - 16px, 5px, 3px, @default-border-color, #888);
+  .container-padding(5px, 1px);
+  .font(@default-font-family, 90px, bold, #131);
+}
+
+.separator {
+  .content-separator(0px, 5px);
+}
+
+/* Built with assistance from LESS =] (http://www.lesscss.org) */

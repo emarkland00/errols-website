@@ -1,52 +1,86 @@
-@charset "UTF-8
-html { overflow: scroll-y; font-size: 100%; }
-
+#page {
+  width: 1280px;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: 'News Cycle', sans-serif;
+  font-size: 48px;
+  font-weight: normal;
+  color: #000000;
+}
 body {
-	margin: 0px;
-	padding: 0px;
-	background-color: #222;
+  background-color: #444444;
 }
-
-.clear { clear: both; }
-
-#page 
-{
-	width: 80%;
-	height: auto;
-	margin: 1%;
-	margin-left: auto;
-	margin-right: auto;	
-	border: 1px solid #000;
-	min-height: 200px;
-	background-color: #fff;
-}
-
-#header 
-{
-	width: 96%;
-	height: auto;
-	min-height: 100px;
-	border: 2px solid #535;
-	margin: inherit;
-	background-color: #bbb;
-}
-
 #content {
-	width: 100%;
-	height: auto;
-	margin: inherit;
-	margin-left: auto;
-	margin-right: auto;
-	border: 1px solid #aaa;
-	float: left;
+  float: left;
+  width: 853px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 3px solid #000000;
+  background-color: #dddddd;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
-
-.sidebar
-{
-	width: 100px;
-	height: auto;
-	padding: 10px;
-	margin: 5px;
-	float: left;
-	border: 1px solid #000;
+#sidebar {
+  float: right;
+  width: 386px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 3px solid #000000;
+  background-color: #dddddd;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
+#header {
+  width: 1264px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 3px solid #000000;
+  background-color: #888888;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  font-family: 'News Cycle', sans-serif;
+  font-size: 90px;
+  font-weight: bold;
+  color: #113311;
+}
+#footer {
+  width: 1264px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 3px solid #000000;
+  background-color: #888888;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  font-family: 'News Cycle', sans-serif;
+  font-size: 90px;
+  font-weight: bold;
+  color: #113311;
+}
+.separator {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-top: 1px solid 5px;
+  clear: both;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-top: 1px solid #444444;
+  clear: both;
+}
+/* Built with assistance from LESS =] (http://www.lesscss.org) */
