@@ -6,6 +6,8 @@
 @default-background-color: #444;
 @default-fill-color: #000;
 @default-border-color: #000;
+@default-border-thickness: 1px;
+@default-border-radius: 1px;
 @default-separator-color: @default-background-color;
 
 //@default-font-family: 'Century Gothic', sans-serif;
@@ -14,12 +16,22 @@
 @default-font-weight: normal;
 @default-font-color: #000;
 
+// derived values
+@max-container-width: @default-page-width - 16px;
+@container-item-width: floor(@default-page-width * (2/3)) - 5px;
+
 .center-margin() {
   margin-right: auto;
   margin-left: auto;
 }
+
+.no-space() {
+  margin: 0px;
+  padding: 0px;
+}
+
 // containers methods
-.rounded-container(@width, @radius, @thickness, @color, @fill-color: #FFF) {
+.rounded-container(@width, @radius: @default-container-radius, @thickness: @default-border-thickness, @color: @default-border-color, @fill-color: @default-fill-color) {
   width: @width;
   -webkit-border-radius: @radius;
   -moz-border-radius: @radius;
@@ -28,7 +40,7 @@
   background-color: @fill-color;
 }
 
-.floated-container(@float: @default-float, @width, @radius, @thickness, @color, @fill-color: @default-fill-color) {
+.floated-container(@float: @default-float, @width, @radius: @default-container-radius, @thickness: @default-border-thickness, @color: @default-border-color, @fill-color: @default-fill-color) {
   float: @float;
   .rounded-container(@width, @radius, @thickness, @color, @fill-color);
 }
@@ -48,10 +60,9 @@
   margin-right: @margin-right;
   margin-top: @margin-top;
   margin-bottom: @margin-bottom;
-  border-top: 1px solid @separator-color;
+  min-height: 1px;
   clear: both;
 }
-
 
 // padding methods
 .container-padding(@padding) {
@@ -67,6 +78,8 @@
   padding-right: @padding-right;
   padding-top: @padding-top;
   padding-bottom: @padding-bottom;
+  margin-top: @padding-top;
+  margin-bottom: @padding-bottom;
 }
 
 // font methods
@@ -77,40 +90,61 @@
   color: @font-color;
 }   
 // END LESS definitions
+
+html { overflow: scroll-y; }
   
 // page layout;
 #page {
   width: @default-page-width;
   height: @default-page-height;
+  .rounded-container(@default-page-width, 3px, @default-border-thickness, #999, #ddd);
+  .container-padding(5px);
   .center-margin;
   .font
 }
 
-body {
-  background-color: @default-background-color;
+#body {
+  width: @default-page-width + 20px;
+  min-height: 100%;
+  height: 100%;
+  background-color: #fff;
+  .center-margin;
+  padding: 10px 0px;
+  overflow: hidden;
 }
+
+body {
+  //background-color: @default-background-color;
+  .no-space;
+}
+
 
 // page content
 #content {
-  .floated-container(left, floor(@default-page-width * (2/3)), 5px, 3px, @default-border-color, #ddd);
+  .floated-container(left, floor(@default-page-width * (2/3)), 5px, @default-border-thickness, @default-border-color, #ddd);
   .container-padding(5px);
-  
 }
 
 #sidebar {
-  .floated-container(right, floor(@default-page-width * (1/3)) - 40px, 5px, 3px, @default-border-color, #ddd);
+  .floated-container(right, floor(@default-page-width * (1/3)) - 40px, 5px, @default-border-thickness, @default-border-color, #ddd);
   .container-padding(5px);
-  
+  margin-right: 5px;
+}
+
+#navigation {
+  .rounded-container(@max-container-width, 5px, 0px, @default-border-color, #888);
+  .font(@default-font-family, 30px, normal, #131);
+  .container-padding(5px, 1px);
 }
 
 #header {
-  .rounded-container(@default-page-width - 16px, 5px, 3px, @default-border-color, #888);
+  .rounded-container(@max-container-width, 5px, @default-border-thickness, @default-border-color, #888);
   .container-padding(5px, 1px);
   .font(@default-font-family, 90px, bold, #131);
 }
 
 #footer {
-  .rounded-container(@default-page-width - 16px, 5px, 3px, @default-border-color, #888);
+  .rounded-container(@max-container-width, 5px, @default-border-thickness, @default-border-color, #888);
   .container-padding(5px, 1px);
   .font(@default-font-family, 90px, bold, #131);
 }
@@ -119,4 +153,22 @@ body {
   .content-separator(0px, 5px);
 }
 
+.content-item {
+  .rounded-container(@container-item-width, 5px, 1px, @default-border-color - #222, #bbb);
+  .content-separator(0px, 0px, 0px, 15px);
+}
+
+.content-item-title {
+  .font(@default-font-family, 36px, 100, #353);
+  padding-left: 10px;
+}
+
+.content-item-content {
+  .font(@default-font-family, 24px, normal, #131);
+  padding-left: 10px;
+}
+
+//.content-item-media {
+  // place stuff for media
+//}
 /* Built with assistance from LESS =] (http://www.lesscss.org) */
