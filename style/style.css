@@ -18,7 +18,7 @@ html {
   margin-bottom: 5px;
   margin-right: auto;
   margin-left: auto;
-  font-family: 'News Cycle', sans-serif;
+  font-family: 'News Cycle', 'Opera Sans', 'Century Gothic', sans-serif;
   font-size: 48px;
   font-weight: normal;
   color: #000000;
@@ -75,7 +75,7 @@ body {
   border-radius: 5px;
   border: 0px solid #000000;
   background-color: #888888;
-  font-family: 'News Cycle', sans-serif;
+  font-family: 'News Cycle', 'Opera Sans', 'Century Gothic', sans-serif;
   font-size: 30px;
   font-weight: normal;
   color: #113311;
@@ -99,10 +99,11 @@ body {
   padding-bottom: 1px;
   margin-top: 1px;
   margin-bottom: 1px;
-  font-family: 'News Cycle', sans-serif;
+  font-family: 'News Cycle', 'Opera Sans', 'Century Gothic', sans-serif;
   font-size: 90px;
-  font-weight: bold;
+  font-weight: normal;
   color: #113311;
+  text-align: right;
 }
 #footer {
   width: 1264px;
@@ -117,9 +118,9 @@ body {
   padding-bottom: 1px;
   margin-top: 1px;
   margin-bottom: 1px;
-  font-family: 'News Cycle', sans-serif;
+  font-family: 'News Cycle', 'Opera Sans', 'Century Gothic', sans-serif;
   font-size: 90px;
-  font-weight: bold;
+  font-weight: normal;
   color: #113311;
 }
 .separator {
@@ -151,17 +152,35 @@ body {
   clear: both;
 }
 .content-item-title {
-  font-family: 'News Cycle', sans-serif;
+  font-family: 'News Cycle', 'Opera Sans', 'Century Gothic', sans-serif;
   font-size: 36px;
   font-weight: 100;
   color: #335533;
   padding-left: 10px;
 }
 .content-item-content {
-  font-family: 'News Cycle', sans-serif;
+  font-family: 'News Cycle', 'Opera Sans', 'Century Gothic', sans-serif;
   font-size: 24px;
   font-weight: normal;
   color: #113311;
   padding-left: 10px;
+}
+@font-face {
+  font-family: 'News Cycle';
+  font-style: normal;
+  font-weight: 400;
+  src: local('News Cycle Regular'), local('NewsCycle-Regular'), url(../fonts/news-cycle.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), url(../fonts/open-sans.woff) format('woff');
+}
+@font-face {
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Century Gothic'), url(../fonts/century-gothic.woff) format('woff');
 }
 /* Built with assistance from LESS =] (http://www.lesscss.org) */

@@ -9,9 +9,7 @@
 @default-border-thickness: 1px;
 @default-border-radius: 1px;
 @default-separator-color: @default-background-color;
-
-//@default-font-family: 'Century Gothic', sans-serif;
-@default-font-family: 'News Cycle', sans-serif;
+@default-font-family: 'News Cycle', 'Opera Sans', 'Century Gothic', sans-serif;
 @default-font-size: 48px;
 @default-font-weight: normal;
 @default-font-color: #000;
@@ -100,7 +98,7 @@ html { overflow: scroll-y; }
   .rounded-container(@default-page-width, 3px, @default-border-thickness, #999, #ddd);
   .container-padding(5px);
   .center-margin;
-  .font
+  .font;
 }
 
 #body {
@@ -140,13 +138,14 @@ body {
 #header {
   .rounded-container(@max-container-width, 5px, @default-border-thickness, @default-border-color, #888);
   .container-padding(5px, 1px);
-  .font(@default-font-family, 90px, bold, #131);
+  .font(@default-font-family, 90px, normal, #131);
+  text-align: right;
 }
 
 #footer {
   .rounded-container(@max-container-width, 5px, @default-border-thickness, @default-border-color, #888);
   .container-padding(5px, 1px);
-  .font(@default-font-family, 90px, bold, #131);
+  .font(@default-font-family, 90px, normal, #131);
 }
 
 .separator {
@@ -168,6 +167,26 @@ body {
   padding-left: 10px;
 }
 
+@font-face {
+  font-family: 'News Cycle';
+  font-style: normal;
+  font-weight: 400;
+  src: local('News Cycle Regular'), local('NewsCycle-Regular'), url(../fonts/news-cycle.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), url(../fonts/open-sans.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Century Gothic'), url(../fonts/century-gothic.woff) format('woff');
+}
 //.content-item-media {
   // place stuff for media
 //}
