@@ -1,2 +1,265 @@
-@font-face{font-family:'News Cycle';font-style:normal;font-weight:400;src:local('News Cycle Regular'),local('NewsCycle-Regular'),url(../fonts/news-cycle.woff) format('woff')}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans'),url(../fonts/open-sans.woff) format('woff')}@font-face{font-family:'Century Gothic';font-style:normal;font-weight:400;src:local('Century Gothic'),url(../fonts/century-gothic.woff) format('woff')}.separator{margin-left:0;margin-right:0;margin-top:0;margin-bottom:0;min-height:1px;clear:both;margin-left:0;margin-right:0;margin-top:5px;margin-bottom:5px;min-height:1px;clear:both}html{overflow:scroll-y}#page{width:1280px;height:auto;width:1280px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;border:0 solid #000;background-color:#fff;padding-left:5px;padding-right:5px;padding-top:5px;padding-bottom:5px;margin-top:5px;margin-bottom:5px;margin-right:auto;margin-left:auto;font-family:'News Cycle','Opera Sans','Century Gothic',sans-serif;font-size:48px;font-weight:400;color:#000}#body{width:1300px;min-height:100%;height:100%;margin-right:auto;margin-left:auto;overflow:hidden}body{background-color:#fff;margin:0;padding:0}#content{float:left;width:853px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;border:0 solid #000;background-color:#bb7;padding-left:5px;padding-right:0;padding-top:5px;padding-bottom:0;margin-top:5px;margin-bottom:0}#sidebar{float:right;width:386px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;border:0 solid #000;background-color:#bb7;padding-left:5px;padding-right:5px;padding-top:5px;padding-bottom:5px;margin-top:5px;margin-bottom:5px;margin-right:5px}#navigation{width:1264px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;border:0 solid #000;background-color:#bb7;font-family:'News Cycle','Opera Sans','Century Gothic',sans-serif;font-size:30px;font-weight:400;color:#000;padding-left:5px;padding-right:5px;padding-top:1px;padding-bottom:1px;margin-top:1px;margin-bottom:1px}#header{width:1264px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;border:0 solid #000;background-color:#bb7;padding-left:5px;padding-right:5px;padding-top:1px;padding-bottom:1px;margin-top:1px;margin-bottom:1px;font-family:'News Cycle','Opera Sans','Century Gothic',sans-serif;font-size:90px;font-weight:400;color:#000;text-align:right}.content-item-title{font-family:'News Cycle','Opera Sans','Century Gothic',sans-serif;font-size:36px;font-weight:100;color:#000;padding-left:10px}.content-item-content{font-family:'News Cycle','Opera Sans','Century Gothic',sans-serif;font-size:24px;font-weight:400;color:#000;padding-left:10px}.content-item{width:99%;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;border:0 solid #000;background-color:#848440;margin-left:0;margin-right:1px;margin-top:0;margin-bottom:15px;min-height:1px;clear:both}#footer{width:1264px;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;border:0 solid #000;background-color:#bb7;padding-left:5px;padding-right:5px;padding-top:1px;padding-bottom:1px;margin-top:1px;margin-bottom:1px;font-family:'News Cycle','Opera Sans','Century Gothic',sans-serif;font-size:90px;font-weight:400;color:#000}#copyright{font-family:'News Cycle','Opera Sans','Century Gothic',sans-serif;font-size:12px;font-weight:400;color:#000;text-align:center}
-/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */
+@font-face {
+  font-family: 'News Cycle';
+  font-style: normal;
+  font-weight: 400;
+  src: local('News Cycle Regular'), local('NewsCycle-Regular'), url(../fonts/news-cycle.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), url(../fonts/open-sans.woff) format('woff');
+}
+@font-face {
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Century Gothic'), url(../fonts/century-gothic.woff) format('woff');
+}
+@font-face {
+  font-family: 'League Gothic';
+  font-style: normal;
+  font-weight: bold;
+  src: local('League Gothic'), url(../fonts/league-gothic.woff) format('woff');
+}
+.separator {
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  min-height: 1px;
+  clear: both;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  min-height: 1px;
+  clear: both;
+}
+html {
+  overflow: scroll-y;
+}
+#page {
+  width: 1280px;
+  height: auto;
+  width: 1280px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 0px solid #000000;
+  background-color: #ffffff;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: 'League Gothic', 'News Cycle', 'Opera Sans', 'Century Gothic', sans-serif;
+  font-size: 48px;
+  font-weight: normal;
+  color: #000000;
+}
+#body {
+  width: 1300px;
+  min-height: 100%;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+}
+body {
+  background-color: #ffffff;
+  margin: 0px;
+  padding: 0px;
+}
+a:active,
+a:visited,
+a:hover,
+a:link {
+  text-decoration: none;
+  font-style: none;
+  color: inherit;
+}
+#content {
+  float: left;
+  width: 853px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 0px solid #000000;
+  background-color: #bbbb77;
+  padding-left: 5px;
+  padding-right: 0px;
+  padding-top: 5px;
+  padding-bottom: 0px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+#sidebar {
+  float: right;
+  width: 386px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 0px solid #000000;
+  background-color: #bbbb77;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+#navigation {
+  width: 1264px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 0px solid #000000;
+  background-color: #eeeedd;
+  font-family: 'League Gothic', 'News Cycle', 'Opera Sans', 'Century Gothic', sans-serif;
+  font-size: 30px;
+  font-weight: normal;
+  color: #000000;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  float: right;
+}
+#navigation ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  text-align: right;
+}
+#navigation li {
+  display: inline;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+.nav-item {
+  width: 2%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+  background-color: #888844;
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+}
+.nav-item:hover {
+  width: 2%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+  background-color: #55552b;
+  margin-right: auto;
+  margin-left: auto;
+  color: #fff;
+  cursor: default;
+}
+#active-nav-item {
+  width: 2%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+  background-color: #55552b;
+  -webkit-transition: none;
+  transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  color: inherit;
+}
+#header {
+  width: 1264px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 0px solid #000000;
+  background-color: #bbbb77;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  font-family: 'League Gothic', 'News Cycle', 'Opera Sans', 'Century Gothic', sans-serif;
+  font-size: 90px;
+  font-weight: bold;
+  color: #000000;
+}
+#sub-header {
+  font-family: 'League Gothic', 'News Cycle', 'Opera Sans', 'Century Gothic', sans-serif;
+  font-size: 30px;
+  font-weight: normal;
+  color: #000000;
+  text-indent: 20px;
+}
+.content-item-title {
+  font-family: 'League Gothic', 'News Cycle', 'Opera Sans', 'Century Gothic', sans-serif;
+  font-size: 36px;
+  font-weight: 100;
+  color: #000000;
+  padding-left: 10px;
+}
+.content-item-content {
+  font-family: 'League Gothic', 'News Cycle', 'Opera Sans', 'Century Gothic', sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  color: #000000;
+  padding-left: 10px;
+}
+.content-item {
+  width: 99%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 0px solid #000000;
+  background-color: #848440;
+  margin-left: 0px;
+  margin-right: 1px;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  min-height: 1px;
+  clear: both;
+}
+#footer {
+  width: 1264px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 0px solid #000000;
+  background-color: #bbbb77;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  font-family: 'League Gothic', 'News Cycle', 'Opera Sans', 'Century Gothic', sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  color: #000000;
+  text-align: center;
+}
+#copyright {
+  font-family: 'League Gothic', 'News Cycle', 'Opera Sans', 'Century Gothic', sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: #000000;
+  text-align: center;
+}
