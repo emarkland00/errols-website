@@ -4,7 +4,7 @@
 		<meta http-equiv="Content-Type" ="text/html; charset=UTF-8" />
 		<title>Errol G. Markland Jr.</title>
 		<meta name="description" content="The central hub for all things about Errol G. Markland Jr." />
-		<meta name="keywords" content="Errol, Markland, Jr, Software, Developer, Computer, Engineer, Back End, Game Programmer, CCNY, NSBE, ACM, New York" />
+		<meta name="keywords" content="Errol, Markland, Jr, Software, Developer, Computer, Engineer, CCNY, City College, NSBE, ACM, New York" />
 		<link href="style/style.css" type="text/css" rel="stylesheet" />
 	</head>
 	<body>
