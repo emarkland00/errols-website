@@ -40,9 +40,9 @@ html {
   overflow: scroll-y;
 }
 #page {
-  width: 1280px;
+  width: 1024px;
   height: auto;
-  width: 1280px;
+  width: 1024px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -62,9 +62,9 @@ html {
   color: #000000;
 }
 #body {
-  width: 1300px;
+  width: 1044px;
   min-height: 100%;
-  height: 100%;
+  height: 2000px;
   margin-right: auto;
   margin-left: auto;
   overflow: hidden;
@@ -84,7 +84,7 @@ a:link {
 }
 #content {
   float: left;
-  width: 853px;
+  width: 682px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -99,7 +99,7 @@ a:link {
 }
 #sidebar {
   float: right;
-  width: 386px;
+  width: 301px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -114,7 +114,7 @@ a:link {
   margin-right: 5px;
 }
 #navigation {
-  width: 1264px;
+  width: 1008px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -124,13 +124,8 @@ a:link {
   font-size: 30px;
   font-weight: normal;
   color: #000000;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 1px;
-  padding-bottom: 1px;
-  margin-top: 1px;
-  margin-bottom: 1px;
   float: right;
+  margin-right: 10px;
 }
 #navigation ul {
   list-style: none;
@@ -185,7 +180,7 @@ a:link {
   color: inherit;
 }
 #header {
-  width: 1264px;
+  width: 1008px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -238,7 +233,7 @@ a:link {
   clear: both;
 }
 #footer {
-  width: 1264px;
+  width: 1008px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -262,4 +257,18 @@ a:link {
   font-weight: normal;
   color: #000000;
   text-align: center;
+}
+#top-nav {
+  top: 0px;
+  z-index: 0;
+}
+#top-nav {
+  display: block;
+  margin-bottom: 30px;
+}
+#top-nav ul {
+  list-style: none;
+}
+#top-nav li {
+  display: inline;
 }
