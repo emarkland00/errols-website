@@ -62,30 +62,28 @@ body {
   margin-right: auto;
   margin-left: auto;
   font-family: 'League Gothic', 'News Cycle', 'Opera Sans', 'Century Gothic', sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: normal;
   color: #000000;
 }
-.content {
-  width: 1024px;
+#header {
+  width: 512px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   border: 0px solid #000000;
-  background-color: #bbbb88;
-  margin-bottom: 10px;
-}
-.content a:active,
-.content a:visited,
-.content a:link {
-  text-decoration: none;
+  background-color: #ffffff;
+  float: right;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  font-family: 'League Gothic', 'News Cycle', 'Opera Sans', 'Century Gothic', sans-serif;
+  font-size: 90px;
   font-weight: bold;
-  color: inherit;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-}
-.content a:hover {
-  color: #555555;
+  color: #000000;
 }
 #navigation {
   width: 1024px;
@@ -161,31 +159,30 @@ body {
   -o-transition: none;
   color: inherit;
 }
-#header {
-  width: 512px;
+.content {
+  width: 1024px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   border: 0px solid #000000;
-  background-color: #ffffff;
-  float: right;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 1px;
-  padding-bottom: 1px;
-  margin-top: 1px;
-  margin-bottom: 1px;
-  font-family: 'League Gothic', 'News Cycle', 'Opera Sans', 'Century Gothic', sans-serif;
-  font-size: 90px;
-  font-weight: bold;
-  color: #000000;
+  background-color: #bbbb88;
+  margin-bottom: 10px;
 }
-#sub-header {
-  font-family: 'League Gothic', 'News Cycle', 'Opera Sans', 'Century Gothic', sans-serif;
-  font-size: 30px;
-  font-weight: normal;
-  color: #000000;
-  text-indent: 20px;
+.content a:active,
+.content a:visited,
+.content a:link {
+  text-decoration: none;
+  font-weight: bold;
+  color: inherit;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+}
+.content a:hover {
+  color: #555555;
+}
+.content p {
+  padding: 10px;
+  margin: 0px;
 }
 #footer {
   width: 1024px;
@@ -207,13 +204,7 @@ body {
   color: #000000;
   text-align: center;
 }
-#top-nav {
-  display: block;
-  margin-bottom: 30px;
-}
-#top-nav ul {
-  list-style: none;
-}
-#top-nav li {
-  display: inline;
+#hey-there {
+  font-size: 50px;
+  font-weight: bold;
 }

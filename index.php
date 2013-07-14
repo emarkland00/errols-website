@@ -24,18 +24,24 @@
 			</div>
 			<div class="separator"></div>
 			<div class="content">
-				Hey there. <br /><br />
+				<p id="hey-there">Hey there.</p>
 				
-				I'm Errol Markland, a developer who likes to explore the various venues of technology. Born and raised in New York. Earned my Degree in Computer Engineering from the
-				<a href="http://www.ccny.cuny.edu">The City College of New York</a>.
+				<p>
+					I'm Errol Markland, a developer who likes to explore the various venues 
+					of technology. Born and raised in New York. Earned my Degree in Computer 
+					Engineering from the <a href="http://www.ccny.cuny.edu">The City College of New York</a>.
+				</p>
 				
-				<br /><br />
+				<p>
+					So I've done quite a few things over time. Check out on my 
+					<a href="projects.php">projects</a> page for a quick run down of things 
+					I've worked on in the past.
+				</p>
 				
-				So I've done quite a few things over time. Check out on my <a href="projects.php">projects</a> page for a quick run down of things I've worked on in the past. <br /><br />
-				
-				
-				For folks would prefer a good ol' PDF to assist your search, <a href="/errol_markland_resume.php">here you go</a>!<br /><br />				
-				<div class="separator"> </div>
+				<p>
+					For folks would prefer a good ol' PDF to assist your search, 
+					<a href="/errol_markland_resume.php">here you go</a>!				
+				</p>
 			</div>
 			
 			<div class="content">
