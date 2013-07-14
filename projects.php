@@ -22,24 +22,18 @@
 			<div class="separator"> </div>
 			<div id="navigation">
 				<ul>
-					<li class='nav-item' id="active-nav-item" title="Currently on this page"><a href="/index.php">Home</a></li>
-					<li class='nav-item'><a href="/resume.php" title="About me!">Resume</a></li>
-					<li class='nav-item'><a href="/projects.php" title="Check out some of my projects!">Projects</a></li>
+					<li class='nav-item'><a href="/index.php">Home</a></li>
+					<li class='nav-item'><a href="/resume.php" title="Check out my resume">Resume</a></li>
+					<li class='nav-item' id="active-nav-item" title="Currently on this page"><a href="/projects.php">Projects</a></li>
 				</ul>
 			</div>
 			<div class="separator"></div>
 			<div id="content">
-				Hey there. <br /><br />
+				Some projects I've worked on: <br /><br />
+
+				Projects I'm currently dabbling in: <br /><br />
 				
-				I'm Errol Markland, a developer who likes to explore the various venues of technology. Born and raised in New York. Earned my Degree in Computer Engineering from the
-				<a href="http://www.ccny.cuny.edu">The City College of New York</a>.
-				
-				<br /><br />
-				
-				So I've done quite a few things over time. Check out on my <a href="projects.php">projects</a> page for a quick run down of things I've worked on in the past. <br /><br />
-				
-				
-				For folks would prefer a good ol' PDF to assist your search, <a href="/errol_markland_resume.php">here you go</a>!<br /><br />
+				I do have a few other projects via bitbucket but rather not reveal them. I like their private repository thing.
 			<div class="separator"> </div>
 			
 			<div id="footer">

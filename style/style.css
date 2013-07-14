@@ -57,7 +57,7 @@ html {
   margin-right: auto;
   margin-left: auto;
   font-family: 'League Gothic', 'News Cycle', 'Opera Sans', 'Century Gothic', sans-serif;
-  font-size: 48px;
+  font-size: 24px;
   font-weight: normal;
   color: #000000;
 }
@@ -74,28 +74,25 @@ body {
   margin: 0px;
   padding: 0px;
 }
-a:active,
-a:visited,
-a:hover,
-a:link {
-  text-decoration: none;
-  font-style: none;
-  color: inherit;
-}
 #content {
-  float: left;
-  width: 682px;
+  width: 1024px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   border: 0px solid #000000;
-  background-color: #bbbb77;
-  padding-left: 5px;
-  padding-right: 0px;
-  padding-top: 5px;
-  padding-bottom: 0px;
-  margin-top: 5px;
-  margin-bottom: 0px;
+  background-color: #bbbb88;
+}
+#content a:active,
+#content a:visited,
+#content a:link {
+  text-decoration: none;
+  font-weight: bold;
+  color: inherit;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+}
+#content a:hover {
+  color: #555555;
 }
 #sidebar {
   float: right;
@@ -104,7 +101,7 @@ a:link {
   -moz-border-radius: 5px;
   border-radius: 5px;
   border: 0px solid #000000;
-  background-color: #bbbb77;
+  background-color: #bbbb88;
   padding-left: 5px;
   padding-right: 5px;
   padding-top: 5px;
@@ -114,18 +111,25 @@ a:link {
   margin-right: 5px;
 }
 #navigation {
-  width: 1008px;
+  width: 1024px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   border: 0px solid #000000;
-  background-color: #eeeedd;
+  background-color: #ffffff;
   font-family: 'League Gothic', 'News Cycle', 'Opera Sans', 'Century Gothic', sans-serif;
   font-size: 30px;
   font-weight: normal;
   color: #000000;
   float: right;
-  margin-right: 10px;
+}
+#navigation a:active,
+#navigation a:visited,
+#navigation a:hover,
+#navigation a:link {
+  text-decoration: none;
+  font-style: none;
+  color: inherit;
 }
 #navigation ul {
   list-style: none;
@@ -148,7 +152,7 @@ a:link {
   -moz-border-radius: 5px;
   border-radius: 5px;
   border: 1px solid #ffffff;
-  background-color: #888844;
+  background-color: #8d8d50;
   margin-right: auto;
   margin-left: auto;
   -webkit-transition: all 0.2s ease;
@@ -160,7 +164,7 @@ a:link {
   -moz-border-radius: 5px;
   border-radius: 5px;
   border: 1px solid #ffffff;
-  background-color: #55552b;
+  background-color: #5c5c35;
   margin-right: auto;
   margin-left: auto;
   color: #fff;
@@ -172,7 +176,7 @@ a:link {
   -moz-border-radius: 5px;
   border-radius: 5px;
   border: 1px solid #ffffff;
-  background-color: #55552b;
+  background-color: #5c5c35;
   -webkit-transition: none;
   transition: none;
   -moz-transition: none;
@@ -180,12 +184,13 @@ a:link {
   color: inherit;
 }
 #header {
-  width: 1008px;
+  width: 512px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   border: 0px solid #000000;
-  background-color: #bbbb77;
+  background-color: #ffffff;
+  float: right;
   padding-left: 5px;
   padding-right: 5px;
   padding-top: 1px;
@@ -204,47 +209,13 @@ a:link {
   color: #000000;
   text-indent: 20px;
 }
-.content-item-title {
-  font-family: 'League Gothic', 'News Cycle', 'Opera Sans', 'Century Gothic', sans-serif;
-  font-size: 36px;
-  font-weight: 100;
-  color: #000000;
-  padding-left: 10px;
-}
-.content-item-content {
-  font-family: 'League Gothic', 'News Cycle', 'Opera Sans', 'Century Gothic', sans-serif;
-  font-size: 24px;
-  font-weight: normal;
-  color: #000000;
-  padding-left: 10px;
-}
-.content-item {
-  width: 99%;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  border: 0px solid #000000;
-  background-color: #848440;
-  margin-left: 0px;
-  margin-right: 1px;
-  margin-top: 0px;
-  margin-bottom: 15px;
-  min-height: 1px;
-  clear: both;
-}
 #footer {
-  width: 1008px;
+  width: 1024px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   border: 0px solid #000000;
-  background-color: #bbbb77;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 1px;
-  padding-bottom: 1px;
-  margin-top: 1px;
-  margin-bottom: 1px;
+  background-color: #bbbb88;
   font-family: 'League Gothic', 'News Cycle', 'Opera Sans', 'Century Gothic', sans-serif;
   font-size: 18px;
   font-weight: normal;
