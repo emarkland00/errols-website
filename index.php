@@ -8,7 +8,7 @@
 		<link href='/style/style.css' type='text/css' rel='stylesheet' />
 	</head>
 	
-	<body>
+	<body> 
 		<div id="page">
 			<div id="header">
 				Errol G. Markland Jr.
