@@ -9,12 +9,11 @@
 	</head>
 	<body>
 		<div id="page">
-			<img src="img_here.png" alt="img here" />
 			<div id="header">
 				Errol G. Markland Jr.
 			</div>
-			
 			<div class="separator"> </div>
+			
 			<div id="navigation">
 				<ul>
 					<li class='nav-item'><a href="/index.php">Home</a></li>
@@ -24,24 +23,32 @@
 				</ul>
 			</div>
 			<div class="separator"></div>
-			<div class="content">
-				Some projects I've worked on: <br /><br />
-
-				Projects I'm currently dabbling in: <br /><br />
-				
-				I do have a few other projects via bitbucket but rather not reveal them. I like their private repository thing.
-			</div>
 			
-			<div class="content">	
-				<div id="footer">
-					<a href="/index.php">Home</a> | 
-					<a href="/resume.php">Resume</a> | 
-					<a href="/projects.php">Projects</a> | 
-					<a href="/contact.php">Contact</a>
-				</div>
-			</div>
+			<div class="content">
+				<p>Some project's that I've worked on can be found on <a href="https://github.com/emarkland" target="_blank">GitHub</a>.</p>
+				
+				<p>
+					I do have a few other projects via 
+					<a href="https://bitbucket.org/emarkland00" target="_blank">Bitbucket</a> but 
+					rather not reveal them. I like their private repository thing.
+				</p>
+				
+				<p>In the future, I'll make life a bit easier by actually listing the projects I've done here.</p>
+				
+				<!-- 
+					Some projects I've worked on: <br /><br />
+	
+					Projects I'm currently dabbling in: <br /><br />
+				 -->
+			</div>			
+		</div>
+		
+		<div id="footer">
+			<a href="/index.php">Home</a> | 
+			<a href="/resume.php">Resume</a> | 
+			<a href="/projects.php">Projects</a> | 
+			<a href="/contact.php">Contact</a>
 		</div>
 		<div id="copyright">&copy; Errol Markland, 2013.</div>
-		</div>
 	</body>	
 </html>

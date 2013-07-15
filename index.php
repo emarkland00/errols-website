@@ -9,11 +9,11 @@
 	</head>
 	<body>
 		<div id="page">
-			<img src="img_here.png" alt="img here" />
 			<div id="header">
 				Errol G. Markland Jr.
 			</div>
-			<div class="separator"> </div>
+			<div class="separator"></div>
+			
 			<div id="navigation">
 				<ul>
 					<li class='nav-item' id="active-nav-item" title="Currently on this page"><a href="/index.php">Home</a></li>
@@ -23,41 +23,48 @@
 				</ul>
 			</div>
 			<div class="separator"></div>
+			
 			<div class="content">
 				<p id="hey-there">Hey there.</p>
 				
 				<p>
-					I'm Errol Markland, a developer who likes to explore the various venues 
-					of technology. Born and raised in New York. Earned my Degree in Computer 
+					My name is <strong>Errol</strong>.
+				</p>
+				
+				
+				<p>
+					I'm a developer who likes to explore the various venues 
+					of technology. 
+				</p>
+				
+				<!-- 
+				Born and raised in New York City. Earned my Degree in Computer 
 					Engineering from the <a href="http://www.ccny.cuny.edu">The City College of New York</a>.
-				</p>
-				
-				<p>
-					So I've done quite a few things over time. Check out on my 
-					<a href="projects.php">projects</a> page for a quick run down of things 
-					I've worked on in the past.
-				</p>
-				
-				<p>
-					For folks would prefer a good ol' PDF to assist your search, 
-					<a href="/errol_markland_resume.php">here you go</a>!				
-				</p>
+				 -->
+				 
+				 <p style="text-align: center;">
+					 This site is functional but under construction. (But not for long!)<br />
+					 <img src="/images/construction_guy.png" alt=""><br />
+					 Please watch your step as you navigate through the site.
+				 </p>
 			</div>
 			
-			<div class="content">
-				Here are a few articles I've been checking out...
-			</div>
-			
-			<div class="content">	
-				<div id="footer">
-					<a href="/index.php">Home</a> | 
-					<a href="/resume.php">Resume</a> | 
-					<a href="/projects.php">Projects</a> | 
-					<a href="/contact.php">Contact</a>
+			<!-- 
+				<div class="content">
+					<div id="latest">
+						<h1>Here are a few articles I've been checking out...</h1>
+					</div>
 				</div>
-			</div>
-			
-			<div id="copyright">&copy; Errol Markland, 2013.</div>
+		 	-->
 		</div>
+		
+		<div id="footer">
+			<a href="/index.php">Home</a> | 
+			<a href="/resume.php">Resume</a> | 
+			<a href="/projects.php">Projects</a> | 
+			<a href="/contact.php">Contact</a>
+		</div>
+		
+		<div id="copyright">&copy; Errol Markland, 2013.</div>
 	</body>	
 </html>
