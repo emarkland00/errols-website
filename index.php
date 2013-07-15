@@ -28,14 +28,8 @@
 				<p id="hey-there">Hey there.</p>
 				
 				<p>
-					My name is <strong>Errol</strong>.
-				</p>
-				
-				
-				<p>
-					I'm a developer who likes to explore the various venues 
-					of technology. 
-				</p>
+					My name is <strong>Errol</strong>. I'm a developer who likes to explore the various venues of technology.
+				</p>				
 				
 				<!-- 
 				Born and raised in New York City. Earned my Degree in Computer 
@@ -43,7 +37,7 @@
 				 -->
 				 
 				 <p style="text-align: center;">
-					 This site is functional but under construction. (But not for long!)<br />
+					 This site is functional but is currently under <strong>heavy</strong> construction. (But not for long!)<br />
 					 <img src="/images/construction_guy.png" alt=""><br />
 					 Please watch your step as you navigate through the site.
 				 </p>
