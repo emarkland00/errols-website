@@ -1,11 +1,11 @@
 ﻿/* AUTHOR */
 Webmaster: Errol Markland
-Contact: errol.markland [at] gmail.com
-Twitter: @mrmarkland
-From: Jamaica, New York, USA
+Site: errolmarkland.com/contact.php
+Twitter: @mr_markland
+From: New York, NY USA
 
 /* SITE */
-Last update: 2012/12/19
+Last-updated: 2013/07/17
 Language: English
-Doctype: HTML5
-IDE: Aptana Studio, Notepad++, Filezilla
+Standards: HTML5, CSS, PHP, JS
+IDE: Eclipse-PHP, Filezilla
