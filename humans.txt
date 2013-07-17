@@ -1,6 +1,11 @@
-﻿# AUTHOR 
+﻿This site is designed to be a means of showing myself to the web. It also serves as my personal playground. I hope you enjoy your visit. =]
+
+Feel free to reach out to me for any questions or suggestions.
+
+# AUTHOR 
     Webmaster: Errol Markland
-    Site: errolmarkland.com/contact.php
+    Site: errolmarkland.com
+    Contact: errolmarkland.com/contact.php
     Twitter: @mr_markland
     From: New York, NY USA
 
