@@ -1,11 +1,11 @@
-﻿/* AUTHOR */
-Webmaster: Errol Markland
-Site: errolmarkland.com/contact.php
-Twitter: @mr_markland
-From: New York, NY USA
+﻿# AUTHOR 
+    Webmaster: Errol Markland
+    Site: errolmarkland.com/contact.php
+    Twitter: @mr_markland
+    From: New York, NY USA
 
-/* SITE */
-Last-updated: 2013/07/17
-Language: English
-Standards: HTML5, CSS, PHP, JS
-IDE: Eclipse-PHP, Filezilla
+# SITE 
+    Last-updated: 2013/07/17
+    Language: English
+    Standards: HTML5, CSS3, PHP5, JS
+    IDE: Eclipse-PHP, FileZilla
