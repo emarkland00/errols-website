@@ -27,6 +27,21 @@
 			<div class="content">
 				<p>Glad you would like to keep in touch.</p>
 				
+				
+				<div id="contact-form">
+					<div class="form-item">
+						<input type="text" placeholder="Subject" />
+					</div>
+					
+					<div class="form-item">
+						<input type="text" placeholder="Details" />
+					</div>
+					
+					<div class="form-item">
+						<input type="button" value="Send" />
+					</div>
+				</div>
+
 				<p>Form is unavailable at the moment, but will be available very soon!</p>
 				
 				<p>For now, email me at <a href="mailto:errol.markland@gmail.com">this address</a> in the meantime. Please be specific in your inquiry</p>
