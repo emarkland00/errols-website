@@ -1,0 +1,168 @@
+@import url('constants.less');
+@import url('methods.less');
+
+// derived values 
+@current-background-color: #bb8; //@default-background-color;
+@current-border-color: @current-background-color + 3.0 * @shade-darker; //@default-border-color
+@current-font-color: @current-background-color + 3.0* @shade-darker;
+@body-background-color: @current-background-color +  0.5 * @shade-brighter;
+
+html { overflow-y: scroll; }
+
+@dark-stripe: darken(@body-background-color, 10%);
+@light-stripe: lighten(@body-background-color, 1%);
+body {
+    //  background-color: @body-background-color;
+    .no-space();
+    background-image: -webkit-gradient(
+        linear, 
+        left bottom, 
+        right top, 
+        color-stop(0, @dark-stripe), 
+        color-stop(0.25, @dark-stripe), 
+        color-stop(0.25, @light-stripe), 
+        color-stop(0.5, @light-stripe), 
+        color-stop(0.5, @dark-stripe), 
+        color-stop(0.75, @dark-stripe), 
+        color-stop(0.75, @light-stripe));
+    
+    background-size: 20px 20px;
+    width:100%;
+    height:100%;
+}
+
+#page {
+    margin-top: 20px;
+	width: @default-page-width;
+	height: @default-page-height;
+	.rounded-container(@default-page-width, 8px, 0px, @current-border-color, @body-background-color + 0.5 * @shade-darker);
+	.container-padding(5px);
+	.center-margin;
+	.font;  
+	min-height: @default-min-height;
+}
+
+#header {
+    .rounded-container(@default-page-width * 0.75, 5px, 0px, @current-border-color, @body-background-color + 0.5 * @shade-darker);
+    .container-padding(5px, 1px);
+    .font(@default-font-family, 90px, bold, @current-font-color + 0.75 * @shade-brighter);
+}
+
+// navigation
+#navigation {
+    .rounded-container(@default-page-width, 5px, 0px, @current-border-color, @body-background-color + 0.5 * @shade-darker);
+    .font(@default-font-family, 30px, normal, @current-font-color + 0.75 * @shade-brighter);
+    float: right;
+    margin-bottom: 5px;
+
+    a:active, a:visited, a:hover, a:link {
+        text-decoration: none;
+        font-style: none;
+        color: inherit;
+    }
+  
+    ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        text-align: right;
+    }
+  
+    li {
+        display: inline;
+        .container-padding(15px, 3px);
+    }
+}
+
+@nav-item-color: darken(@current-background-color, 20%);
+.nav-item {
+    .rounded-container(2%, 5px, 1px, @nav-item-color, @nav-item-color);
+    .center-margin;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+}
+
+@nav-item-color-hover: darken(@current-background-color, 35%);
+.nav-item:hover {
+    .rounded-container(2%, 5px, 1px, @nav-item-color-hover, @nav-item-color-hover);
+    .center-margin;
+    color: #fff;
+    cursor: default;
+}
+
+#active-nav-item {
+    .rounded-container(2%, 5px, 1px, @nav-item-color-hover, @nav-item-color-hover);
+    -webkit-transition:none;
+    transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    color: inherit;
+}
+
+.content {
+    .rounded-container(@default-page-width, 5px, 0px, @current-border-color, @current-background-color);  
+    margin-bottom: 10px;
+    a:active, a:visited, a:link {
+        text-decoration: none;
+        font-weight: bold;
+        color: inherit;      
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+    }
+    a:hover {
+        color: @link-color;
+    }
+    p {
+        padding: 10px;
+        margin: 0px;
+    }
+}
+
+#latest {
+    h1 {
+        font-weight: bold;
+        font-size: @default-font-size * 1.2;
+        margin: 0px;
+        padding: 0px;
+        padding-left: 10px;
+    }
+    ul {
+        
+    }
+    li {
+        list-style-type: square;
+    }
+}
+
+#footer {
+    @footer-font-color: @current-font-color + 0.75 * @shade-brighter;
+	.rounded-container(@default-page-width, 5px, 0px, @current-border-color, @current-background-color);
+	.font(@default-font-family, 18px, normal, @footer-font-color);
+	text-align: center;
+	width: @default-page-width;
+	.center-margin();
+	.container-padding(5px);
+	
+	a:active, a:visited, a:link {
+        text-decoration: none;
+	   -webkit-transition: all 0.2s ease;
+       -moz-transition: all 0.2s ease;
+	   color: @footer-font-color;
+	}
+	
+	a:hover {
+	   color: @footer-font-color + 1.5 * @shade-brighter;
+	}
+}
+
+#copyright {
+	.font(@default-font-family, 12px, normal, @current-font-color + 5.0 * @shade-darker);
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+// Miscellaneous
+#hey-there {
+    font-size: @default-font-size * 2.5;
+    font-weight: bold;
+}
