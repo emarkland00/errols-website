@@ -267,12 +267,14 @@ body {
   width: 80%;
   padding: 0px;
   margin: 5px;
+  font-size: 24px;
 }
 #contact-form p {
   margin: 5px;
   padding: 0px;
   font-weight: bold;
   text-align: center;
+  font-size: 38px;
 }
 #contact-form input {
   width: 576px;
@@ -280,17 +282,16 @@ body {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  border: 0px solid #bbbb88;
+  border: 1px solid #bbbb88;
   background-color: #ffffff;
   min-height: 25px;
-  margin-bottom: 20px;
   padding: 5px;
-  font-size: 16px;
   font-weight: bold;
+  font-size: 24px;
 }
 #contact-form textarea {
   width: 576px;
-  min-height: 200px;
+  min-height: 150px;
   width: 576px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -299,10 +300,10 @@ body {
   background-color: #ffffff;
   padding: 5px;
   font-family: 'News Cycle', 'League Gothic', 'Opera Sans', 'Century Gothic', sans-serif;
-  font-size: 16px;
+  font-size: 24px;
 }
 #contact-form #submit-button {
-  width: 288px;
+  width: 144px;
   min-height: 20px;
   text-align: center;
   transition-property: all;
@@ -327,18 +328,24 @@ body {
   -o-transition-duration: 0.2s;
   -o-transition-timing-function: ease;
   -o-transition-delay: 0s;
-  border: solid 1px #bbbb88;
+  background-color: #9f9f6c;
+  border: solid 1px #fffff7;
   font-weight: bold;
+  padding: 15px;
 }
 #contact-form #submit-button:hover {
   background-color: #848451;
   color: #ffffff;
-  border: solid 1px #FFF;
+  border: solid 1px #fffff7;
 }
 #contact-form #submit-button:active {
   background-color: #5d5d2a;
   color: #fffff7;
-  border: solid 1px #FFF;
+  border: solid 1px #fffff7;
+}
+input#human-check {
+  padding: 5px;
+  font-size: 12px;
 }
 #social-links {
   width: 576px;
@@ -350,6 +357,7 @@ body {
   padding: 0px;
   font-weight: bold;
   text-align: center;
+  font-size: 38px;
 }
 .social-icon {
   width: 125px;

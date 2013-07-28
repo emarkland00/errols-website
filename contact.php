@@ -25,14 +25,18 @@
 			
 			<div class="content">
 				<div id="contact-form">
-					<p>Need something? Send me a message!</p>
+					<p>Got questions? Contact me!</p>
 					
 					<div class="form-item">
 						<input type="text" placeholder="Message Subject" id="subject" />
 					</div>
 					
 					<div class="form-item">
-						<textarea  placeholder="Details on subject matter" id="details"></textarea>
+						<textarea placeholder="Details on subject matter" id="details"></textarea>
+					</div>
+					
+					<div class="form-item">
+						<input type="text" placeholder="Human Check: What's 2 + 2?" id="human-check" />
 					</div>
 					
 					<div class="form-item">
@@ -41,7 +45,7 @@
 				</div>
 				
 				<div id="social-links">
-					<p>I'm available on these networks!</p>
+					<p>Find me on these networks</p>
 					<div id="social-icon-container">
 						<a href="https://www.facebook.com/emark00" target="_blank">
 							<div class="social-icon">
@@ -72,5 +76,8 @@
 				 <div class="clearer"></div>
 			</div>
 		</div>
+		
+		<script type="text/javascript" script="/js/libs/jquery-2.0.3.min.js"></script>
+		<script type="text/javascript" script="/js/libs/contact.js"></script>
 	</body>	
 </html>

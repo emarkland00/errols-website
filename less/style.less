@@ -146,59 +146,68 @@ body {
     margin: 20px;
     font-family: @default-font-family;
     float: left;
-    
     .form-item {
         width: 80%;
         padding: 0px;
         margin: 5px;
+        font-size: floor(@default-font-size * 0.5);
     }
     
     p {
         margin: 5px;
         padding: 0px;
         font-weight: bold;
-        text-align: center;    
+        text-align: center;
+        font-size: floor(@default-font-size * 0.8);    
     }
     
     input {
         width: @form-item-width;
-        .rounded-container(@form-item-width, 3px, 0px, @current-border-color + 3.00 * @shade-brighter, @current-background-color + 3.00 * @shade-brighter);
+        .rounded-container(@form-item-width, 3px, 1px, @current-border-color + 3.00 * @shade-brighter, @current-background-color + 3.00 * @shade-brighter);
         min-height: 25px;
-        margin-bottom: 20px;
         padding: 5px;
-        font-size: 16px;
         font-weight: bold;
+        font-size: floor(@default-font-size * 0.5);
     }
+    
+    
     
     textarea {
         width: @form-item-width;
-        min-height: 200px;
+        min-height: 150px;
         .rounded-container(@form-item-width, 3px, 1px, @current-border-color + 3.00 * @shade-brighter, @current-background-color + 3.00 * @shade-brighter);
         padding: 5px;
         font-family: @default-font-family;
-        font-size: 16px;
+        font-size: floor(@default-font-size * 0.5);
     }
     
     #submit-button {
-        width: floor(@form-item-width * 0.5);
+        width: floor(@form-item-width * 0.25);
         min-height: 20px;
         text-align: center;
         .transition(all, ease, 0.2s);
-        border: solid 1px @current-background-color;
+        background-color: @current-background-color + 0.25 * @shade-darker;
+        border: solid 1px @current-background-color + @shade-brighter;
         font-weight: bold;
+        padding: 15px;
     }
     
     #submit-button:hover {
         background-color: @current-background-color + 0.5 * @shade-darker;
         color: @current-background-color + 3.00 * @shade-brighter;
-        border: solid 1px #FFF;
+        border: solid 1px @current-background-color + @shade-brighter;
     }
     
     #submit-button:active {
         background-color: @current-background-color + 0.85 * @shade-darker;
         color: @current-background-color + 1.00 * @shade-brighter;
-        border: solid 1px #FFF;
+        border: solid 1px @current-background-color + @shade-brighter;
     }
+}
+
+input#human-check {
+    padding: 5px;
+    font-size: floor(@default-font-size * 0.25); 
 }
 
 #social-links {
@@ -211,6 +220,7 @@ body {
         padding: 0px;
         font-weight: bold;
         text-align: center;    
+        font-size: floor(@default-font-size * 0.8);
     }   
 }
 
