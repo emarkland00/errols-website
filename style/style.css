@@ -407,7 +407,7 @@ body {
   margin: 5px;
   text-align: center;
 }
-#social-links .social-icon {
+.social-icon {
   width: 125px;
   height: 125px;
   width: 125px;
@@ -444,11 +444,11 @@ body {
   text-align: center;
   line-height: 10px;
 }
-#social-links .social-icon:hover {
+.social-icon:hover {
   background-color: #848451;
   border: 1px solid #FFF;
 }
-#social-links .social-icon:active {
+.social-icon:active {
   background-color: #4c4c19;
   border: 1px solid #FFF;
 }

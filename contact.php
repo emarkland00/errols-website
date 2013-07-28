@@ -66,7 +66,9 @@
 						 		<img src="/images/twitter_logo1.png" alt="Twitter" />
 						 	</div>
 					 	</a>
+					 	<div class="clearer"></div>
 				 	</div>
+				 	
 				 </div>
 				 <div class="clearer"></div>
 			</div>

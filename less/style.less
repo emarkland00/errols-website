@@ -231,30 +231,34 @@ body {
         padding: 0px;
         margin: 5px;
         text-align: center;
-    }
-    
-    @social-icon-size: 125px;
-    .social-icon {
-        width: @social-icon-size;    
-        height: @social-icon-size;
-        .rounded-container(@social-icon-size, 5px, 1px, @current-background-color + 0.5, @current-background-color);
-        .transition(all, ease, 0.2s);
-        float: left;
-        margin: 50px;
-        margin-top: 0px;
-        text-align: center;
-        line-height: 10px;
-    }
-    
-    .social-icon:hover {
-        background-color: @current-background-color + 0.5 * @shade-darker;
-        border: 1px solid #FFF;
-    }
-    
-    .social-icon:active {
-        background-color: @current-background-color + @shade-darker;
-        border: 1px solid #FFF;
-    }
+    }    
+}
+
+@social-icon-size: 125px;
+.social-icon {
+    width: @social-icon-size;    
+    height: @social-icon-size;
+    .rounded-container(@social-icon-size, 5px, 1px, @current-background-color + 0.5, @current-background-color);
+    .transition(all, ease, 0.2s);
+    float: left;
+    margin: 50px;
+    margin-top: 0px;
+    text-align: center;
+    line-height: 10px;
+}
+
+.social-icon:hover {
+    background-color: @current-background-color + 0.5 * @shade-darker;
+    border: 1px solid #FFF;
+}
+
+.social-icon:active {
+    background-color: @current-background-color + @shade-darker;
+    border: 1px solid #FFF;
+}
+
+#social-icon-container {
+    // empty
 }
 
 #copyright {
