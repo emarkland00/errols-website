@@ -29,15 +29,5 @@
 				<p style="text-align: center;"><a href="errol_markland_resume.pdf">this will do</a>.</p>
 			</div>
 		</div>
-		
-		<div id="footer">
-			<a href="/index.php">Home</a> | 
-			<a href="/resume.php">Resume</a> | 
-			<a href="/projects.php">Projects</a> | 
-			<a href="/contact.php">Contact</a>
-		</div>
-		
-		<div id="copyright">&copy; Errol Markland, 2013.</div>
-		</div>
 	</body>	
 </html>

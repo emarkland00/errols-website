@@ -35,9 +35,8 @@ body {
 	width: @default-page-width;
 	height: @default-page-height;
 	.rounded-container(@default-page-width, 8px, 0px, @current-border-color, @body-background-color + 0.5 * @shade-darker);
-	.container-padding(5px);
-	.center-margin;
-	margin-top: 25px;
+	padding: 25px;
+	margin: 25px auto;
 	.font;  
 	min-height: @default-min-height;
 }
@@ -45,13 +44,13 @@ body {
 #header {
     .rounded-container(@default-page-width * 0.75, 5px, 0px, @current-border-color, @body-background-color + 0.5 * @shade-darker);
     .container-padding(5px, 1px);
-    .font(@default-font-family, 90px, bold, @current-font-color + 0.75 * @shade-brighter);
+    font-family: @default-font-family;
+    font-size: @default-font-size * 2.50;
 }
 
 // navigation
 #navigation {
     .rounded-container(@default-page-width, 5px, 0px, @current-border-color, @body-background-color + 0.5 * @shade-darker);
-    .font(@default-font-family, 30px, normal, @current-font-color + 0.75 * @shade-brighter);
     float: right;
     margin-bottom: 5px;
 
@@ -72,35 +71,38 @@ body {
         display: inline;
         .container-padding(15px, 3px);
     }
-    @nav-item-color: darken(@current-background-color, 20%);
-    .nav-item {
-        .rounded-container(2%, 5px, 1px, @nav-item-color, @nav-item-color);
-        .center-margin;
-        .transition(all, ease, 0.2s);
-    }
-    
-    @nav-item-color-hover: darken(@current-background-color, 35%);
-    .nav-item:hover {
-        .rounded-container(2%, 5px, 1px, @nav-item-color-hover, @nav-item-color-hover);
-        .center-margin;
-        color: #fff;
-        cursor: default;
-    }
-    
-    .nav-item:active {
-        .rounded-container(2%, 5px, 1px, @nav-item-color-hover * 0.75, @nav-item-color-hover * 0.75);
-        .center-margin;
-        color: #fff;
-        cursor: default;
-    }
-    
-    #active-nav-item {
-        .rounded-container(2%, 5px, 1px, @nav-item-color-hover * 0.75, @nav-item-color-hover * 0.75);        
-        .transition(none, none, 0s);
-        color: #fff;
-    }
 }
 
+@nav-item-font-size: floor(@default-font-size * 0.9);
+@nav-item-width: floor(@default-page-width * 0.15);
+@nav-item-color: darken(@current-background-color, 20%);
+.nav-item {
+    .rounded-container(@nav-item-width, 5px, 1px, @nav-item-color, @nav-item-color);
+    .center-margin;
+    .transition(all, ease, 0.2s);
+    .font(@default-font-family, @nav-item-font-size, normal, @current-font-color + 0.75 * @shade-brighter);
+}
+
+@nav-item-color-hover: darken(@current-background-color, 35%);
+.nav-item:hover {
+    .rounded-container(@nav-item-width, 5px, 1px, @nav-item-color-hover, @nav-item-color-hover);
+    .center-margin;
+    color: #fff;
+    cursor: default;
+}
+
+.nav-item:active {
+    .rounded-container(@nav-item-width, 5px, 1px, @nav-item-color-hover * 0.75, @nav-item-color-hover * 0.75);
+    .center-margin;
+    color: #fff;
+    cursor: default;
+}
+
+#active-nav-item {
+    .rounded-container(@nav-item-width, 5px, 1px, @nav-item-color-hover * 0.75, @nav-item-color-hover * 0.75);        
+    .transition(none, none, 0s);
+    color: #fff;
+}
 
 
 .content {
