@@ -1,6 +1,11 @@
 (function ($) {
 	
 	var validateForm = function() {
+		var email = $('#email').val();
+		if (!email) {
+			// missing email
+		}
+		
 		var subject = $('#subject').val();
 		if (!subject) {
 			// missing subject
@@ -12,6 +17,7 @@
 		}
 		
 		var json = {
+			email: email,
 			subject: subject,
 			detail: detail
 		};

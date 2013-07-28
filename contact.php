@@ -28,6 +28,10 @@
 					<p>Got questions? Contact me!</p>
 					
 					<div class="form-item">
+						<input type="text" placeholder="Your Email Address" id="email" />
+					</div>
+					
+					<div class="form-item">
 						<input type="text" placeholder="Message Subject" id="subject" />
 					</div>
 					
