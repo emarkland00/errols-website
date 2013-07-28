@@ -342,13 +342,13 @@ body {
 }
 #social-links {
   width: 576px;
+  margin: 25px;
   float: left;
-  margin: 20px;
 }
 #social-links p {
-  font-weight: bold;
-  padding: 0px;
   margin: 5px;
+  padding: 0px;
+  font-weight: bold;
   text-align: center;
 }
 .social-icon {
@@ -382,19 +382,20 @@ body {
   -o-transition-duration: 0.2s;
   -o-transition-timing-function: ease;
   -o-transition-delay: 0s;
+  margin: 1%;
   float: left;
-  margin: 50px;
-  margin-top: 0px;
+  display: inline;
   text-align: center;
   line-height: 10px;
 }
 .social-icon:hover {
   background-color: #848451;
-  border: 1px solid #FFF;
 }
 .social-icon:active {
   background-color: #4c4c19;
-  border: 1px solid #FFF;
+}
+#social-icon-container {
+  margin-left: 20px;
 }
 #copyright {
   font-family: 'News Cycle', 'League Gothic', 'Opera Sans', 'Century Gothic', sans-serif;
@@ -406,7 +407,6 @@ body {
 }
 #hey-there {
   font-size: 120px;
-  font-weight: bold;
 }
 .clearer {
   clear: both;

@@ -68,7 +68,6 @@
 					 	</a>
 					 	<div class="clearer"></div>
 				 	</div>
-				 	
 				 </div>
 				 <div class="clearer"></div>
 			</div>
