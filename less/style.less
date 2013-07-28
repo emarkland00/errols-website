@@ -78,7 +78,7 @@ body {
 @nav-item-color: darken(@current-background-color, 20%);
 .nav-item {
     .rounded-container(@nav-item-width, 5px, 1px, @nav-item-color, @nav-item-color);
-    .center-margin;
+    margin: auto 0px;
     .transition(all, ease, 0.2s);
     .font(@default-font-family, @nav-item-font-size, normal, @current-font-color + 0.75 * @shade-brighter);
 }
@@ -86,14 +86,14 @@ body {
 @nav-item-color-hover: darken(@current-background-color, 35%);
 .nav-item:hover {
     .rounded-container(@nav-item-width, 5px, 1px, @nav-item-color-hover, @nav-item-color-hover);
-    .center-margin;
+    margin: auto 0px;
     color: #fff;
     cursor: default;
 }
 
 .nav-item:active {
     .rounded-container(@nav-item-width, 5px, 1px, @nav-item-color-hover * 0.75, @nav-item-color-hover * 0.75);
-    .center-margin;
+    margin: auto 0px;
     color: #fff;
     cursor: default;
 }
@@ -137,26 +137,6 @@ body {
     li {
         list-style-type: square;
     }
-}
-
-#footer {
-    @footer-font-color: @current-font-color + 0.75 * @shade-brighter;
-	.rounded-container(@default-page-width, 5px, 0px, @current-border-color, @current-background-color);
-	.font(@default-font-family, 18px, normal, @footer-font-color);
-	text-align: center;
-	width: @default-page-width;
-	.center-margin();
-	.container-padding(5px);
-	
-	a:active, a:visited, a:link {
-        text-decoration: none;
-        .transition(all, ease, 0.2s);
-        color: @footer-font-color;
-	}
-	
-	a:hover {
-        color: @footer-font-color + 1.5 * @shade-brighter;
-	}
 }
 
 @form-item-width: floor(@default-page-width * 0.45);

@@ -120,8 +120,7 @@ body {
   border-radius: 5px;
   border: 1px solid #8d8d50;
   background-color: #8d8d50;
-  margin-right: auto;
-  margin-left: auto;
+  margin: auto 0px;
   transition-property: all;
   transition-duration: 0.2s;
   transition-timing-function: ease;
@@ -156,8 +155,7 @@ body {
   border-radius: 5px;
   border: 1px solid #5c5c35;
   background-color: #5c5c35;
-  margin-right: auto;
-  margin-left: auto;
+  margin: auto 0px;
   color: #fff;
   cursor: default;
 }
@@ -168,8 +166,7 @@ body {
   border-radius: 5px;
   border: 1px solid #454527;
   background-color: #454527;
-  margin-right: auto;
-  margin-left: auto;
+  margin: auto 0px;
   color: #fff;
   cursor: default;
 }
@@ -258,59 +255,6 @@ body {
 }
 #latest li {
   list-style-type: square;
-}
-#footer {
-  width: 1280px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  border: 0px solid #000000;
-  background-color: #bbbb88;
-  font-family: 'News Cycle', 'League Gothic', 'Opera Sans', 'Century Gothic', sans-serif;
-  font-size: 18px;
-  font-weight: normal;
-  color: #000000;
-  text-align: center;
-  width: 1280px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-#footer a:active,
-#footer a:visited,
-#footer a:link {
-  text-decoration: none;
-  transition-property: all;
-  transition-duration: 0.2s;
-  transition-timing-function: ease;
-  transition-delay: 0s;
-  /* Firefox 4 */
-
-  -moz-transition-property: all;
-  -moz-transition-duration: 0.2s;
-  -moz-transition-timing-function: ease;
-  -moz-transition-delay: 0s;
-  /* Safari and Chrome */
-
-  -webkit-transition-property: all;
-  -webkit-transition-duration: 0.2s;
-  -webkit-transition-timing-function: ease;
-  -webkit-transition-delay: 0s;
-  /* Opera */
-
-  -o-transition-property: all;
-  -o-transition-duration: 0.2s;
-  -o-transition-timing-function: ease;
-  -o-transition-delay: 0s;
-  color: #000000;
-}
-#footer a:hover {
-  color: #686835;
 }
 #contact-form {
   width: 576px;
