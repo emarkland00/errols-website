@@ -5,13 +5,13 @@
 		<title>Errol G. Markland Jr.</title>
 		<meta name="description" content="The central hub for all things about Errol G. Markland Jr." />
 		<meta name="keywords" content="Errol, Markland, Jr, Software, Developer, Computer, Engineer, CCNY, City College, NSBE, ACM, New York" />
-		<link href="style/style.css" type="text/css" rel="stylesheet" />
+		<link href="/style/style.css" type="text/css" rel="stylesheet" />
 	</head>
 	<body>
 		<div id="page">
 			<div id="header">
 				Errol G. Markland Jr.
-			</div>
+			</div>	
 			<div class="separator"> </div>
 			
 			<div id="navigation">
@@ -45,6 +45,8 @@
 					
 					<div class="form-item">
 						<input type="submit" value="Send" id="submit-button" />
+						
+						<span id="loading-gif"><img src="/images/loading2.gif" alt="" /></span>
 					</div>
 				</div>
 				
@@ -81,7 +83,7 @@
 			</div>
 		</div>
 		
-		<script type="text/javascript" script="/js/libs/jquery-2.0.3.min.js"></script>
-		<script type="text/javascript" script="/js/libs/contact.js"></script>
+		<script type="text/javascript" src="/js/libs/jquery-2.0.3.min.js"></script>
+		<script type="text/javascript" src="/js/contact.js"></script>
 	</body>	
 </html>

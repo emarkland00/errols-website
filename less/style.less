@@ -201,6 +201,7 @@ body {
         color: @current-background-color + 1.00 * @shade-brighter;
         border: solid 1px @current-background-color + @shade-brighter;
     }
+    
 }
 
 input#human-check {
@@ -249,6 +250,14 @@ input#human-check {
     margin-left: 20px;
 }
 
+
+.loading {
+    display: none;
+    background: @current-background-color,
+        url("/images/loading2.gif"),
+        50% 50%,
+        no-repeat;
+}
 #copyright {
 	.font(@default-font-family, 12px, normal, @current-font-color + 5.0 * @shade-darker);
 	text-align: center;

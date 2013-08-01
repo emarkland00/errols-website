@@ -1,4 +1,10 @@
-(function ($) {
+(function($) {
+	var success = function(data) {
+		
+	}, 
+	failure = function (data) {
+		
+	};
 	
 	var validateForm = function() {
 		var email = $('#email').val();
@@ -19,7 +25,7 @@
 		var json = {
 			email: email,
 			subject: subject,
-			detail: detail
+			details: details
 		};
 		
 		$.ajax({
@@ -32,12 +38,22 @@
 		.fail(failure);
 	};
 	
-	var success = function(data) {
-		
-	}, 
-	failure = function (data) {
-		
+	
+	
+	var start = function() {
+		$('#submit-button').val("Sending...");
+		$('#loading-gif').show();
+	}, stop = function() {
+		// $('#submit-button').val("Sent!");
+		// $('#loading-gif').hide();
 	};
 	
-	$('#submit-button').on('click', validateForm);
+	$(document).ajaxStart(start);
+	$(document).ajaxStop(stop);
+	
+	$('#submit-button').on({
+		click: validateForm,
+	});
+	
+	$('#loading-gif').hide();
 })(jQuery);
