@@ -470,12 +470,12 @@ input#captcha-code {
   padding: 5px;
 }
 #captcha-refresh:hover {
-  color: #555555;
-  cursor: pointer;
-  width: 201.6px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  border: 1px solid #f3f3c0;
-  background-color: #d7d7a4;
+  background-color: #848451;
+  color: #ffffff;
+  border: solid 1px #fffff7;
+}
+#captcha-refresh:active {
+  background-color: #5d5d2a;
+  color: #fffff7;
+  border: solid 1px #fffff7;
 }

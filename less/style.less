@@ -305,8 +305,13 @@ input#captcha-code {
 }
 
 #captcha-refresh:hover {
-    color: @link-color;
-    cursor: pointer;
-    .rounded-container(@captcha-input-width, 3px, 1px, @current-background-color + @shade-brighter * 0.5, @current-background-color + @shade-brighter * 0.25);
+    background-color: @current-background-color + 0.5 * @shade-darker;
+    color: @current-background-color + 3.00 * @shade-brighter;
+    border: solid 1px @current-background-color + @shade-brighter;
 }
 
+#captcha-refresh:active {
+    background-color: @current-background-color + 0.85 * @shade-darker;
+    color: @current-background-color + 1.00 * @shade-brighter;
+    border: solid 1px @current-background-color + @shade-brighter;
+}

@@ -38,8 +38,6 @@
 		.fail(failure);
 	};
 	
-	
-	
 	var start = function() {
 		$('#submit-button').val("Sending...");
 		$('#loading-gif').show();
