@@ -417,3 +417,65 @@ input#human-check {
 .clearer {
   clear: both;
 }
+#captcha,
+#captcha-refresh,
+#captcha-code {
+  float: left;
+}
+#captcha {
+  margin-right: 20px;
+}
+input#captcha-code {
+  width: 201.6px;
+  margin: 0px;
+  font-size: 14.399999999999999px;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+#captcha-refresh {
+  font-weight: bold;
+  width: 201.6px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #f3f3c0;
+  background-color: #bbbb88;
+  height: 25px;
+  text-decoration: none;
+  color: inherit;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  /* Firefox 4 */
+
+  -moz-transition-property: all;
+  -moz-transition-duration: 0.2s;
+  -moz-transition-timing-function: ease;
+  -moz-transition-delay: 0s;
+  /* Safari and Chrome */
+
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease;
+  -webkit-transition-delay: 0s;
+  /* Opera */
+
+  -o-transition-property: all;
+  -o-transition-duration: 0.2s;
+  -o-transition-timing-function: ease;
+  -o-transition-delay: 0s;
+  font-size: 19.200000000000003px;
+  text-align: center;
+  padding: 5px;
+}
+#captcha-refresh:hover {
+  color: #555555;
+  cursor: pointer;
+  width: 201.6px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #f3f3c0;
+  background-color: #d7d7a4;
+}

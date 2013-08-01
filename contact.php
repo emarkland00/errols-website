@@ -40,7 +40,10 @@
 					</div>
 					
 					<div class="form-item">
-						<input type="text" placeholder="Human Check: What's 2 + 2?" id="human-check" />
+						<img id="captcha" src="/ext/securimage/securimage_show.php" alt="CAPTCHA Image" />
+						<input type="text" id="captcha-code" maxlength="6" placeholder="What does it say?" />
+						<div id="captcha-refresh">I don't know...hit me!</div>
+						<div class="clearer"></div>
 					</div>
 					
 					<div class="form-item">

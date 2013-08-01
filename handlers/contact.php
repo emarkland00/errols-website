@@ -1,18 +1,33 @@
-<?php 
-	if (!isset($_POST['subject']) || !isset($_POST['details']) || !isset($_POST['email'])) {
-		location('HTTP 1.1 400 Missing details');
+<?php
+	session_start(); 
+	
+	function checkCaptcha() {
+		include_once $_SERVER['DOCUMENT_ROOT'] . '/securimage/securimage.php';
+		$securimage = new Securimage();
+		return $securimage->check($_POST['captcha-code']);
+	}
+	
+	function checkFormParams() {
+		return (!isset($_POST['subject']) || !isset($_POST['details']) || !isset($_POST['email']));		
+	}
+	
+	function processForm() {
+		$email = $_POST['email'];
+		$subject = $_POST['subject'];
+		$message = $_POST['details'];
+		mail("contact@errolmarkland.com", $email, $subject, $message);
+	}
+	
+	if (!checkCaptcha()) {
+		header("HTTP 1.1 400 Bad captcha solution.");
 		return;
 	}
 	
-	require_once '/ext/securimage/securimage.php';
-	$image = new Securimage();
-	if (!$image->check($_POST['code'])) {
-		location('HTTP 1.1 400 Failed captcha test');
+	if (!checkFormParams()) {
+		header('HTTP 1.1 400 Missing details');
 		return;
 	}
 	
-	$email = $_POST['email'];
-	$subject = $_POST['subject'];
-	$message = $_POST['details'];
-	mail("contact@errolmarkland.com", $email, $subject, $message);
+	return processForm();
 ?>
+

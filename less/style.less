@@ -272,3 +272,41 @@ input#human-check {
 .clearer {
     clear: both;
 }
+
+
+// captcha
+#captcha, #captcha-refresh, #captcha-code {
+    float: left;
+}
+
+#captcha {
+    margin-right: 20px;
+}
+
+@captcha-input-width: @form-item-width * 0.35;
+input#captcha-code {
+    width: @captcha-input-width;    
+    margin: 0px;
+    font-size: @default-font-size * 0.30;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+#captcha-refresh { 
+    font-weight: bold;
+    .rounded-container(@captcha-input-width, 3px, 1px, @current-background-color + @shade-brighter * 0.5, @current-background-color);
+    height: 25px;
+    text-decoration: none;
+    color: inherit;      
+    .transition(all, ease, 0.2s);
+    font-size: @default-font-size * 0.40;
+    text-align: center;
+    padding: 5px;
+}
+
+#captcha-refresh:hover {
+    color: @link-color;
+    cursor: pointer;
+    .rounded-container(@captcha-input-width, 3px, 1px, @current-background-color + @shade-brighter * 0.5, @current-background-color + @shade-brighter * 0.25);
+}
+

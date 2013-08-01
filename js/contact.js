@@ -56,4 +56,9 @@
 	});
 	
 	$('#loading-gif').hide();
+	
+	$('#captcha-refresh').on('click', function() {
+		$('#captcha').src = '/ext/securimage/securimage_show.php?' + Math.random(); 
+		return false;
+	});
 })(jQuery);
