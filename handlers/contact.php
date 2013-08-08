@@ -37,6 +37,10 @@
 		return true;		
 	}
 	
+	function emailIsValid($email) {
+	    return filter_var($email, FILTER_VALIDATE_EMAIL);
+	}
+	
 	function processForm() {
 	    global $emailSubject, $emailMessage, $emailAddress, $emailCC, $EMAIL_ADDRESS;
 	    $result = array();
@@ -58,15 +62,20 @@
 		echo json_encode($result);
 	}
 	
-	if (!checkCaptcha()) {
-		header("HTTP 1.1 400 Bad captcha solution.");
+	function error($code, $message) {
+	    header("HTTP 1.1 $code $message");
+	}
+	
+	
+	if (!checkFormParams()) {
+	    error(400, "Invalid details");
 		return;
 	}
 	
-	if (!checkFormParams()) {
-		header('HTTP 1.1 400 Invalid details');
-		return;
-	}
+	if (!emailIsValid($emailAddress)) {
+	    error(400, "Invalid email address");
+	    return;
+	} 
 	
 	return processForm();
 ?>
