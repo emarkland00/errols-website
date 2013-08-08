@@ -297,7 +297,7 @@ body {
   font-size: 24px;
 }
 #contact-form #submit-button {
-  width: 144px;
+  width: 201px;
   min-height: 20px;
   text-align: center;
   transition-property: all;
@@ -331,11 +331,27 @@ body {
   background-color: #848451;
   color: #ffffff;
   border: solid 1px #fffff7;
+  cursor: pointer;
 }
 #contact-form #submit-button:active {
   background-color: #5d5d2a;
   color: #fffff7;
   border: solid 1px #fffff7;
+}
+#contact-form #copy {
+  display: inline;
+  text-align: left;
+  padding: 1px;
+  font-size: 19px;
+  margin-left: 0px;
+  vertical-align: middle;
+  height: 20px;
+}
+#contact-form #cc {
+  width: 15px;
+  height: 20px;
+  margin-left: 0px;
+  vertical-align: middle;
 }
 input#human-check {
   padding: 5px;
@@ -473,6 +489,7 @@ input#captcha-code {
   background-color: #848451;
   color: #ffffff;
   border: solid 1px #fffff7;
+  cursor: pointer;
 }
 #captcha-refresh:active {
   background-color: #5d5d2a;

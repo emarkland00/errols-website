@@ -1,7 +1,8 @@
+<?php session_start(); ?>
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
-		<meta http-equiv="Content-Type" ="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>Errol G. Markland Jr.</title>
 		<meta name="description" content="The central hub for all things about Errol G. Markland Jr." />
 		<meta name="keywords" content="Errol, Markland, Jr, Software, Developer, Computer, Engineer, CCNY, City College, NSBE, ACM, New York" />
@@ -13,7 +14,7 @@
 				Errol G. Markland Jr.
 			</div>	
 			<div class="separator"> </div>
-			
+
 			<div id="navigation">
 				<ul>
 					<li class='nav-item'><a href="/">Home</a></li>
@@ -40,16 +41,16 @@
 					</div>
 					
 					<div class="form-item">
-						<img id="captcha" src="/ext/securimage/securimage_show.php" alt="CAPTCHA Image" />
-						<input type="text" id="captcha-code" maxlength="6" placeholder="What does it say?" />
-						<div id="captcha-refresh">I don't know...hit me!</div>
-						<div class="clearer"></div>
+					    <span id="copy">
+    					    <input type="checkbox" id="cc" checked /> Send a copy to my inbox
+    					</span>
 					</div>
 					
 					<div class="form-item">
 						<input type="submit" value="Send" id="submit-button" />
-						
+						<!--  
 						<span id="loading-gif"><img src="/images/loading2.gif" alt="" /></span>
+						-->
 					</div>
 				</div>
 				

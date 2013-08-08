@@ -381,7 +381,8 @@ class Securimage
      *
      * @var string
      */
-    public $database_user   = 'errolmar_captcha';
+    //public $database_user   = 'errolmar_captcha';
+    public $database_user   = 'root';
 
     /**
      * Database password for connection (mysql, postgres only)
@@ -389,7 +390,8 @@ class Securimage
      *
      * @var string
      */
-    public $database_pass   = 'm1ghtyB00kC0mputer$!';
+    // public $database_pass   = 'm1ghtyB00kC0mputer$!';
+    public $database_pass   = 'password';
 
     /**
      * Name of the database to select (mysql, postgres only)

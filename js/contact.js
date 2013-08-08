@@ -1,9 +1,11 @@
 (function($) {
+	var submitButton = '#submit-button';
+	
 	var success = function(data) {
-		
+		$(submitButton).val("Sent!")
 	}, 
 	failure = function (data) {
-		
+		$(submitButton).val("Problem\nsending email!")
 	};
 	
 	var validateForm = function() {
@@ -39,7 +41,7 @@
 	};
 	
 	var start = function() {
-		$('#submit-button').val("Sending...");
+		$(submitButton).val("Sending...");
 		$('#loading-gif').show();
 	}, stop = function() {
 		// $('#submit-button').val("Sent!");
@@ -49,7 +51,7 @@
 	$(document).ajaxStart(start);
 	$(document).ajaxStop(stop);
 	
-	$('#submit-button').on({
+	$(submitButton).on({
 		click: validateForm,
 	});
 	

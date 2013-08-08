@@ -180,7 +180,7 @@ body {
     }
     
     #submit-button {
-        width: floor(@form-item-width * 0.25);
+        width: floor(@form-item-width * 0.35);
         min-height: 20px;
         text-align: center;
         .transition(all, ease, 0.2s);
@@ -194,6 +194,7 @@ body {
         background-color: @current-background-color + 0.5 * @shade-darker;
         color: @current-background-color + 3.00 * @shade-brighter;
         border: solid 1px @current-background-color + @shade-brighter;
+        cursor: pointer;
     }
     
     #submit-button:active {
@@ -202,6 +203,21 @@ body {
         border: solid 1px @current-background-color + @shade-brighter;
     }
     
+    #copy {
+        display: inline;
+        text-align: left;
+        padding: 1px;
+        font-size: floor(@default-font-size * 0.4);
+        margin-left: 0px;
+        vertical-align: middle;
+        height: 20px;
+    }
+    #cc { 
+        width: 15px;
+        height: 20px;
+        margin-left: 0px;
+        vertical-align: middle;
+    }
 }
 
 input#human-check {
@@ -308,6 +324,7 @@ input#captcha-code {
     background-color: @current-background-color + 0.5 * @shade-darker;
     color: @current-background-color + 3.00 * @shade-brighter;
     border: solid 1px @current-background-color + @shade-brighter;
+    cursor: pointer;
 }
 
 #captcha-refresh:active {
