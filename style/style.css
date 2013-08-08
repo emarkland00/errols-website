@@ -496,3 +496,7 @@ input#captcha-code {
   color: #fffff7;
   border: solid 1px #fffff7;
 }
+#email-warning,
+#subject-warning {
+  color: red;
+}

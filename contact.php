@@ -30,10 +30,12 @@
 					
 					<div class="form-item">
 						<input type="text" placeholder="Your Email Address" id="email" />
+						<div id="email-warning">Email can't be empty.</div>
 					</div>
 					
 					<div class="form-item">
 						<input type="text" placeholder="Message Subject" id="subject" />
+						<div id="subject-warning">Subject can't be empty</div>
 					</div>
 					
 					<div class="form-item">

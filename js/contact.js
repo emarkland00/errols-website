@@ -1,5 +1,7 @@
 (function($) {
-	var submitButton = '#submit-button';
+	var submitButton = '#submit-button',
+		warningSpeed = 150,
+		warningStyle = 'swing';
 	
 	var success = function(data) {
 		$(submitButton).val("Sent!")
@@ -10,24 +12,29 @@
 	
 	var validateForm = function() {
 		var email = $('#email').val();
-		if (!email) {
-			// missing email
+		if (!email || !email.length) {
+			$("#email-warning").show(warningSpeed, warningStyle);
+			return;
+		} else {
+			$("#email-warning").hide(warningSpeed, warningStyle);
 		}
 		
-		var subject = $('#subject').val();
-		if (!subject) {
-			// missing subject
+		var subject = $('#subject').val();		
+		if (!subject || !subject.length) {
+			$("#subject-warning").show(warningSpeed, warningStyle);
+			return;
+		} else {
+			$("#subject-warning").hide(warningSpeed, warningStyle);
 		}
 		
-		var details = $('#details').val();
-		if (!details) {
-			// missing details
-		}
+		var details = $('#details').val();		
+		var cc = $('#cc').is(':checked') ? 1 : 0;
 		
 		var json = {
 			email: email,
 			subject: subject,
-			details: details
+			details: details,
+			cc: cc
 		};
 		
 		$.ajax({
@@ -40,25 +47,11 @@
 		.fail(failure);
 	};
 	
-	var start = function() {
+	$(document).ajaxStart(function() {
 		$(submitButton).val("Sending...");
-		$('#loading-gif').show();
-	}, stop = function() {
-		// $('#submit-button').val("Sent!");
-		// $('#loading-gif').hide();
-	};
-	
-	$(document).ajaxStart(start);
-	$(document).ajaxStop(stop);
-	
-	$(submitButton).on({
-		click: validateForm,
 	});
 	
-	$('#loading-gif').hide();
-	
-	$('#captcha-refresh').on('click', function() {
-		$('#captcha').src = '/ext/securimage/securimage_show.php?' + Math.random(); 
-		return false;
-	});
+	$(submitButton).on('click', validateForm);
+	$('#email-warning').hide();
+	$('#subject-warning').hide();
 })(jQuery);
