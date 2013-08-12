@@ -11,14 +11,6 @@
 	$emailMessage='';
 	$emailAddress='';
 	$emailCC='';
-	        
-	
-	function checkCaptcha() {
-	    return true;
-		include_once $_SERVER['DOCUMENT_ROOT'] . '/ext/securimage/securimage.php';
-		$securimage = new Securimage();
-		return $securimage->check($_POST['captcha-code']);
-	}
 	
 	function checkFormParams() {
 	    global $subject, $message, $email, $cc;
@@ -30,10 +22,19 @@
 	         return false;
 	    }
 
+	    // get and validate email
 	    $emailAddress = $_POST[$email];
+	    if (filter_var($emailAddress, FILTER_VALIDATE_EMAIL) === false) {
+	        if ($emailAddress !== "me@localhost") {
+	            return false;	        
+	        }
+	    }
+	    
+	    // get and validate optional cc
 	    $emailSubject = $_POST[$subject];
 	    $emailMessage = $_POST[$message];
-	    $emailCC = $_POST[$cc]; 
+	    $emailCC = $_POST[$cc];
+	    
 		return true;		
 	}
 	
@@ -66,16 +67,10 @@
 	    header("HTTP 1.1 $code $message");
 	}
 	
-	
 	if (!checkFormParams()) {
 	    error(400, "Invalid details");
 		return;
 	}
-	
-	if (!emailIsValid($emailAddress)) {
-	    error(400, "Invalid email address");
-	    return;
-	} 
 	
 	return processForm();
 ?>

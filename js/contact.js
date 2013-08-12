@@ -39,7 +39,7 @@
 		
 		$.ajax({
 			type: 'POST',
-			url: '/handlers/contact.php',
+			url: '/handlers/contact.php?XDEBUG_SESSION_START=ECLIPSE_DBGP',
 			data: json,
 			dataType: 'json'
 		})
