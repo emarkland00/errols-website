@@ -46,19 +46,26 @@
 	    global $emailSubject, $emailMessage, $emailAddress, $emailCC, $EMAIL_ADDRESS;
 	    $result = array();
 	    
-		if (mail($EMAIL_ADDRESS, $emailSubject, $emailMessage, "From: $emailAddress")) {
+	    $headers  = 'MIME-Version: 1.0' . "\r\n";
+	    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+	    	    
+		if (mail($EMAIL_ADDRESS, $emailSubject, $emailMessage, $headers . 'From: ' . $emailAddress . "\r\n")) {
 		    $result['result'] = 'Sent email to site owner';		    
 		} else {
 		    $result['result'] = 'Failed to send email to site owner';
 		}
 		
 		if ($emailCC === "1") {
-		    $ccSubject = "Copy of $emailSubject from errolmarkland.com";
-		    $ccMessage = $emailMessage . PHP_EOL;
-		    $ccMessage .= '\nThanks for contacting me.' . PHP_EOL;
-            $ccMessage .= '\n\n I\'ll get back to you as soon as possible.' . PHP_EOL;
+		    $ccSubject = "Copy of inquiry regarding '$emailSubject' from errolmarkland.com";
 		    
-            if (mail($emailAddress, $ccSubject, $ccMessage, "From: contact@errolmarkland.com")) {
+		    //TODO: Add a gray background for the reply text
+		    $ccMessage = $emailMessage . PHP_EOL;
+		    $ccMessage .= '<br /><br />Thanks for contacting me.' . PHP_EOL;
+            $ccMessage .= '<br />I\'ll get back to you as soon as possible!' . PHP_EOL;
+            $ccMessage .= "<br /><br />Best Regards,";
+            $ccMessage .= "<br />Errol Markland";
+		    
+            if (mail($emailAddress, $ccSubject, $ccMessage, $headers . 'From: contact@errolmarkland.com' . "\r\n")) {
                 $result['cc_result'] = "Successfully CC'd $emailAddress";
             } else {
                 $result['cc_result'] = "Failed to CC $emailAddress";
