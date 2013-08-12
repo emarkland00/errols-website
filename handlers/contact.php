@@ -53,11 +53,16 @@
 		}
 		
 		if ($emailCC === "1") {
-             if (mail($emailAddress, "CC: $emailSubject", $emailMessage, "From: contact@errolmarkland.com")) {
-                 $result['cc_result'] = "Successfully CC'd $emailAddress";
-             } else {
-                 $result['cc_result'] = "Failed to CC $emailAddress";
-             }
+		    $ccSubject = "Copy of $emailSubject from errolmarkland.com";
+		    $ccMessage = $emailMessage . PHP_EOL;
+		    $ccMessage .= '\nThanks for contacting me.' . PHP_EOL;
+            $ccMessage .= '\n\n I\'ll get back to you as soon as possible.' . PHP_EOL;
+		    
+            if (mail($emailAddress, $ccSubject, $ccMessage, "From: contact@errolmarkland.com")) {
+                $result['cc_result'] = "Successfully CC'd $emailAddress";
+            } else {
+                $result['cc_result'] = "Failed to CC $emailAddress";
+            }
 		}
 		
 		echo json_encode($result);
