@@ -2,5 +2,6 @@
 *.project
 *.metadata
 
-# directories
-
+#directories
+*.settings/
+*.buildpath

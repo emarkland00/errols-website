@@ -5,7 +5,7 @@
 		<title>Errol G. Markland Jr.</title>
 		<meta name='description' content="The central hub for all things about Errol G. Markland Jr." />
 		<meta name='keywords' content="Errol, Markland, Jr, Software, Developer, Computer, Engineer, CCNY, City College, NSBE, ACM, New York, NY" />
-		<link href='/style/style.css' type='text/css' rel='stylesheet' />
+		<link href='/style/style.css' type='text/css' rel='stylesheet' media="screen" />
 	</head>
 	
 	<body> 
@@ -52,13 +52,5 @@
 				</div>
 		 	-->
 		</div>
-		
-		<div id="footer">
-			<a href="/index.php">Home</a> | 
-			<a href="/resume.php">Resume</a> | 
-			<a href="/projects.php">Projects</a> | 
-			<a href="/contact.php">Contact</a>
-		</div>
-		<div id="copyright">&copy; Errol Markland, 2013.</div>
 	</body>	
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
-		<meta http-equiv="Content-Type" ="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>Errol G. Markland Jr.</title>
 		<meta name="description" content="The central hub for all things about Errol G. Markland Jr." />
 		<meta name="keywords" content="Errol, Markland, Jr, Software, Developer, Computer, Engineer, CCNY, City College, NSBE, ACM, New York" />
@@ -28,16 +28,6 @@
 				<p style="text-align: center;">I'll build a nice web version of my resume but for now,</p>
 				<p style="text-align: center;"><a href="errol_markland_resume.pdf">this will do</a>.</p>
 			</div>
-		</div>
-		
-		<div id="footer">
-			<a href="/index.php">Home</a> | 
-			<a href="/resume.php">Resume</a> | 
-			<a href="/projects.php">Projects</a> | 
-			<a href="/contact.php">Contact</a>
-		</div>
-		
-		<div id="copyright">&copy; Errol Markland, 2013.</div>
 		</div>
 	</body>	
 </html>
