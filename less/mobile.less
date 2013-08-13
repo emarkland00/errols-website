@@ -1,23 +1,24 @@
 @import url('constants.less');
 @import url('methods.less');
 
+// mobile specific constants
+@default-page-width: 300px;
+@default-page-height: auto;
+@default-min-height: 20 0px;
+@default-font-size: 48px;
+
 // derived values 
 @current-background-color: #bb8; //@default-background-color;
 @current-border-color: @current-background-color + 3.0 * @shade-darker; //@default-border-color
 @current-font-color: @current-background-color + 3.0* @shade-darker;
 @body-background-color: @current-background-color +  0.5 * @shade-brighter;
 
-// inline methods
-.separator {
-  .content-separator(0px, 5px);
-}
-
 html { 
     overflow-y: scroll;
 }
 
-@dark-stripe: darken(@body-background-color, 25%);
-@light-stripe: lighten(@body-background-color, 10%);
+@dark-stripe: darken(@body-background-color, 10%);
+@light-stripe: lighten(@body-background-color, 5%);
 body {
     //  background-color: @body-background-color;
     .no-space();
@@ -35,35 +36,43 @@ body {
     
     background-size: 20px 20px;
     */
-    .rounded-container(@default-page-width, 0px, 0px, @current-border-color, @current-background-color + @shade-darker);
+    .rounded-container(@default-page-width, 0px, 0px, @current-border-color, @body-background-color + @shade-darker);
     width:100%;
     height:100%;
 }
 
-
-
 #page {
-	width: @default-page-width;
-	height: @default-page-height;
-	.rounded-container(@default-page-width, 0px, 0px, @current-border-color, @body-background-color + @shade-darker);
-	padding: 25px;
-	margin: 25px auto;
-	.font;  
-	min-height: @default-min-height;
+    width: @default-page-width;
+    height: @default-page-height;
+    .rounded-container(@default-page-width, 0px, 0px, @current-border-color, @body-background-color + @shade-darker);
+    padding: 25px;
+    margin: 25px auto;
+    .font;  
+    min-height: @default-min-height;
 }
 
+@subtitle-col-size: floor(@default-page-width * 0.42);
 #header {
-    .rounded-container(@default-page-width * 0.75, 0px, 0px, @current-border-color, @body-background-color + @shade-darker);
-    .container-padding(5px, 1px);
+    .rounded-container(@subtitle-col-size, 0px, 0px, @current-border-color, @body-background-color + @shade-darker);
     font-family: @default-font-family;
-    font-size: @default-font-size * 2.50;
+    font-size: floor(@default-font-size * 0.85);
+    float: none;
+    display: inline-block;
+    vertical-align: top;
 }
 
+.separator {
+    float: none;
+    width: 0px;
+    height: 0px;
+    display: inline-block;
+}
 // navigation
 #navigation {
-    .rounded-container(@default-page-width, 0px, 0px, @current-border-color, @body-background-color + @shade-darker);
-    float: right;
-    margin-bottom: 5px;
+    .rounded-container(@subtitle-col-size, 0px, 0px, @current-border-color, @body-background-color + @shade-darker);
+    float: none;    
+    text-align: right;
+    display: inline-block;
 
     a:active, a:visited, a:hover, a:link {
         text-decoration: none;
@@ -81,11 +90,12 @@ body {
     li {
         display: inline;
         .container-padding(15px, 3px);
+        margin-right: -15px;
     }
 }
 
-@nav-item-font-size: floor(@default-font-size * 0.9);
-@nav-item-width: floor(@default-page-width * 0.15);
+@nav-item-font-size: floor(@default-font-size * 0.5);
+@nav-item-width: floor(@subtitle-col-size * 0.15);
 @nav-item-color: darken(@current-background-color, 40%);
 .nav-item {
     .rounded-container(@nav-item-width, 0px, 1px, @nav-item-color, @nav-item-color);
@@ -95,12 +105,7 @@ body {
 }
 
 @nav-item-color-hover: darken(@current-background-color, 35%);
-.nav-item:hover {
-    .rounded-container(@nav-item-width, 0px, 1px, @nav-item-color-hover, @nav-item-color-hover);
-    margin: auto 0px;
-    color: #fff;
-    cursor: default;
-}
+
 
 .nav-item:active {
     .rounded-container(@nav-item-width, 0px, 1px, @nav-item-color-hover * 0.75, @nav-item-color-hover * 0.75);
@@ -119,7 +124,8 @@ body {
     .rounded-container(@default-page-width, 0px, 0px, @current-border-color, @current-background-color);  
     margin-top: 10px;
     margin-bottom: 10px;
-    clear: both;
+    clear: none;
+    font-size: floor(@default-font-size * 0.75);
     a:active, a:visited, a:link {
         text-decoration: none;
         font-weight: bold;
@@ -132,6 +138,11 @@ body {
     p {
         padding: 10px;
         margin: 0px;
+    }
+    
+    p > img {
+        width: 80%;
+        height: 80%;
     }
 }
 
@@ -151,18 +162,18 @@ body {
     }
 }
 
-@form-item-width: floor(@default-page-width * 0.45);
+@form-item-width: floor(@default-page-width * 0.80);
 #contact-form {
     width: @form-item-width;
     height: auto;
     margin: 20px;    
     font-family: @default-font-family;
-    float: left;
+    float: none;
     .form-item {
         width: 80%;
         padding: 0px;
         margin: 5px;
-        font-size: floor(@default-font-size * 0.5);
+        font-size: floor(@default-font-size * 0.40);
     }
     
     p {
@@ -179,7 +190,7 @@ body {
         min-height: 25px;
         padding: 5px;
         font-weight: bold;
-        font-size: floor(@default-font-size * 0.5);
+        font-size: floor(@default-font-size * 0.35);
     }
     
     textarea {
@@ -188,11 +199,11 @@ body {
         .rounded-container(@form-item-width, 3px, 1px, @current-border-color + 3.00 * @shade-brighter, @current-background-color + 3.00 * @shade-brighter);
         padding: 5px;
         font-family: @default-font-family;
-        font-size: floor(@default-font-size * 0.5);
+        font-size: floor(@default-font-size * 0.35);
     }
     
     #submit-button {
-        .rounded-container(floor(@form-item-width * 0.35), 0px, 1px, @current-border-color + 3.00 * @shade-brighter, @current-background-color + 3.00 * @shade-brighter);
+        .rounded-container(floor(@form-item-width), 0px, 1px, @current-border-color + 3.00 * @shade-brighter, @current-background-color + 3.00 * @shade-brighter);
         min-height: 20px;
         text-align: center;
         .transition(all, ease, 0.2s);
@@ -239,9 +250,9 @@ input#human-check {
 
 #social-links {
     width: @form-item-width;
-    margin: 25px;
-    float: left;
-    
+    float: none;
+    display: table;
+    padding-bottom: 25px;
     p {
         margin: 5px;
         padding: 0px;
@@ -251,27 +262,20 @@ input#human-check {
     }   
 }
 
-@social-icon-size: 125px;
+@social-icon-size: floor(@form-item-width * 0.40);
 .social-icon {
     width: @social-icon-size;    
     height: @social-icon-size;
     .rounded-container(@social-icon-size, 0px, 1px, @current-background-color + 0.5, @current-background-color);
     .transition(all, ease, 0.2s);
-    margin: 1%;
-    float: left;
-    display: inline;
-    text-align: center;
-    line-height: 10px;
-}
-
-.social-icon:hover {
-    background-color: @current-background-color + 0.5 * @shade-darker;
-    
+    float: none;
+    display: inline-block;
+    line-height: 20px;
+    margin-bottom: 15px;    
 }
 
 .social-icon:active {
-    background-color: @current-background-color + @shade-darker;
-    
+    background-color: @current-background-color + @shade-darker;    
 }
 
 #social-icon-container {
@@ -287,20 +291,19 @@ input#human-check {
         no-repeat;
 }
 #copyright {
-	.font(@default-font-family, 12px, normal, @current-font-color + 5.0 * @shade-darker);
-	text-align: center;
-	margin-bottom: 15px;
+    .font(@default-font-family, 12px, normal, @current-font-color + 5.0 * @shade-darker);
+    text-align: center;
+    margin-bottom: 15px;
 }
 
 // Miscellaneous
 #hey-there {
-    font-size: @default-font-size * 2.5;    
+    font-size: @default-font-size;    
 }
 
 .clearer {
-    clear: both;
+    clear: none;
 }
-
 
 // captcha
 #captcha, #captcha-refresh, #captcha-code {
@@ -348,3 +351,4 @@ input#captcha-code {
 #email-warning, #subject-warning {
     color: red;
 }
+

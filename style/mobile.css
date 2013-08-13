@@ -16,20 +16,6 @@
   font-weight: normal;
   src: local('Century Gothic'), url(/fonts/century-gothic.woff) format('woff');
 }
-.separator {
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  min-height: 1px;
-  clear: both;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  min-height: 1px;
-  clear: both;
-}
 html {
   overflow-y: scroll;
 }
@@ -51,19 +37,19 @@ body {
     background-size: 20px 20px;
     */
 
-  width: 1280px;
+  width: 300px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
   border: 0px solid #000000;
-  background-color: #4c4c19;
+  background-color: #848451;
   width: 100%;
   height: 100%;
 }
 #page {
-  width: 1280px;
+  width: 300px;
   height: auto;
-  width: 1280px;
+  width: 300px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
@@ -75,33 +61,37 @@ body {
   font-size: 48px;
   font-weight: normal;
   color: #000000;
-  min-height: 40 0px;
+  min-height: 20 0px;
 }
 #header {
-  width: 960px;
+  width: 126px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
   border: 0px solid #000000;
   background-color: #848451;
-  padding-left: 5px;
-  padding-right: 5px;
-  padding-top: 1px;
-  padding-bottom: 1px;
-  margin-top: 1px;
-  margin-bottom: 1px;
   font-family: 'News Cycle', 'Opera Sans', 'Century Gothic', sans-serif;
-  font-size: 120px;
+  font-size: 40px;
+  float: none;
+  display: inline-block;
+  vertical-align: top;
+}
+.separator {
+  float: none;
+  width: 0px;
+  height: 0px;
+  display: inline-block;
 }
 #navigation {
-  width: 1280px;
+  width: 126px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
   border: 0px solid #000000;
   background-color: #848451;
-  float: right;
-  margin-bottom: 5px;
+  float: none;
+  text-align: right;
+  display: inline-block;
 }
 #navigation a:active,
 #navigation a:visited,
@@ -125,9 +115,10 @@ body {
   padding-bottom: 3px;
   margin-top: 3px;
   margin-bottom: 3px;
+  margin-right: -15px;
 }
 .nav-item {
-  width: 192px;
+  width: 18px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
@@ -157,23 +148,12 @@ body {
   -o-transition-timing-function: ease;
   -o-transition-delay: 0s;
   font-family: 'News Cycle', 'Opera Sans', 'Century Gothic', sans-serif;
-  font-size: 43px;
+  font-size: 24px;
   font-weight: normal;
   color: #000000;
 }
-.nav-item:hover {
-  width: 192px;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
-  border: 1px solid #5c5c35;
-  background-color: #5c5c35;
-  margin: auto 0px;
-  color: #fff;
-  cursor: default;
-}
 .nav-item:active {
-  width: 192px;
+  width: 18px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
@@ -184,7 +164,7 @@ body {
   cursor: default;
 }
 #active-nav-item {
-  width: 192px;
+  width: 18px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
@@ -215,7 +195,7 @@ body {
   color: #fff;
 }
 .content {
-  width: 1280px;
+  width: 300px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
@@ -223,7 +203,8 @@ body {
   background-color: #bbbb88;
   margin-top: 10px;
   margin-bottom: 10px;
-  clear: both;
+  clear: none;
+  font-size: 36px;
 }
 .content a:active,
 .content a:visited,
@@ -261,6 +242,10 @@ body {
   padding: 10px;
   margin: 0px;
 }
+.content p > img {
+  width: 80%;
+  height: 80%;
+}
 #latest h1 {
   font-weight: bold;
   font-size: 57.599999999999994px;
@@ -272,17 +257,17 @@ body {
   list-style-type: square;
 }
 #contact-form {
-  width: 576px;
+  width: 240px;
   height: auto;
   margin: 20px;
   font-family: 'News Cycle', 'Opera Sans', 'Century Gothic', sans-serif;
-  float: left;
+  float: none;
 }
 #contact-form .form-item {
   width: 80%;
   padding: 0px;
   margin: 5px;
-  font-size: 24px;
+  font-size: 19px;
 }
 #contact-form p {
   margin: 5px;
@@ -292,8 +277,8 @@ body {
   font-size: 38px;
 }
 #contact-form input {
-  width: 576px;
-  width: 576px;
+  width: 240px;
+  width: 240px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -302,12 +287,12 @@ body {
   min-height: 25px;
   padding: 5px;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 16px;
 }
 #contact-form textarea {
-  width: 576px;
+  width: 240px;
   min-height: 150px;
-  width: 576px;
+  width: 240px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -315,10 +300,10 @@ body {
   background-color: #ffffff;
   padding: 5px;
   font-family: 'News Cycle', 'Opera Sans', 'Century Gothic', sans-serif;
-  font-size: 24px;
+  font-size: 16px;
 }
 #contact-form #submit-button {
-  width: 201px;
+  width: 240px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
@@ -384,9 +369,10 @@ input#human-check {
   font-size: 12px;
 }
 #social-links {
-  width: 576px;
-  margin: 25px;
-  float: left;
+  width: 240px;
+  float: none;
+  display: table;
+  padding-bottom: 25px;
 }
 #social-links p {
   margin: 5px;
@@ -396,9 +382,9 @@ input#human-check {
   font-size: 38px;
 }
 .social-icon {
-  width: 125px;
-  height: 125px;
-  width: 125px;
+  width: 96px;
+  height: 96px;
+  width: 96px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
@@ -426,14 +412,10 @@ input#human-check {
   -o-transition-duration: 0.2s;
   -o-transition-timing-function: ease;
   -o-transition-delay: 0s;
-  margin: 1%;
-  float: left;
-  display: inline;
-  text-align: center;
-  line-height: 10px;
-}
-.social-icon:hover {
-  background-color: #848451;
+  float: none;
+  display: inline-block;
+  line-height: 20px;
+  margin-bottom: 15px;
 }
 .social-icon:active {
   background-color: #4c4c19;
@@ -454,10 +436,10 @@ input#human-check {
   margin-bottom: 15px;
 }
 #hey-there {
-  font-size: 120px;
+  font-size: 48px;
 }
 .clearer {
-  clear: both;
+  clear: none;
 }
 #captcha,
 #captcha-refresh,
@@ -468,7 +450,7 @@ input#human-check {
   margin-right: 20px;
 }
 input#captcha-code {
-  width: 201.6px;
+  width: 84px;
   margin: 0px;
   font-size: 14.399999999999999px;
   font-weight: normal;
@@ -476,7 +458,7 @@ input#captcha-code {
 }
 #captcha-refresh {
   font-weight: bold;
-  width: 201.6px;
+  width: 84px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
