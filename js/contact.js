@@ -1,13 +1,44 @@
 (function($) {
 	var submitButton = '#submit-button',
+		submitButtonText = '#submit-button-text',
 		warningSpeed = 150,
 		warningStyle = 'swing';
 	
 	var success = function(data) {
-		$(submitButton).val("Sent!")
+		fadeFn(submitButtonText, 'Inquiry sent. Thanks!');
+		$(submitButton).unbind('click');
 	}, 
 	failure = function (data) {
-		$(submitButton).val("Problem\nsending email!")
+		fadeFn(submitButtonText, 'Problem sending email...');
+	};
+	
+	var fadeFn = function(elem, afterText, callback) {
+		var fadeStyle = 'swing',
+			elemFadeIn = function(callback) {
+			$(elem).fadeIn({
+				easing: fadeStyle,
+				complete: callback || function() { }
+			});
+		};
+		
+		$(elem).fadeOut({
+			easing: fadeStyle,
+			complete: function() {
+				$(elem).html(afterText);
+				elemFadeIn(callback);
+			}
+		});
+	};
+	
+	var processForm = function(json) {
+		$.ajax({
+			type: 'POST',
+			url: '/handlers/contact.php',
+			data: json,
+			dataType: 'json'
+		})
+		.done(success)
+		.fail(failure);
 	};
 	
 	var validateForm = function() {
@@ -30,26 +61,13 @@
 		var details = $('#details').val();		
 		var cc = $('#cc').is(':checked') ? 1 : 0;
 		
-		var json = {
+		fadeFn(submitButtonText, 'Sending', processForm({
 			email: email,
 			subject: subject,
 			details: details,
 			cc: cc
-		};
-		
-		$.ajax({
-			type: 'POST',
-			url: '/handlers/contact.php',
-			data: json,
-			dataType: 'json'
-		})
-		.done(success)
-		.fail(failure);
+		}));
 	};
-	
-	$(document).ajaxStart(function() {
-		$(submitButton).val("Sending...");
-	});
 	
 	$(submitButton).on('click', validateForm);
 	$('#email-warning').hide();

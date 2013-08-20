@@ -5,7 +5,10 @@
 		<title>Errol G. Markland Jr.</title>
 		<meta name="description" content="The central hub for all things about Errol G. Markland Jr." />
 		<meta name="keywords" content="Errol, Markland, Jr, Software, Developer, Computer, Engineer, CCNY, City College, NSBE, ACM, New York" />
-		<link href="style/style.css" type="text/css" rel="stylesheet" />
+		
+		<link href='/style/style.css' type='text/css' rel='stylesheet' media="screen" />
+		<link href="/style/mobile.css" type="text/css" rel="stylesheet" media="screen and (max-width: 480px)" /> 
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	</head>
 	<body>
 		<div id="page">
@@ -25,7 +28,7 @@
 			<div class="separator"></div>
 			
 			<div class="content">
-				<p>Some project's that I've worked on can be found on <a href="https://github.com/emarkland" target="_blank">GitHub</a>.</p>
+				<p>Some projects that I've worked on can be found on <a href="https://github.com/emarkland" target="_blank">GitHub</a>.</p>
 				
 				<p>
 					I do have a few other projects via 
