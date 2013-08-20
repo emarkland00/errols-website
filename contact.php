@@ -20,9 +20,9 @@
 			<div id="navigation">
 				<ul>
 					<li class='nav-item'><a href="/">Home</a></li>
-					<li class='nav-item'><a href="/resume.php" title="About me!">Resume</a></li>
-					<li class='nav-item'><a href="/projects.php" title="Check out some of my projects!">Projects</a></li>
-					<li class='nav-item' id="active-nav-item" title="Currently on this page"><a href="/contact.php">Contact</a></li>
+					<li class='nav-item'><a href="/resume" title="About me!">Resume</a></li>
+					<li class='nav-item'><a href="/projects" title="Check out some of my projects!">Projects</a></li>
+					<li class='nav-item' id="active-nav-item" title="Currently on this page"><a href="/contact">Contact</a></li>
 				</ul>
 			</div>
 			<div class="separator"> </div>
