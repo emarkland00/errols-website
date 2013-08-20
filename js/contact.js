@@ -70,6 +70,7 @@
 		}));
 	};
 	
+	//TODO: Make this work with submit()
 	$(submitButton).submit(validateForm);
 	$('#email-warning').hide();
 	$('#subject-warning').hide();
