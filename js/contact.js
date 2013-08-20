@@ -33,7 +33,7 @@
 	var processForm = function(json) {
 		$.ajax({
 			type: 'POST',
-			url: '/handlers/contact.php',
+			url: '/handlers/contact',
 			data: json,
 			dataType: 'json'
 		})
@@ -41,7 +41,8 @@
 		.fail(failure);
 	};
 	
-	var validateForm = function() {
+	var validateForm = function(e) {
+		e.preventDefault();
 		var email = $('#email').val();
 		if (!email || !email.length) {
 			$("#email-warning").show(warningSpeed, warningStyle);
@@ -69,7 +70,7 @@
 		}));
 	};
 	
-	$(submitButton).on('click', validateForm);
+	$(submitButton).submit(validateForm);
 	$('#email-warning').hide();
 	$('#subject-warning').hide();
 })(jQuery);

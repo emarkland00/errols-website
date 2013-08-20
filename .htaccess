@@ -1,8 +1,8 @@
-RewriteEngine on
-
 <Files ~ "\.htaccess">
     Order allow,deny
     Deny from all
 </Files>
 
+RewriteEngine on
 RewriteRule ^([a-zA-Z]+)$ $1.php [NC]
+RewriteRule ^handlers/([a-zA-Z]+)$ $1.php [NC]

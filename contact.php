@@ -27,7 +27,7 @@
 			</div>
 			<div class="separator"> </div>
 			<div class="content">
-				<div id="contact-form">
+				<form id="contact-form">
 					<p>Got questions? Contact me!</p>
 					
 					<div class="form-item">
@@ -51,11 +51,9 @@
 					</div>
 					
 					<div class="form-item">
-					    <div id="submit-button">
-					        <div id="submit-button-text">Send</div>
-					    </div>
+					    <input type="submit" id="submit-button" value="Send">
 					</div>
-				</div>
+				</form>
 				
 				<div id="social-links">
 					<p>Find me on these networks</p>
