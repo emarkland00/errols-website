@@ -318,14 +318,14 @@ body {
   font-size: 24px;
 }
 #contact-form #submit-button {
-  width: 201px;
+  width: 288px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
   border: 1px solid #bbbb88;
   background-color: #ffffff;
-  min-height: 20px;
   text-align: center;
+  vertical-align: middle;
   transition-property: all;
   transition-duration: 0.2s;
   transition-timing-function: ease;
@@ -378,6 +378,14 @@ body {
   height: 20px;
   margin-left: 0px;
   vertical-align: middle;
+}
+#contact-form #submit-button-text {
+  height: 50px;
+  vertical-align: middle;
+}
+#email-warning,
+#subject-warning {
+  display: none;
 }
 input#human-check {
   padding: 5px;

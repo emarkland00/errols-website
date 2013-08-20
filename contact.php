@@ -51,10 +51,9 @@
 					</div>
 					
 					<div class="form-item">
-						<input type="submit" value="Send" id="submit-button" />
-						<!--  
-						<span id="loading-gif"><img src="/images/loading2.gif" alt="" /></span>
-						-->
+					    <div id="submit-button">
+					        <div id="submit-button-text">Send</div>
+					    </div>
 					</div>
 				</div>
 				
