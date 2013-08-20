@@ -1,2 +1,8 @@
 RewriteEngine on
+
+<Files ~ "\.htaccess">
+    Order allow,deny
+    Deny from all
+</Files>
+
 RewriteRule ^([a-zA-Z]+)$ $1.php [NC]
