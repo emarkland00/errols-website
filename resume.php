@@ -19,17 +19,17 @@
 			
 			<div id="navigation">
 				<ul>
-					<li class='nav-item'><a href="index.php">Home</a></li>
-					<li class='nav-item' id="active-nav-item" title="Currently on this page"><a href="/resume.php">Resume</a></li>
-					<li class='nav-item'><a href="projects.php" title="Check out some of my projects!">Projects</a></li>
-					<li class='nav-item'><a href="/contact.php" title="Let's get in touch">Contact</a></li>
+					<li class='nav-item'><a href="/">Home</a></li>
+					<li class='nav-item' id="active-nav-item" title="Currently on this page"><a href="/resume">Resume</a></li>
+					<li class='nav-item'><a href="projects" title="Check out some of my projects!">Projects</a></li>
+					<li class='nav-item'><a href="/contact" title="Let's get in touch">Contact</a></li>
 				</ul>
 			</div>
 			<div class="separator"></div>
 			
 			<div class="content">
 				<p style="text-align: center;">I'll build a nice web version of my resume but for now,</p>
-				<p style="text-align: center;"><a href="errol_markland_resume.pdf">this will do</a>.</p>
+				<p style="text-align: center;"><a href="/errol_markland_resume.pdf">this will do</a>.</p>
 			</div>
 		</div>
 	</body>	
