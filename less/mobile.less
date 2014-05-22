@@ -17,17 +17,18 @@ html {
     overflow-y: scroll;
 }
 
-@dark-stripe: darken(@body-background-color, 10%);
-@light-stripe: lighten(@body-background-color, 5%);
+
+@dark-stripe: darken(@body-background-color, 30%);
+@light-stripe: darken(@body-background-color, 18%);
 body {
     //  background-color: @body-background-color;
     .no-space();
-    /*background-image: -webkit-gradient(
+    background-image: -webkit-gradient(
         linear, 
         left bottom, 
         right top, 
         color-stop(0, @dark-stripe), 
-        color-stop(0.25, @dark-stripe), 
+        color-stop(0.25, @dark-stripe),
         color-stop(0.25, @light-stripe), 
         color-stop(0.5, @light-stripe), 
         color-stop(0.5, @dark-stripe), 
@@ -35,7 +36,7 @@ body {
         color-stop(0.75, @light-stripe));
     
     background-size: 20px 20px;
-    */
+
     .rounded-container(@default-page-width, 0px, 0px, @current-border-color, @body-background-color + @shade-darker);
     width:100%;
     height:100%;
