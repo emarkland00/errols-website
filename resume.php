@@ -29,7 +29,7 @@
 			
 			<div class="content">
 				<p style="text-align: center;">I'll build a nice web version of my resume but for now,</p>
-				<p style="text-align: center;"><a href="/errol_markland_resume.pdf">this will do</a>.</p>
+				<p style="text-align: center;"><a href="/Errol_Markland_Resume.pdf">this will do</a>.</p>
 			</div>
 		</div>
 	</body>	

@@ -22,21 +22,8 @@ html {
 body {
   margin: 0px;
   padding: 0px;
-  /*background-image: -webkit-gradient(
-        linear, 
-        left bottom, 
-        right top, 
-        color-stop(0, @dark-stripe), 
-        color-stop(0.25, @dark-stripe), 
-        color-stop(0.25, @light-stripe), 
-        color-stop(0.5, @light-stripe), 
-        color-stop(0.5, @dark-stripe), 
-        color-stop(0.75, @dark-stripe), 
-        color-stop(0.75, @light-stripe));
-    
-    background-size: 20px 20px;
-    */
-
+  background-image: -webkit-gradient(linear, left bottom, right top, color-stop(0, #d9d940), color-stop(0.25, #d9d940), color-stop(0.25, #e3e373), color-stop(0.5, #e3e373), color-stop(0.5, #d9d940), color-stop(0.75, #d9d940), color-stop(0.75, #e3e373));
+  background-size: 20px 20px;
   width: 300px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
@@ -47,7 +34,6 @@ body {
   height: 100%;
 }
 #page {
-  width: 300px;
   height: auto;
   width: 300px;
   -webkit-border-radius: 0px;
@@ -130,19 +116,16 @@ body {
   transition-timing-function: ease;
   transition-delay: 0s;
   /* Firefox 4 */
-
   -moz-transition-property: all;
   -moz-transition-duration: 0.2s;
   -moz-transition-timing-function: ease;
   -moz-transition-delay: 0s;
   /* Safari and Chrome */
-
   -webkit-transition-property: all;
   -webkit-transition-duration: 0.2s;
   -webkit-transition-timing-function: ease;
   -webkit-transition-delay: 0s;
   /* Opera */
-
   -o-transition-property: all;
   -o-transition-duration: 0.2s;
   -o-transition-timing-function: ease;
@@ -175,19 +158,16 @@ body {
   transition-timing-function: none;
   transition-delay: 0s;
   /* Firefox 4 */
-
   -moz-transition-property: none;
   -moz-transition-duration: 0s;
   -moz-transition-timing-function: none;
   -moz-transition-delay: 0s;
   /* Safari and Chrome */
-
   -webkit-transition-property: none;
   -webkit-transition-duration: 0s;
   -webkit-transition-timing-function: none;
   -webkit-transition-delay: 0s;
   /* Opera */
-
   -o-transition-property: none;
   -o-transition-duration: 0s;
   -o-transition-timing-function: none;
@@ -217,19 +197,16 @@ body {
   transition-timing-function: ease;
   transition-delay: 0s;
   /* Firefox 4 */
-
   -moz-transition-property: all;
   -moz-transition-duration: 0.2s;
   -moz-transition-timing-function: ease;
   -moz-transition-delay: 0s;
   /* Safari and Chrome */
-
   -webkit-transition-property: all;
   -webkit-transition-duration: 0.2s;
   -webkit-transition-timing-function: ease;
   -webkit-transition-delay: 0s;
   /* Opera */
-
   -o-transition-property: all;
   -o-transition-duration: 0.2s;
   -o-transition-timing-function: ease;
@@ -278,7 +255,6 @@ body {
 }
 #contact-form input {
   width: 240px;
-  width: 240px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -290,7 +266,6 @@ body {
   font-size: 16px;
 }
 #contact-form textarea {
-  width: 240px;
   min-height: 150px;
   width: 240px;
   -webkit-border-radius: 3px;
@@ -316,19 +291,16 @@ body {
   transition-timing-function: ease;
   transition-delay: 0s;
   /* Firefox 4 */
-
   -moz-transition-property: all;
   -moz-transition-duration: 0.2s;
   -moz-transition-timing-function: ease;
   -moz-transition-delay: 0s;
   /* Safari and Chrome */
-
   -webkit-transition-property: all;
   -webkit-transition-duration: 0.2s;
   -webkit-transition-timing-function: ease;
   -webkit-transition-delay: 0s;
   /* Opera */
-
   -o-transition-property: all;
   -o-transition-duration: 0.2s;
   -o-transition-timing-function: ease;
@@ -386,7 +358,6 @@ input#human-check {
   font-size: 38px;
 }
 .social-icon {
-  width: 96px;
   height: 96px;
   width: 96px;
   -webkit-border-radius: 0px;
@@ -399,19 +370,16 @@ input#human-check {
   transition-timing-function: ease;
   transition-delay: 0s;
   /* Firefox 4 */
-
   -moz-transition-property: all;
   -moz-transition-duration: 0.2s;
   -moz-transition-timing-function: ease;
   -moz-transition-delay: 0s;
   /* Safari and Chrome */
-
   -webkit-transition-property: all;
   -webkit-transition-duration: 0.2s;
   -webkit-transition-timing-function: ease;
   -webkit-transition-delay: 0s;
   /* Opera */
-
   -o-transition-property: all;
   -o-transition-duration: 0.2s;
   -o-transition-timing-function: ease;
@@ -476,19 +444,16 @@ input#captcha-code {
   transition-timing-function: ease;
   transition-delay: 0s;
   /* Firefox 4 */
-
   -moz-transition-property: all;
   -moz-transition-duration: 0.2s;
   -moz-transition-timing-function: ease;
   -moz-transition-delay: 0s;
   /* Safari and Chrome */
-
   -webkit-transition-property: all;
   -webkit-transition-duration: 0.2s;
   -webkit-transition-timing-function: ease;
   -webkit-transition-delay: 0s;
   /* Opera */
-
   -o-transition-property: all;
   -o-transition-duration: 0.2s;
   -o-transition-timing-function: ease;
