@@ -4,5 +4,6 @@
 </Files>
 
 RewriteEngine on
+RewriteRule ^resume$ Errol_Markland_Resume.pdf [NC] # /resume --> straight to pdf
 RewriteRule ^([a-zA-Z]+)$ $1.php [NC]
 RewriteRule ^handlers/([a-zA-Z]+)$ $1.php [NC]
