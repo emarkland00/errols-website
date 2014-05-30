@@ -1,7 +1,9 @@
-<Files ~ "\.htaccess">
+<Files ".htaccess">
     Order allow,deny
     Deny from all
 </Files>
+
+Options -Indexes
 
 RewriteEngine on
 RewriteRule ^resume$ Errol_Markland_Resume.pdf [NC] # /resume --> straight to pdf

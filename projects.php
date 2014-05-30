@@ -20,9 +20,9 @@
 			<div id="navigation">
 				<ul>
 					<li class='nav-item'><a href="/">Home</a></li>
-					<li class='nav-item'><a href="/resume" title="Check out my resume">Resume</a></li>
-					<li class='nav-item' id="active-nav-item" title="Currently on this page"><a href="/projects">Projects</a></li>
-					<li class='nav-item'><a href="/contact" title="Let's get in touch">Contact</a></li>
+					<li class='nav-item'><a href="/resume" target="_blank">Resume</a></li>
+					<li class='nav-item' id="active-nav-item"><a href="/projects">Projects</a></li>
+					<li class='nav-item'><a href="/contact">Contact</a></li>
 				</ul>
 			</div>
 			<div class="separator"></div>
