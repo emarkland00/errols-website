@@ -4,14 +4,6 @@
 		warningSpeed = 150,
 		warningStyle = 'swing';
 	
-	var success = function(data) {
-		fadeFn(submitButtonText, 'Inquiry sent. Thanks!');
-		$(submitButton).unbind('click');
-	}, 
-	failure = function (data) {
-		fadeFn(submitButtonText, 'Problem sending email...');
-	};
-	
 	var fadeFn = function(elem, afterText, callback) {
 		var fadeStyle = 'swing',
 			elemFadeIn = function(callback) {
@@ -37,26 +29,38 @@
 			data: json,
 			dataType: 'json'
 		})
-		.done(success)
-		.fail(failure);
+		.done(function(data) {
+            fadeFn(submitButtonText, 'Inquiry sent. Thanks!');
+            $(submitButton).unbind('click');
+        })
+		.fail(function (data) {
+            fadeFn(submitButtonText, 'Problem sending email...');
+        });
 	};
 	
 	var validateForm = function(e) {
+        var show = function(elem) {
+            $(elem).show(warningSpeed, warningStyle);
+        },
+        hide = function(elem) {
+            $(elem).hide(warningSpeed, warningStyle);
+        };
+
 		e.preventDefault();
 		var email = $('#email').val();
 		if (!email || !email.length) {
-			$("#email-warning").show(warningSpeed, warningStyle);
+            show('#email-warning');
 			return;
 		} else {
-			$("#email-warning").hide(warningSpeed, warningStyle);
+            hide('#email-warning');
 		}
 		
 		var subject = $('#subject').val();		
 		if (!subject || !subject.length) {
-			$("#subject-warning").show(warningSpeed, warningStyle);
+            show('#subject-warning');
 			return;
 		} else {
-			$("#subject-warning").hide(warningSpeed, warningStyle);
+			hide('#subject-warning');
 		}
 		
 		var details = $('#details').val();		
