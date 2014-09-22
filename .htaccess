@@ -1,3 +1,4 @@
+#No directory listing
 <Files ".htaccess">
     Order allow,deny
     Deny from all
@@ -7,5 +8,7 @@ Options -Indexes
 
 RewriteEngine on
 RewriteRule ^resume$ Errol_Markland_Resume.pdf [NC] # /resume --> straight to pdf
+
+# remove file ending (/index.php -> /index)
 RewriteRule ^([a-zA-Z]+)$ $1.php [NC]
 RewriteRule ^handlers/([a-zA-Z]+)$ $1.php [NC]
