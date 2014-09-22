@@ -1,3 +1,16 @@
+<?php
+    session_start();
+
+    // credit to http://stackoverflow.com/a/6287931
+    if (!isset($_SESSION['token'])) {
+        $token = md5(uniqid(rand(), TRUE));
+        $_SESSION['token'] = $token;
+        $_SESSION['token_time'] = time();
+    } else {
+        $token = $_SESSION['token'];
+    }
+?>
+
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
@@ -39,6 +52,8 @@
                     <div id="latest-entry-content"></div>
                 </div>
 			</div>
+
+            <input type="hidden" id="tkn" value="<?php $_SESSION['token']; ?>" />
 		</div>
 
         <script type="text/javascript" src="/js/libs/jquery-2.0.3.min.js"></script>

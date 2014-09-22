@@ -1,6 +1,5 @@
 (function($, undefined) {
-    var handlerUrl = "/handlers/latest.php",
-        contentContainer = '#latest-entry-container'
+    var contentContainer = '#latest-entry-container'
         contentHeader = '#latest-entry-header'
         contentContainerItem = '.latest-entry-container-item';
 
@@ -23,7 +22,7 @@
 
     };
 
-    var tkn = $('#csrf-token').val();
+    var tkn = $('#tkn').val();
     if (tkn) {
         fetchContent({
             token: tkn
