@@ -33,26 +33,15 @@
 				<p>
 					My name is <strong>Errol</strong>. I'm a developer who likes to explore the various venues of technology.
 				</p>				
-				
-				<!-- 
-				Born and raised in New York City. Earned my Degree in Computer 
-					Engineering from the <a href="http://www.ccny.cuny.edu">The City College of New York</a>.
-				 -->
-				 
-				 <p style="text-align: center;">
-					 This site is functional but is currently under <strong>heavy</strong> construction. (But not for long!)<br />
-					 <img src="/images/construction_guy.png" alt=""><br />
-					 Please watch your step as you navigate through the site.
-				 </p>
+
+                <div id="latest-articles">
+                    <div id="latest-entry-header">Here are a few things I've been checking out lately.</div>
+                    <div id="latest-entry-content"></div>
+                </div>
 			</div>
-			
-			<!-- 
-				<div class="content">
-					<div id="latest">
-						<h1>Here are a few articles I've been checking out...</h1>
-					</div>
-				</div>
-		 	-->
 		</div>
+
+        <script type="text/javascript" src="/js/libs/jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="/js/latest-entry.js"></script>
 	</body>	
 </html>
