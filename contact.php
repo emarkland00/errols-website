@@ -87,8 +87,8 @@
 				 <div class="clearer"></div>
 			</div>
 		</div>
-		
-		<script type="text/javascript" src="/js/libs/jquery-2.0.3.min.js"></script>
+
+        <script type="text/javascript" src="/js/libs/jquery-2.1.1.min.js"></script>
 		<script type="text/javascript" src="/js/contact.js"></script>
 	</body>	
 </html>

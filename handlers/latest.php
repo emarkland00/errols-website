@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+require_once("article.php");
 
 function is_valid_request() {
     // token existence
@@ -25,7 +25,16 @@ function clear_session() {
 }
 
 function get_results() {
-    return json_encode('{}');
+    $arr = array();
+    foreach (Article::getLastTenArticles() as $article) {
+        $arr[] = array(
+            'title' => $article->getName(),
+            'url' => $article->getUrl(),
+            'source' => $article->getSource(),
+            'timestamp' => $article->getTimestamp()
+        );
+    }
+    return json_encode($arr);
 }
 
 if (!is_valid_request()) {
