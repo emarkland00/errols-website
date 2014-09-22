@@ -1,4 +1,6 @@
 (function($) {
+    'use strict'
+
 	var submitButton = '#submit-button',
 		submitButtonText = '#submit-button-text',
 		warningSpeed = 150,

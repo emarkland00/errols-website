@@ -1,5 +1,7 @@
 <?php
+require_once("config.php");
 require_once('MySQLException.php');
+
 
 /**
  * Manage a MySQL connection
@@ -22,42 +24,46 @@ abstract class MySQLAbstract
      * @param String $user The db user name
      * @param String $pass The db user name's password
      */
-    public function __construct($host=null, $dbName=null, $user=null, $pass=null, $options=null)
+    public function __construct($host=null, $dbName=null, $user=null, $pass=null)
     {
-        if (($host == null) && ($dbName == null) && ($user == null) && ($pass == null)) {
-            $mysql = $GLOBALS["config"]["mysql"];
-            $host = $mysql["host"];
-            $dbName = $mysql["dbname"];
-            $user = $mysql["user"];
-            $pass = $mysql["pass"];
-        }
-
         $this->_Host = $host;
         $this->_DBName = $dbName;
         $this->_User = $user;
         $this->_Pass = $pass;
+        $this->getConnection();
+    }
 
+    private function getConnection() {
         if (!$this->_Connection instanceof PDO) {
+            if (($this->_Host == null) && ($this->_DBName == null) && ($this->_User == null) && ($this->_Pass == null)) {
+                $mysql = Config::getMySQL();
+                $this->_Host = $mysql["host"];
+                $this->_DBName = $mysql["dbname"];
+                $this->_User = $mysql["user"];
+                $this->_Pass = $mysql["pass"];
+            }
+
             try {
-                $this->_Connection = new PDO("mysql:host=$this->_Host;dbname=$this->_DBName", $this->_User, $this->_Pass);
+                $this->_Connection = new PDO("mysql:host=$this->_Host;dbname=$this->_DBName;charset=utf8", $this->_User, $this->_Pass);
                 $this->_Connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             } catch (PDOException $e) {
                 //TODO: Create that log class and log this exception
                 throw new MySQLConnectionException($e);
             }
         }
+        return $this->_Connection;
     }
 
     /**
      * Process query
-     * @param $query - The query to be processed
-     * @param $queryParams - Extra query string parameters (Format: [name1 => [value1, pdo object type], name2 => [value2, pdo object type], ...])
-     * @throws MySQLQueryException
-     * @return Boolean True, if the query was successfully processed. False, if otherwise.
+     * @param $query string - The query to be processed
+     * @param $queryParams array - Extra query string parameters (Format: [name1 => [value1, pdo object type], name2 => [value2, pdo object type], ...])
+     * @throws MySQLQueryException - Thrown if problem with query string or query params
+     * @return Boolean - True, if the query was successfully processed. False, if otherwise.
      */
     protected function process($query, $queryParams) {
         try {
-            $preparedQuery = $this->_Connection->prepare($query);
+            $preparedQuery = $this->getConnection()->prepare($query);
             if ($queryParams !== null && gettype($queryParams) === 'array') {
                 foreach ($queryParams as $name => $value) {
                     if (count($value) === 2) {
@@ -76,9 +82,9 @@ abstract class MySQLAbstract
 
     /**
      * The base create mod
-     * @param String $query
-     * @param Array $queryParams
-     * @return string|number
+     * @param String $query - The INSERT query used to generate the entry
+     * @param Array $queryParams - The query params used to generate the entry
+     * @return int Returns the insert id of the created entry, or -1 if failed to create item
      */
     protected function createBase($query, $queryParams) {
         if ($this->process($query, $queryParams)) {
@@ -89,9 +95,9 @@ abstract class MySQLAbstract
 
     /**
      * Get a result from mysql query
-     * @param String $query The query to be processed
-     * @param Array $queryParams Extra query string parameters (Format: [name1 => [value1, pdo object type], name2 => [value2, pdo object type], ...])
-     * @return The result entry fetched. Null, if otherwise
+     * @param $query string - The query to be processed
+     * @param $queryParams array - Extra query string parameters (Format: [name1 => [value1, pdo object type], name2 => [value2, pdo object type], ...])
+     * @return $object - The result entry fetched. Null, if otherwise
      */
     protected function getOne($query, $queryParams = null) {
         $result = $this->process($query, $queryParams);
@@ -103,9 +109,9 @@ abstract class MySQLAbstract
 
     /**
      * Get all results from mysql query
-     * @param String $query The query to be processed
-     * @param Array $queryParams Extra query string parameters (Format: [name1 => [value1, pdo object type], name2 => [value2, pdo object type], ...])
-     * @return An array of results that meets query criteria. Null, if otherwise
+     * @param $query String - The query to be processed
+     * @param $queryParams Array - Extra query string parameters (Format: [name1 => [value1, pdo object type], name2 => [value2, pdo object type], ...])
+     * @return $object[] An array of results that meets query criteria. Null, if otherwise
      */
     protected function getAll($query, $queryParams = null) {
         $result = $this->process($query, $queryParams);
@@ -115,13 +121,17 @@ abstract class MySQLAbstract
         return null;
     }
 
+    /**
+     * Get the name of the database
+     * @return String The database name
+     */
     protected function getDBName() {
         return $this->_DBName;
     }
 
     /**
      * Detect whether if a given model has changed
-     * @return True, if the model has changed. False, if otherwise.
+     * @return bool True, if the model has changed. False, if otherwise.
      */
     abstract protected function modelChanged();
 }

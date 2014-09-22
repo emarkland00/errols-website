@@ -1,6 +1,5 @@
 <?php
-session_start();
-require_once("article.php");
+require_once("Article.php");
 
 function is_valid_request() {
     // token existence
@@ -13,8 +12,8 @@ function is_valid_request() {
     if (time() - $time > 300) return false;
 
     // fetched token
-    if (!isset($_GET['tkn'])) return false;
-    $currentTkn = $_GET('tkn');
+    if (!isset($_GET['token'])) return false;
+    $currentTkn = $_GET['token'];
 
     return $currentTkn === $tkn;
 }
@@ -37,11 +36,13 @@ function get_results() {
     return json_encode($arr);
 }
 
-if (!is_valid_request()) {
-    clear_session();
+if (is_valid_request()) {
+    header('Content-type: application/json');
+    echo get_results();
+} else {
     header('HTTP/1.1 400 Bad Request', true, 400);
-    return;
 }
 
-echo get_results();
+clear_session();
+
 ?>
