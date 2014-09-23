@@ -23,9 +23,9 @@ function clear_session() {
     unset($_SESSION['token_time']);
 }
 
-function get_results() {
+function get_results($count) {
     $arr = array();
-    foreach (Article::getLastTenArticles() as $article) {
+    foreach (Article::getLatestArticles($count) as $article) {
         $arr[] = array(
             'title' => $article->getName(),
             'url' => $article->getUrl(),
@@ -38,7 +38,7 @@ function get_results() {
 
 if (is_valid_request()) {
     header('Content-type: application/json');
-    echo get_results();
+    echo get_results($_GET['count']);
 } else {
     header('HTTP/1.1 400 Bad Request', true, 400);
 }

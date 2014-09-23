@@ -3,9 +3,10 @@
 
     var contentContainer = $('#latest-entry-content'),
         contentHeader = $('#latest-entry-header'),
-        contentContainerItem = 'latest-entry-container-item';
+        contentContainerItem = 'latest-entry-content-item';
 
     function fetchContent(json) {
+        contentContainer.addClass('loader');
         $.ajax({
             type: 'GET',
             url: '/handlers/latest.php',
@@ -13,13 +14,11 @@
             dataType: 'json'
         })
         .done(function(data) {
-            console.log('SUCCESS');
+            contentContainer.removeClass('loader');
             appendContentToPage(data);
         })
         .fail(function(data) {
-            console.log('FAIL')
-        }).always(function(data) {
-            console.log(data);
+
         });
     }
 
@@ -31,12 +30,14 @@
     };
 
     var template =
-        "<div class='" + contentContainerItem + "'>" +
-            "<div>Title: {{title}}</div>" +
-            "<div>URL: {{url}}</div>" +
-            "<div>Source: {{source}}</div>" +
-            "<div>Timestamp: {{timestamp}}</div>" +
-        "</div>",
+        "<a href='{{url}}' target='_blank'>" +
+            "<div class='" + contentContainerItem + "'>" +
+                "<div>Title: {{title}}</div>" +
+                "<div>URL: {{url}}</div>" +
+                "<div>Source: {{source}}</div>" +
+                "<div>Timestamp: {{timestamp}}</div>" +
+            "</div>" +
+        "</a>",
     _compiledTemplate = null,
     createEntry = function(json) {
         if (_compiledTemplate === null) {
@@ -48,7 +49,8 @@
     var tkn = $('#tkn').val();
     if (tkn) {
         fetchContent({
-            token: tkn
+            token: tkn,
+            count: 3
         });
     }
 }(jQuery));

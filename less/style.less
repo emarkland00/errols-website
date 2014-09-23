@@ -355,3 +355,52 @@ input#captcha-code {
 #email-warning, #subject-warning {
     color: red;
 }
+
+.loader {
+  background-image: url('/images/loading3.gif');
+  min-height: 60px;
+  width: inherit;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#latest-articles {
+  padding: 5px;
+}
+
+#latest-entry-header {
+
+}
+
+#latest-entry-content {
+
+}
+
+.latest-entry-content-item {
+  .rounded-container(floor(@default-page-width * 0.8), 3px, 5px, darken(@current-background-color, 50%), lighten(@current-background-color, 20%));
+  font-size: floor(@default-font-size * 0.30);
+  margin: 10px;
+  padding: 5px;
+  .transition(all, ease, 0.2s);
+  cursor: pointer;
+
+  .latest-entry-content-item-source {
+
+  }
+
+  .latest-entry-content-item-timestamp {
+
+  }
+
+  .latest-entry-content-item-url {
+
+  }
+
+  .latest-entry-content-item-name {
+
+  }
+}
+
+.latest-entry-content-item:hover {
+  .rounded-container(floor(@default-page-width * 0.8), 3px, 5px, darken(@current-background-color, 50%), lighten(@current-background-color, 10%));
+}
