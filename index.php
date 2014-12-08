@@ -19,6 +19,7 @@
 			<div id="navigation">
 				<ul>
 					<li class='nav-item' id="active-nav-item"><a href="/">Home</a></li>
+                    <li class='nav-item'><a href="/about">Who is this guy?</a></li>
 					<li class='nav-item'><a href="/resume" target="_blank">Resume</a></li>
 					<li class='nav-item'><a href="/projects">Projects</a></li>
 					<li class='nav-item'><a href="/contact">Contact</a></li>
