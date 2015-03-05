@@ -351,3 +351,28 @@ input#human-check {
 .latest-entry-content-item:hover {
   background-color: lighten(@current-background-color, 50%);
 }
+
+#email-warning, #subject-warning {
+    color: red;
+}
+
+@about-content-font-size: @default-font-size * 0.75;
+
+#about-container {
+  margin: 10px;
+  padding: 10px;
+}
+
+.about-content {
+  @font-size: @about-content-font-size;
+  margin: 10px;
+}
+
+.about-content-header {
+  @font-size: @about-content-font-size;
+}
+
+.about-content-detail {
+  list-style-type: square;
+  font-size: @about-content-font-size;
+}

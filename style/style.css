@@ -483,3 +483,18 @@ input#human-check {
 .latest-entry-content-item:hover {
   background-color: #ffffff;
 }
+#email-warning,
+#subject-warning {
+  color: red;
+}
+#about-container {
+  margin: 10px;
+  padding: 10px;
+}
+.about-content {
+  margin: 10px;
+}
+.about-content-detail {
+  list-style-type: square;
+  font-size: 36px;
+}

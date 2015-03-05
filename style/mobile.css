@@ -128,7 +128,7 @@ body {
   -o-transition-timing-function: ease;
   -o-transition-delay: 0s;
   font-family: 'News Cycle', 'Opera Sans', 'Century Gothic', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: normal;
   color: #000000;
 }
@@ -467,4 +467,15 @@ input#human-check {
 }
 .latest-entry-content-item:hover {
   background-color: #ffffff;
+}
+#about-container {
+  margin: 10px;
+  padding: 10px;
+}
+.about-content {
+  margin: 10px;
+}
+.about-content-detail {
+  list-style-type: square;
+  font-size: 18px;
 }
