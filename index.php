@@ -1,3 +1,16 @@
+<?php
+    session_start();
+
+    // credit to http://stackoverflow.com/a/6287931
+    if (!isset($_SESSION['token'])) {
+        $token = md5(uniqid(rand(), TRUE));
+        $_SESSION['token'] = $token;
+        $_SESSION['token_time'] = time();
+    } else {
+        $token = $_SESSION['token'];
+    }
+?>
+
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
@@ -6,7 +19,8 @@
 		<meta name='description' content="The central hub for all things about Errol G. Markland Jr." />
 		<meta name='keywords' content="Errol, Markland, Jr, Software, Developer, Computer, Engineer, CCNY, City College, NSBE, ACM, New York, NY" />
 		<link href='/style/style.css' type='text/css' rel='stylesheet' media="screen" />
-		<link href="/style/mobile.css" type="text/css" rel="stylesheet" media="screen and (max-width: 480px)" /> 
+		<link href="/style/mobile.css" type="text/css" rel="stylesheet" media="screen and (max-width: 480px)" />
+        <link type="text/plain" rel="author" href="humans.txt" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	</head>
 	
@@ -19,7 +33,7 @@
 			<div id="navigation">
 				<ul>
 					<li class='nav-item' id="active-nav-item"><a href="/">Home</a></li>
-                    <li class='nav-item'><a href="/about">Who is this guy?</a></li>
+                    <li class='nav-item'><a href="/about">About</a></li>
 					<li class='nav-item'><a href="/resume" target="_blank">Resume</a></li>
 					<li class='nav-item'><a href="/projects">Projects</a></li>
 					<li class='nav-item'><a href="/contact">Contact</a></li>
@@ -34,26 +48,19 @@
 				<p>
 					My name is <strong>Errol</strong>. I'm a developer who likes to explore the various venues of technology.
 				</p>				
-				
-				<!-- 
-				Born and raised in New York City. Earned my Degree in Computer 
-					Engineering from the <a href="http://www.ccny.cuny.edu">The City College of New York</a>.
-				 -->
-				 
-				 <p style="text-align: center;">
-					 This site is functional but is currently under <strong>heavy</strong> construction. (But not for long!)<br />
-					 <img src="/images/construction_guy.png" alt=""><br />
-					 Please watch your step as you navigate through the site.
-				 </p>
+
+                <div id="latest-articles">
+                    <div id="latest-entry-header">Here are a few things I've been checking out lately.</div>
+                    <div id="latest-entry-content"></div>
+                </div>
 			</div>
-			
-			<!-- 
-				<div class="content">
-					<div id="latest">
-						<h1>Here are a few articles I've been checking out...</h1>
-					</div>
-				</div>
-		 	-->
+
+            <input type="hidden" id="tkn" value="<?php echo $_SESSION['token']; ?>" />
 		</div>
+
+        <script type="text/javascript" src="/js/libs/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="/js/libs/handlebars-v1.2.0.js"></script>
+        <script type="text/javascript" src="/js/libs/moment.min.js"></script>
+        <script type="text/javascript" src="/js/latest-entry.js"></script>
 	</body>	
 </html>
