@@ -17,11 +17,11 @@
         .done(function(data) {
             var hasData = false;
             contentContainer.removeClass('loader');
-            /*for (var i in data) {
+            for (var i in data) {
                 hasData = true;
                 var json = data[i];
                 json.date = moment(json.timestamp).format('MMM D, YYYY');
-            }*/
+            }
                 if (hasData) {
             appendContentToPage(data);
                 } else {
