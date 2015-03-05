@@ -39,8 +39,6 @@
 				</ul>
 			</div>
 
-            
-
 			<div class="separator"></div>
 			
 			<div class="content">
@@ -61,6 +59,7 @@
 
         <script type="text/javascript" src="/js/libs/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="/js/libs/handlebars-v1.2.0.js"></script>
+        <script type="text/javascript" src="/js/libs/moment.min.js"></script>
         <script type="text/javascript" src="/js/latest-entry.js"></script>
 	</body>	
 </html>

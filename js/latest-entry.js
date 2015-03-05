@@ -3,7 +3,8 @@
 
     var contentContainer = $('#latest-entry-content'),
         contentHeader = $('#latest-entry-header'),
-        contentContainerItem = 'latest-entry-content-item';
+        contentContainerItem = 'latest-entry-content-item',
+        contentItemSource = 'latest-entry-content-item-source';
 
     function fetchContent(json) {
         contentContainer.addClass('loader');
@@ -15,6 +16,10 @@
         })
         .done(function(data) {
             contentContainer.removeClass('loader');
+            for (var i in data) {
+                var json = data[i];
+                json.date = moment(json.timestamp).format('MMM D, YYYY');
+            }
             appendContentToPage(data);
         })
         .fail(function(data) {
@@ -32,10 +37,10 @@
     var template =
         "<a href='{{url}}' target='_blank'>" +
             "<div class='" + contentContainerItem + "'>" +
-                "<div>Title: {{title}}</div>" +
-                "<div>URL: {{url}}</div>" +
-                "<div>Source: {{source}}</div>" +
-                "<div>Timestamp: {{timestamp}}</div>" +
+                "<div>" +
+                    "<span class='" + contentItemSource + "'>[{{source}}]</span> {{title}}" + "" +
+                "</div>" +
+                "<div>{{date}}</div>" +
             "</div>" +
         "</a>",
     _compiledTemplate = null,
