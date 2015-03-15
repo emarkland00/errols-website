@@ -1,6 +1,7 @@
 <?php
 require_once("MySQLAbstract.php");
 class ArticleBase extends MySQLAbstract {
+    protected static $TABLE_NAME = "article";
     private $_existsInDB;
     public function __construct() {
         $this->_existsInDB = false;
@@ -17,7 +18,7 @@ class ArticleBase extends MySQLAbstract {
             die('ArticleIDValue can not be null');
         }
         $Article = new Article();
-        $query = 'SELECT * FROM Article WHERE `article_id` = :val';
+        $query = 'SELECT * FROM $TABLE_NAME WHERE `article_id` = :val';
         $result = $Article->getOne($query, array(
             ':val' => array($ArticleIDValue, PDO::PARAM_INT),
         ));
@@ -43,7 +44,7 @@ class ArticleBase extends MySQLAbstract {
             die('Article_keyValue can not be null');
         }
         $Article = new Article();
-        $query = 'SELECT * FROM Article WHERE `article_key`= :val';
+        $query = 'SELECT * FROM $TABLE_NAME WHERE `article_key`= :val';
         $result = $Article->getAll($query, array(
             ':val' => array($Article_keyValue, PDO::PARAM_STR),
         ));
@@ -72,7 +73,7 @@ class ArticleBase extends MySQLAbstract {
             die('NameValue can not be null');
         }
         $Article = new Article();
-        $query = 'SELECT * FROM Article WHERE `name`= :val';
+        $query = 'SELECT * FROM $TABLE_NAME WHERE `name`= :val';
         $result = $Article->getAll($query, array(
             ':val' => array($NameValue, PDO::PARAM_STR),
         ));
@@ -101,7 +102,7 @@ class ArticleBase extends MySQLAbstract {
             die('SourceValue can not be null');
         }
         $Article = new Article();
-        $query = 'SELECT * FROM Article WHERE `source`= :val';
+        $query = 'SELECT * FROM $TABLE_NAME WHERE `source`= :val';
         $result = $Article->getAll($query, array(
             ':val' => array($SourceValue, PDO::PARAM_STR),
         ));
@@ -130,7 +131,7 @@ class ArticleBase extends MySQLAbstract {
             die('TimestampValue can not be null');
         }
         $Article = new Article();
-        $query = 'SELECT * FROM Article WHERE `timestamp`= :val';
+        $query = 'SELECT * FROM $TABLE_NAME WHERE `timestamp`= :val';
         $result = $Article->getAll($query, array(
             ':val' => array($TimestampValue, PDO::PARAM_STR),
         ));
@@ -159,7 +160,7 @@ class ArticleBase extends MySQLAbstract {
             die('UrlValue can not be null');
         }
         $Article = new Article();
-        $query = 'SELECT * FROM Article WHERE `url`= :val';
+        $query = 'SELECT * FROM $TABLE_NAME WHERE `url`= :val';
         $result = $Article->getAll($query, array(
             ':val' => array($UrlValue, PDO::PARAM_STR),
         ));
@@ -199,7 +200,7 @@ class ArticleBase extends MySQLAbstract {
     }
 
     private function create() {
-        $query = "INSERT INTO Article (`article_id`,`article_key`,`name`,`source`,`timestamp`,`url`) VALUES (:article_id,:article_key,:name,:source,:timestamp,:url)";
+        $query = "INSERT INTO " . Article.TABLE_NAME . " (`article_id`,`article_key`,`name`,`source`,`timestamp`,`url`) VALUES (:article_id,:article_key,:name,:source,:timestamp,:url)";
         $result = $this->createBase($query, array(
             ':article_id' => array($this->_ArticleID, PDO::PARAM_INT),
             ':article_key' => array($this->_Article_key, PDO::PARAM_STR),
@@ -213,7 +214,7 @@ class ArticleBase extends MySQLAbstract {
     }
 
     private function commit() {
-        $query = "UPDATE Article SET `article_key`=:article_key,`name`=:name,`source`=:source,`timestamp`=:timestamp,`url`=:url WHERE `article_id`=:article_id";
+        $query = "UPDATE " . Article.TABLE_NAME . " SET `article_key`=:article_key,`name`=:name,`source`=:source,`timestamp`=:timestamp,`url`=:url WHERE `article_id`=:article_id";
         $result = $this->process($query, array(
             ':article_id' => array($this->_ArticleID, PDO::PARAM_INT),
             ':article_key' => array($this->_Article_key, PDO::PARAM_STR),
