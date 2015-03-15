@@ -1,7 +1,7 @@
 <?php
 require_once("MySQLAbstract.php");
 class ArticleBase extends MySQLAbstract {
-    protected static $TABLE_NAME = "Article";
+    protected static $TABLE_NAME = "article";
     private $_existsInDB;
     public function __construct() {
         $this->_existsInDB = false;
