@@ -24,12 +24,41 @@ class ArticleBase extends MySQLAbstract {
         return Article::fillArticleModel($result);
     }
 
+    private $_Article_key;
+    public function getArticle_key() {
+        return $this->_Article_key;
+    }
+
+    public function setArticle_key($Article_keyValue) {
+        if ($Article_keyValue == NULL) {
+            die('Article_keyValue can not be null');
+        }
+        if ($this->_Article_key === $Article_keyValue) return;
+        $this->_Article_key = $Article_keyValue;
+        $this->_modelChanged = true;
+    }
+
+    public static function findAllByArticle_key($Article_keyValue) {
+        if ($Article_keyValue == NULL) {
+            die('Article_keyValue can not be null');
+        }
+        $Article = new Article();
+        $query = 'SELECT * FROM Article WHERE `article_key`= :val';
+        $result = $Article->getAll($query, array(
+            ':val' => array($Article_keyValue, PDO::PARAM_STR),
+        ));
+        foreach ($result as $entry => $value) {
+            $items[] = Article::fillArticleModel($value);
+        }
+        return $items;
+    }
+
     private $_Name;
     public function getName() {
         return $this->_Name;
     }
 
-    public function setName($NameValue) { 
+    public function setName($NameValue) {
         if ($NameValue == NULL) {
             die('NameValue can not be null');
         }
@@ -58,7 +87,7 @@ class ArticleBase extends MySQLAbstract {
         return $this->_Source;
     }
 
-    public function setSource($SourceValue) { 
+    public function setSource($SourceValue) {
         if ($SourceValue == NULL) {
             die('SourceValue can not be null');
         }
@@ -87,7 +116,7 @@ class ArticleBase extends MySQLAbstract {
         return $this->_Timestamp;
     }
 
-    public function setTimestamp($TimestampValue) { 
+    public function setTimestamp($TimestampValue) {
         if ($TimestampValue == NULL) {
             die('TimestampValue can not be null');
         }
@@ -116,7 +145,7 @@ class ArticleBase extends MySQLAbstract {
         return $this->_Url;
     }
 
-    public function setUrl($UrlValue) { 
+    public function setUrl($UrlValue) {
         if ($UrlValue == NULL) {
             die('UrlValue can not be null');
         }
@@ -141,9 +170,9 @@ class ArticleBase extends MySQLAbstract {
     }
 
     /**
-    * Save Article into database
-    * @return True, if saved into database. False, if otherwise.
-    **/
+     * Save Article into database
+     * @return True, if saved into database. False, if otherwise.
+     **/
     public function save() {
         if ($this->_existsInDB && !$this->_modelChanged) {
             return false;
@@ -159,6 +188,7 @@ class ArticleBase extends MySQLAbstract {
     protected static function fillArticleModel($reader) {
         $item = new Article();
         $item->_ArticleID = $reader["article_id"];
+        $item->_Article_key = $reader["article_key"];
         $item->_Name = $reader["name"];
         $item->_Source = $reader["source"];
         $item->_Timestamp = $reader["timestamp"];
@@ -169,9 +199,10 @@ class ArticleBase extends MySQLAbstract {
     }
 
     private function create() {
-        $query = "INSERT INTO Article (`article_id`,`name`,`source`,`timestamp`,`url`) VALUES (:article_id,:name,:source,:timestamp,:url)";
+        $query = "INSERT INTO Article (`article_id`,`article_key`,`name`,`source`,`timestamp`,`url`) VALUES (:article_id,:article_key,:name,:source,:timestamp,:url)";
         $result = $this->createBase($query, array(
             ':article_id' => array($this->_ArticleID, PDO::PARAM_INT),
+            ':article_key' => array($this->_Article_key, PDO::PARAM_STR),
             ':name' => array($this->_Name, PDO::PARAM_STR),
             ':source' => array($this->_Source, PDO::PARAM_STR),
             ':timestamp' => array($this->_Timestamp, PDO::PARAM_STR),
@@ -182,9 +213,10 @@ class ArticleBase extends MySQLAbstract {
     }
 
     private function commit() {
-        $query = "UPDATE Article SET `name`=:name,`source`=:source,`timestamp`=:timestamp,`url`=:url WHERE `article_id`=:article_id";
+        $query = "UPDATE Article SET `article_key`=:article_key,`name`=:name,`source`=:source,`timestamp`=:timestamp,`url`=:url WHERE `article_id`=:article_id";
         $result = $this->process($query, array(
             ':article_id' => array($this->_ArticleID, PDO::PARAM_INT),
+            ':article_key' => array($this->_Article_key, PDO::PARAM_STR),
             ':name' => array($this->_Name, PDO::PARAM_STR),
             ':source' => array($this->_Source, PDO::PARAM_STR),
             ':timestamp' => array($this->_Timestamp, PDO::PARAM_STR),
@@ -195,7 +227,7 @@ class ArticleBase extends MySQLAbstract {
 
     private $_modelChanged = false;
     protected function modelChanged() {
-       return $this->_modelChanged;
+        return $this->_modelChanged;
     }
 }
 ?>
