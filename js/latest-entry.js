@@ -44,7 +44,7 @@
         "<a href='{{url}}' target='_blank'>" +
             "<div class='" + contentContainerItem + "'>" +
                 "<div>" +
-                    "<span class='" + contentItemSource + "'>[{{source}}]</span> {{title}}" + "" +
+                    "<span class='" + contentItemSource + "'>[saw on {{source}}]</span> {{title}}" + "" +
                 "</div>" +
                 "<div>{{date}}</div>" +
             "</div>" +
