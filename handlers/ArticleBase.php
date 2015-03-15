@@ -1,7 +1,7 @@
 <?php
 require_once("MySQLAbstract.php");
 class ArticleBase extends MySQLAbstract {
-    protected static $TABLE_NAME = "article";
+    protected static $TABLE_NAME = "Article";
     private $_existsInDB;
     public function __construct() {
         $this->_existsInDB = false;
@@ -200,7 +200,7 @@ class ArticleBase extends MySQLAbstract {
     }
 
     private function create() {
-        $query = "INSERT INTO " . Article.TABLE_NAME . " (`article_id`,`article_key`,`name`,`source`,`timestamp`,`url`) VALUES (:article_id,:article_key,:name,:source,:timestamp,:url)";
+        $query = "INSERT INTO " . ArticleBase::$TABLE_NAME . " (`article_id`,`article_key`,`name`,`source`,`timestamp`,`url`) VALUES (:article_id,:article_key,:name,:source,:timestamp,:url)";
         $result = $this->createBase($query, array(
             ':article_id' => array($this->_ArticleID, PDO::PARAM_INT),
             ':article_key' => array($this->_Article_key, PDO::PARAM_STR),
@@ -214,7 +214,7 @@ class ArticleBase extends MySQLAbstract {
     }
 
     private function commit() {
-        $query = "UPDATE " . Article.TABLE_NAME . " SET `article_key`=:article_key,`name`=:name,`source`=:source,`timestamp`=:timestamp,`url`=:url WHERE `article_id`=:article_id";
+        $query = "UPDATE " . ArticleBase::$TABLE_NAME . " SET `article_key`=:article_key,`name`=:name,`source`=:source,`timestamp`=:timestamp,`url`=:url WHERE `article_id`=:article_id";
         $result = $this->process($query, array(
             ':article_id' => array($this->_ArticleID, PDO::PARAM_INT),
             ':article_key' => array($this->_Article_key, PDO::PARAM_STR),
