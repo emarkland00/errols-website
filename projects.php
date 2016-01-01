@@ -29,8 +29,10 @@
 			<div class="separator"></div>
 			
 			<div class="content">
+                <!--
 				<p>Some projects that I've worked on can be found on <a href="https://github.com/emarkland" target="_blank">GitHub</a>.</p>
-				
+				-->
+                
 				<p>
 					I do have a few other projects via 
 					<a href="https://bitbucket.org/emarkland00" target="_blank">Bitbucket</a> but 
