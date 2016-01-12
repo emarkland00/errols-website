@@ -21,7 +21,11 @@
 		<link href='/style/style.css' type='text/css' rel='stylesheet' media="screen" />
 		<link href="/style/mobile.css" type="text/css" rel="stylesheet" media="screen and (max-width: 480px)" />
         <link type="text/plain" rel="author" href="humans.txt" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+        <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
 	
 	<body> 
@@ -58,10 +62,18 @@
             <input type="hidden" id="tkn" value="<?php echo $_SESSION['token']; ?>" />
 		</div>
 
-        <script type="text/javascript" src="/js/libs/jquery-2.1.1.min.js"></script>
-        <script type="text/javascript" src="/js/libs/handlebars-v1.2.0.js"></script>
-        <script type="text/javascript" src="/js/libs/moment.min.js"></script>
-        <script type="text/javascript" src="/js/latest-entry.js"></script>
+        <script src="/js/libs/jquery-2.1.1.min.js"></script>
+        <script src="/js/jquery.scrolly.min.js"></script> 
+        <script src="/js/libs/handlebars-v1.2.0.js"></script>
+        <script src="/js/libs/moment.min.js"></script>
+        <script src="/js/skel.min.js"></script> 
+        <script src="/js/skel-viewport.min.js"></script> 
+        <script src="/js/util.js"></script> 
+        <script src="/js/main.js"></script>
+        <!--[if lte IE 8]><script src="/js/ie/respond.min.js"></script><![endif]-->
+        
+        <script src="/js/latest-entry.js"></script>
+
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
