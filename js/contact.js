@@ -65,10 +65,12 @@
 			hide('#subject-warning');
 		}
 		
-		var details = $('#details').val();		
+		var details = $('#message').val();		
+        var name = $('#name').val();
 		var cc = $('#cc').is(':checked') ? 1 : 0;
 		
 		fadeFn(submitButtonText, 'Sending', processForm({
+            name: name,
 			email: email,
 			subject: subject,
 			details: details,
