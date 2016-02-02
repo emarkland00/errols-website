@@ -1,10 +1,13 @@
 <?php
-	session_start(); 
 	
 	$EMAIL_ADDRESS = 'errol@errolmarkland.com';
+    
+    // expected vars
 	$subject = 'subject';
-	$message = 'details';
+	$message = 'message';
 	$email = 'email';
+    
+    // optional vars
 	$cc = 'cc';
 	
 	$emailSubject='';
@@ -19,27 +22,31 @@
 	    if ((!isset($_POST[$subject]) || 
              !isset($_POST[$message]) || 
              !isset($_POST[$email]))) {
+             error(400, 'Missing required parameter');
 	         return false;
 	    }
 
 	    // get and validate email
 	    $emailAddress = $_POST[$email];
-	    if (filter_var($emailAddress, FILTER_VALIDATE_EMAIL) === false) {
-	        if ($emailAddress !== "me@localhost") {
-	            return false;	        
-	        }
-	    }
+	    if (!emailIsValid($emailAddress)) {
+            error(400, 'Invalid email address');
+            return false;
+        }
 	    
 	    // get and validate optional cc
 	    $emailSubject = $_POST[$subject];
 	    $emailMessage = $_POST[$message];
-	    $emailCC = $_POST[$cc];
+        if (isset($_POST[$cc])) {
+            $emailCC = $_POST[$cc];
+        }
 	    
 		return true;		
 	}
 	
 	function emailIsValid($email) {
-	    return filter_var($email, FILTER_VALIDATE_EMAIL);
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)) return true;
+        return $email === 'me@localhost';
+        
 	}
 	
 	function processForm() {
@@ -56,7 +63,7 @@
 		}
 		
 		if ($emailCC === "1") {
-		    $ccSubject = "Copy of inquiry regarding '$emailSubject' from errolmarkland.com";
+		    $ccSubject = "[Copy] '$emailSubject' from errolmarkland.com";
 		    
 		    //TODO: Add a gray background for the reply text
 		    $ccMessage = $emailMessage . PHP_EOL;
