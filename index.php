@@ -68,7 +68,7 @@
         </article>
     </div>
 
-    <!-- Work -->
+    <!-- Articles -->
     <div class="wrapper style2">
         <article id="articles">
             <header>
@@ -181,7 +181,6 @@
             -->
         </article>
     </div>
-
 
     <!-- Contact -->
     <div class="wrapper style4">
@@ -333,6 +332,4 @@
         ga('send', 'pageview');
 
     </script>
-
-
 </html>
