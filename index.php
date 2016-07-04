@@ -9,7 +9,7 @@
     // sc == secure cookie
     if (setcookie('sc', $cookieVal, $expirationTimeInSec, "/", "localhost", true, true)) {
         $_SESSION['token'] = $token;
-        $_SESSION['token_time'] = $tokenTime; 
+        $_SESSION['token_time'] = $tokenTime;
     }
 ?>
 
@@ -27,18 +27,18 @@
         <meta name="description" content="The central hub for all things about Errol G. Markland Jr." />
         <meta name="keywords" content="Errol, Markland, Jr, Software, Developer, Computer, Engineer, CCNY, City College" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
         <!--[if lte IE 8]><script src="/js/ie/html5shiv.js"></script><![endif]-->
         <link rel="stylesheet" href="/style/main.css" />
-        <link rel="stylesheet" href="/style/style.css" />
         <!--[if lte IE 8]><link rel="stylesheet" href="/style/ie8.css" /><![endif]-->
         <!--[if lte IE 9]><link rel="stylesheet" href="/style/ie9.css" /><![endif]-->
     </head>
     <body>
-    
+
     <nav id="nav">
         <ul class="container">
             <li><a href="#top">Top</a></li>
+            <li><a href="#articles">Articles</a></li>
             <!--
             <li><a href="#work">Work</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -46,7 +46,7 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-    
+
     <!-- Home -->
     <div class="wrapper style1 first">
         <article class="container" id="top">
@@ -58,7 +58,7 @@
                 </div>
                 <div class="8u 12u(mobile)">
                     <header>
-                        <h1>Hi. I&#39;m 
+                        <h1>Hi. I&#39;m
                         <strong>Errol G. Markland Jr.</strong>.</h1>
                     </header>
                     <p>A developer who likes to explore the various venues of technology.</p>
@@ -67,7 +67,7 @@
             </div>
         </article>
     </div>
-    
+
     <!-- Work -->
     <div class="wrapper style2">
         <article id="articles">
@@ -88,20 +88,18 @@
                 </div>
             </div>
             <footer>
-                <p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
                 <a href="#projects" class="button big scrolly">See some of my recent work</a>
             </footer>
         </article>
     </div>
-    -->
-    
+
     <!-- Projects -->
     <div class="wrapper style3">
         <article id="projects">
             <header>
                 <h2>The re-construction is under way</h2>
             </header>
-            
+
             <!--
             <div class="container">
                 <div class="row">
@@ -175,7 +173,7 @@
                     </div>
                 </div>
             </div>
-            
+
           <footer>
                 <p>Thanks for your patience.</p>
                 <a href="#contact" class="button big scrolly">Get in touch</a>
@@ -183,8 +181,8 @@
             -->
         </article>
     </div>
-    
-    
+
+
     <!-- Contact -->
     <div class="wrapper style4">
         <article id="contact" class="container 75%">
@@ -237,43 +235,42 @@
                         <h3>Find me on ...</h3>
                         <ul class="social">
                             <li>
-                                <a href="https://www.facebook.com/emark00" class="icon fa-facebook">
+                                <a href="https://www.facebook.com/emark00" target="_blank" class="icon fa-facebook">
                                     <span class="label">Facebook</span>
                                 </a>
                             </li>
-                            
+
                             <li>
-                                <a href="https://twitter.com/mr_markland" class="icon fa-twitter">
+                                <a href="https://twitter.com/mr_markland" target="_blank" class="icon fa-twitter">
                                     <span class="label">Twitter</span>
                                 </a>
                             </li>
-                            
+
                             <li>
-                                <a href="https://www.instagram.com/mr_markland/" class="icon fa-instagram">
+                                <a href="https://www.instagram.com/mr_markland/" target="_blank" class="icon fa-instagram">
                                     <span class="label">Instagram</span>
                                 </a>
                             </li>
-                            
+
                             <li>
-                                <a href="https://www.linkedin.com/in/errol-markland-80967431" class="icon fa-linkedin">
+                                <a href="https://www.linkedin.com/in/errol-markland-80967431" target="_blank" class="icon fa-linkedin">
                                     <span class="label">LinkedIn</span>
                                 </a>
                             </li>
-                            
-                            <!--
+
                             <li>
-                                <a href="#" class="icon fa-github">
+                                <a href="https://github.com/emarkland" target="_blank" class="icon fa-github">
                                     <span class="label">Github</span>
                                 </a>
                             </li>
-                            
-                            
+
+                            <!--
                             <li>
                                 <a href="#" class="icon fa-dribbble">
                                     <span class="label">Dribbble</span>
                                 </a>
                             </li>
-                            
+
                             <li>
                                 <a href="#" class="icon fa-tumblr">
                                     <span class="label">Tumblr</span>
@@ -284,9 +281,9 @@
                                     <span class="label">Google+</span>
                                 </a>
                             </li>
-                            
+
                             <li><a href="#" class="icon fa-rss"><span>RSS</span></a></li>
-                            
+
                             <li><a href="#" class="icon fa-foursquare"><span>Foursquare</span></a></li>
                             <li><a href="#" class="icon fa-skype"><span>Skype</span></a></li>
                             <li><a href="#" class="icon fa-soundcloud"><span>Soundcloud</span></a></li>
@@ -307,25 +304,25 @@
             </footer>
         </article>
     </div>
-    
+
 
     <!-- Scripts -->
     <script src="/js/libs/jquery-2.1.1.min.js"></script>
-    <script src="/js/jquery.scrolly.min.js"></script> 
+    <script src="/js/jquery.scrolly.min.js"></script>
     <script src="/js/libs/handlebars-v1.2.0.js"></script>
     <script src="/js/libs/moment.min.js"></script>
-    <script src="/js/jquery.min.js"></script> 
-    <script src="/js/jquery.scrolly.min.js"></script> 
-    <script src="/js/skel.min.js"></script> 
-    <script src="/js/skel-viewport.min.js"></script> 
-    <script src="/js/util.js"></script> 
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/skel-viewport.min.js"></script>
+    <script src="/js/util.js"></script>
     <!--[if lte IE 8]><script src="/js/ie/respond.min.js"></script><![endif]-->
-     
+
     <script src="/js/main.js"></script></body>
-    
+
     <script src="/js/latest-entry.js"></script>
     <script src="/js/contact.js"></script>
-    
+
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -336,6 +333,6 @@
         ga('send', 'pageview');
 
     </script>
-    
-    
+
+
 </html>

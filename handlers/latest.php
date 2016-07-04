@@ -50,16 +50,13 @@ function get_results($count) {
             'timestamp' => $article->getTimestamp()
         );
     }
-    return json_encode($arr);
+    return json_encode($arr); 
 }
 
 if (is_valid_request()) {
-    header('Content-type: application/json');
     $count = 0;
-
     if (isset($_POST['count'])) {
         $count = (int)$_POST['count'];
-
         if ($count > 10) {
             $count = 10;
         } else if ($count < 0) {
@@ -67,6 +64,7 @@ if (is_valid_request()) {
         }
     }
 
+    header('Content-type: application/json');
     echo get_results($count);
 } else {
     header('HTTP/1.1 400 Bad Request', true, 400);

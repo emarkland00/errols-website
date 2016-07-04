@@ -41,12 +41,12 @@
         }
     };
 
-    var template = "" + 
+    var template = "" +
         "<div class='4u 12u(mobile) article-item'>" +
             "<a href='{{url}}' target='_blank'>" +
                 "<section class='box style1'>" +
                     "<h4>{{title}}</h4>" +
-                    "<p>" + 
+                    "<p>" +
                         "<span class='" + contentItemSource + "'>[saw on {{source}}]</span>" +
                     "</p>" +
                 "</section>" +
@@ -64,5 +64,5 @@
 
     fetchContent({
         count: 3
-    });    
+    });
 }(jQuery));

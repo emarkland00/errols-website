@@ -498,7 +498,3 @@ input#human-check {
   list-style-type: square;
   font-size: 36px;
 }
-
-.article-item > a {
-  text-decoration: none;
-}
