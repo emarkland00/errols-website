@@ -9,4 +9,4 @@
 
 # Don't include the config details, please see readme. If not in readme, grab a pitchfork.
 handlers/config.php
-*.config
+site.config
