@@ -2,7 +2,6 @@
 require_once("config.php");
 require_once('MySQLException.php');
 
-
 /**
  * Manage a MySQL connection
  *
@@ -38,9 +37,9 @@ abstract class MySQLAbstract
             if (($this->_Host == null) && ($this->_DBName == null) && ($this->_User == null) && ($this->_Pass == null)) {
                 $mysql = Config::getMySQL();
                 $this->_Host = $mysql["host"];
-                $this->_DBName = $mysql["dbname"];
-                $this->_User = $mysql["user"];
-                $this->_Pass = $mysql["pass"];
+                $this->_User = $mysql["username"];
+                $this->_Pass = $mysql["password"];
+                $this->_DBName = $mysql["db_name"];
             }
 
             try {

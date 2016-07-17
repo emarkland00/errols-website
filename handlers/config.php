@@ -1,21 +1,24 @@
 <?php
-class Config {
+class Config
+{
   private static $configDetails=null;
   private static $ENV='SITE';
 
   private static function loadConfig() {
-    if ($configDetails != null) return true;
-    $filepath = getenv($ENV);
-    $configDetails = parse_ini_file($filepath);
-    return !($configDetails == false);
+    if (Config::$configDetails != null) return true;
+    $filepath = getenv(Config::$ENV);
+    print_r($_ENV);
+
+    Config::$configDetails = parse_ini_file($filepath, true);
+    return !(Config::$configDetails == false);
   }
 
-  private static function getMySQL() {
-    if ($configDetails == null) {
-      if (!loadConfig()) return null;
+  public static function getMySQL() {
+    if (Config::$configDetails == null) {
+      if (!Config::loadConfig()) return null;
     }
 
-    return $configDetails('mysql');
+    return Config::$configDetails['mysql'];
   }
 }
 ?>
