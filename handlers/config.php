@@ -7,8 +7,6 @@ class Config
   private static function loadConfig() {
     if (Config::$configDetails != null) return true;
     $filepath = getenv(Config::$ENV);
-    print_r($_ENV);
-
     Config::$configDetails = parse_ini_file($filepath, true);
     return !(Config::$configDetails == false);
   }
