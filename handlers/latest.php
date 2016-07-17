@@ -1,10 +1,15 @@
 <?php
+session_start();
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 require_once("Article.php");
 
 function is_valid_request() {
     // token existence
     if (!isset($_SESSION['token'])) {
-        echo "Missing token on server";
+      //  echo "Missing token on server";
         return false;
     }
     $token = $_SESSION['token'];
@@ -50,7 +55,7 @@ function get_results($count) {
             'timestamp' => $article->getTimestamp()
         );
     }
-    return json_encode($arr); 
+    return json_encode($arr);
 }
 
 if (is_valid_request()) {
