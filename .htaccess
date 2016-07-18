@@ -8,6 +8,10 @@ Options -Indexes
 
 RewriteEngine on
 
+# Redirect traffic over HTTPS
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
 # /resume --> straight to pdf
 RewriteRule ^resume$ Errol_Markland_Resume.pdf [NC]
 
