@@ -9,7 +9,7 @@
     function fetchContent(json) {
         contentContainer.addClass('loader');
         $.ajax({
-            type: 'GET',
+            type: 'POST',
             url: '/handlers/latest.php',
             data: json,
             dataType: 'json'
@@ -22,11 +22,12 @@
                 var json = data[i];
                 json.date = moment(json.timestamp).format('MMM D, YYYY');
             }
-                if (hasData) {
-            appendContentToPage(data);
-                } else {
-                    contentContainer.append("Content coming soon!");
-                }
+
+            if (hasData) {
+                appendContentToPage(data);
+            } else {
+                contentContainer.append("Content coming soon!");
+            }
         })
         .fail(function(data) {
                 contentContainer.append("Content coming soon!");
@@ -40,28 +41,28 @@
         }
     };
 
-    var template =
-        "<a href='{{url}}' target='_blank'>" +
-            "<div class='" + contentContainerItem + "'>" +
-                "<div>" +
-                    "<span class='" + contentItemSource + "'>[saw on {{source}}]</span> {{title}}" + "" +
-                "</div>" +
-                "<div>{{date}}</div>" +
-            "</div>" +
-        "</a>",
-    _compiledTemplate = null,
-    createEntry = function(json) {
+    var template = "" +
+        "<div class='4u 12u(mobile) article-item'>" +
+            "<a href='{{url}}' target='_blank'>" +
+                "<section class='box style1'>" +
+                    "<h4>{{title}}</h4>" +
+                    "<p>" +
+                        "<span class='" + contentItemSource + "'>[saw on {{source}}]</span>" +
+                    "</p>" +
+                "</section>" +
+            "</a>" +
+        "</div>";
+
+    var _compiledTemplate = null;
+
+    function createEntry(json) {
         if (_compiledTemplate === null) {
             _compiledTemplate = Handlebars.compile(template);
         }
         return _compiledTemplate(json);
     };
 
-    var tkn = $('#tkn').val();
-    if (tkn) {
-        fetchContent({
-            token: tkn,
-            count: 3
-        });
-    }
+    fetchContent({
+        count: 3
+    });
 }(jQuery));

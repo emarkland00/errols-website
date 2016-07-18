@@ -60,7 +60,6 @@
                 Dude, if you're still reading, why not <a href="/contact">contact me</a>? I like talking to new people.
                 Just don't be too weird.
             </div>
-
         </div>
     </div>
 </div>

@@ -1,83 +1,61 @@
 (function($) {
     'use strict'
 
-	var submitButton = '#submit-button',
-		submitButtonText = '#submit-button-text',
-		warningSpeed = 150,
-		warningStyle = 'swing';
-	
-	var fadeFn = function(elem, afterText, callback) {
-		var fadeStyle = 'swing',
-			elemFadeIn = function(callback) {
-			$(elem).fadeIn({
-				easing: fadeStyle,
-				complete: callback || function() { }
-			});
-		};
-		
-		$(elem).fadeOut({
-			easing: fadeStyle,
-			complete: function() {
-				$(elem).html(afterText);
-				elemFadeIn(callback);
-			}
-		});
-	};
-	
+	var submitButton = '#submit-button';
+    
 	var processForm = function(json) {
 		$.ajax({
 			type: 'POST',
-			url: '/handlers/contact',
+			url: '/handlers/contact.php',
 			data: json,
 			dataType: 'json'
 		})
 		.done(function(data) {
-            fadeFn(submitButtonText, 'Inquiry sent. Thanks!');
-            $(submitButton).unbind('click');
+            $(submitButton).text('Sent email. Thanks!');
         })
 		.fail(function (data) {
-            fadeFn(submitButtonText, 'Problem sending email...');
+            $(submitButton).text('Problem sending email. Try again later.');
+        })
+        .always(function(data) {
+            $(submitButton)
+                .prop('disabled', true)
+                .unbind();  
         });
 	};
 	
 	var validateForm = function(e) {
-        var show = function(elem) {
-            $(elem).show(warningSpeed, warningStyle);
-        },
-        hide = function(elem) {
-            $(elem).hide(warningSpeed, warningStyle);
-        };
-
 		e.preventDefault();
 		var email = $('#email').val();
 		if (!email || !email.length) {
-            show('#email-warning');
-			return;
-		} else {
-            hide('#email-warning');
-		}
+            console.log('Missing email address');
+            return;
+        }
 		
 		var subject = $('#subject').val();		
 		if (!subject || !subject.length) {
-            show('#subject-warning');
-			return;
-		} else {
-			hide('#subject-warning');
+           console.log('Missing subject');
+		   return;
 		}
 		
-		var details = $('#details').val();		
+		var message = $('#message').val();		
+        if (!message || !message.length) {
+            console.log('Missing email body');
+            return;
+        }
+        
+        var name = $('#name').val();
 		var cc = $('#cc').is(':checked') ? 1 : 0;
 		
-		fadeFn(submitButtonText, 'Sending', processForm({
+        $(submitButton).text('Sending');
+		processForm({
+            name: name,
 			email: email,
 			subject: subject,
-			details: details,
+			message: message,
 			cc: cc
-		}));
+		});
 	};
 	
 	//TODO: Make this work with submit()
-	$(submitButton).submit(validateForm);
-	$('#email-warning').hide();
-	$('#subject-warning').hide();
+	$(submitButton).click(validateForm);	
 })(jQuery);
