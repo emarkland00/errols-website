@@ -39,10 +39,7 @@
         <ul class="container">
             <li><a href="#top">Top</a></li>
             <li><a href="#articles">Articles</a></li>
-            <!--
-            <li><a href="#work">Work</a></li>
             <li><a href="#projects">Projects</a></li>
-            -->
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -178,35 +175,6 @@
                                     <span class="label">Github</span>
                                 </a>
                             </li>
-
-                            <!--
-                            <li>
-                                <a href="#" class="icon fa-dribbble">
-                                    <span class="label">Dribbble</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" class="icon fa-tumblr">
-                                    <span class="label">Tumblr</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="icon fa-google-plus">
-                                    <span class="label">Google+</span>
-                                </a>
-                            </li>
-
-                            <li><a href="#" class="icon fa-rss"><span>RSS</span></a></li>
-
-                            <li><a href="#" class="icon fa-foursquare"><span>Foursquare</span></a></li>
-                            <li><a href="#" class="icon fa-skype"><span>Skype</span></a></li>
-                            <li><a href="#" class="icon fa-soundcloud"><span>Soundcloud</span></a></li>
-                            <li><a href="#" class="icon fa-youtube"><span>YouTube</span></a></li>
-                            <li><a href="#" class="icon fa-blogger"><span>Blogger</span></a></li>
-                            <li><a href="#" class="icon fa-flickr"><span>Flickr</span></a></li>
-                            <li><a href="#" class="icon fa-vimeo"><span>Vimeo</span></a></li>
-                            -->
                         </ul>
                         <hr />
                     </div>
