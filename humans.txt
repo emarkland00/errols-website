@@ -5,12 +5,12 @@ Feel free to reach out to me for any questions or suggestions.
 # AUTHOR
     Webmaster: Errol Markland
     Site: errolmarkland.com
-    Contact: errolmarkland.com/contact
+    Contact: errolmarkland.com#contact
     Twitter: @mr_markland
     From: New York, NY USA
 
 # SITE
-    Last-updated: 2016/07/05
+    Last-updated: 2016/07/16
     Language: English
     Standards: HTML5, CSS3, PHP5, JS
     Editor: Atom

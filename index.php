@@ -7,7 +7,7 @@
     $cookieVal = md5($token ^ $tokenTime);
 
     // sc == secure cookie
-    if (setcookie('sc', $cookieVal, $expirationTimeInSec, "/", "localhost", true, true)) {
+    if (setcookie('sc', $cookieVal, $expirationTimeInSec, "/", "errolmarkland.com", true, true)) {
         $_SESSION['token'] = $token;
         $_SESSION['token_time'] = $tokenTime;
     }
@@ -39,10 +39,7 @@
         <ul class="container">
             <li><a href="#top">Top</a></li>
             <li><a href="#articles">Articles</a></li>
-            <!--
-            <li><a href="#work">Work</a></li>
             <li><a href="#projects">Projects</a></li>
-            -->
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -75,20 +72,10 @@
                 <h2>Here are some articles I've read lately.</h2>
             </header>
             <div class="container" id="latest-articles">
-                <div class="row" id="latest-entry-content">
-                    <!--
-                    <div class="4u 12u(mobile)">
-                        <section class="box style1">
-                            <h3>Lorem dolor tempus</h3>
-                            <p>Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem
-                            dolore.</p>
-                        </section>
-                    </div>
-                    -->
-                </div>
+                <div class="row" id="latest-entry-content"></div>
             </div>
             <footer>
-                <a href="#projects" class="button big scrolly">See some of my recent work</a>
+                Powered by the <a href="https://github.com/emarkland/article-tracker" target="_blank">Article-tracker</a>.
             </footer>
         </article>
     </div>
@@ -97,88 +84,14 @@
     <div class="wrapper style3">
         <article id="projects">
             <header>
-                <h2>The re-construction is under way</h2>
+              <h2>Projects</h2>
+              <p>
+      					Some of the projects I've worked on can be found at my
+      					<a href="https://github.com/emarkland" target="_blank">Github</a>.
+      				</p>
+
+      				<p>In the future, I'll make life a bit easier by actually listing the projects I've done here.</p>
             </header>
-
-            <!--
-            <div class="container">
-                <div class="row">
-                    <div class="4u 12u(mobile)">
-                        <article class="box style2">
-                            <a href="#" class="image featured">
-                                <img src="images/pic01.jpg" alt="" />
-                            </a>
-                            <h3>
-                                <a href="#">Magna feugiat</a>
-                            </h3>
-                            <p>Ornare nulla proin odio consequat.</p>
-                        </article>
-                    </div>
-                    <div class="4u 12u(mobile)">
-                        <article class="box style2">
-                            <a href="#" class="image featured">
-                                <img src="images/pic02.jpg" alt="" />
-                            </a>
-                            <h3>
-                                <a href="#">Veroeros primis</a>
-                            </h3>
-                            <p>Ornare nulla proin odio consequat.</p>
-                        </article>
-                    </div>
-                    <div class="4u 12u(mobile)">
-                        <article class="box style2">
-                            <a href="#" class="image featured">
-                                <img src="images/pic03.jpg" alt="" />
-                            </a>
-                            <h3>
-                                <a href="#">Lorem ipsum</a>
-                            </h3>
-                            <p>Ornare nulla proin odio consequat.</p>
-                        </article>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="4u 12u(mobile)">
-                        <article class="box style2">
-                            <a href="#" class="image featured">
-                                <img src="images/pic04.jpg" alt="" />
-                            </a>
-                            <h3>
-                                <a href="#">Tempus dolore</a>
-                            </h3>
-                            <p>Ornare nulla proin odio consequat.</p>
-                        </article>
-                    </div>
-                    <div class="4u 12u(mobile)">
-                        <article class="box style2">
-                            <a href="#" class="image featured">
-                                <img src="images/pic05.jpg" alt="" />
-                            </a>
-                            <h3>
-                                <a href="#">Feugiat aliquam</a>
-                            </h3>
-                            <p>Ornare nulla proin odio consequat.</p>
-                        </article>
-                    </div>
-                    <div class="4u 12u(mobile)">
-                        <article class="box style2">
-                            <a href="#" class="image featured">
-                                <img src="images/pic06.jpg" alt="" />
-                            </a>
-                            <h3>
-                                <a href="#">Sed amet ornare</a>
-                            </h3>
-                            <p>Ornare nulla proin odio consequat.</p>
-                        </article>
-                    </div>
-                </div>
-            </div>
-
-          <footer>
-                <p>Thanks for your patience.</p>
-                <a href="#contact" class="button big scrolly">Get in touch</a>
-            </footer>
-            -->
         </article>
     </div>
 
@@ -262,35 +175,6 @@
                                     <span class="label">Github</span>
                                 </a>
                             </li>
-
-                            <!--
-                            <li>
-                                <a href="#" class="icon fa-dribbble">
-                                    <span class="label">Dribbble</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#" class="icon fa-tumblr">
-                                    <span class="label">Tumblr</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="icon fa-google-plus">
-                                    <span class="label">Google+</span>
-                                </a>
-                            </li>
-
-                            <li><a href="#" class="icon fa-rss"><span>RSS</span></a></li>
-
-                            <li><a href="#" class="icon fa-foursquare"><span>Foursquare</span></a></li>
-                            <li><a href="#" class="icon fa-skype"><span>Skype</span></a></li>
-                            <li><a href="#" class="icon fa-soundcloud"><span>Soundcloud</span></a></li>
-                            <li><a href="#" class="icon fa-youtube"><span>YouTube</span></a></li>
-                            <li><a href="#" class="icon fa-blogger"><span>Blogger</span></a></li>
-                            <li><a href="#" class="icon fa-flickr"><span>Flickr</span></a></li>
-                            <li><a href="#" class="icon fa-vimeo"><span>Vimeo</span></a></li>
-                            -->
                         </ul>
                         <hr />
                     </div>
