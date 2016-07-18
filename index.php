@@ -7,7 +7,7 @@
     $cookieVal = md5($token ^ $tokenTime);
 
     // sc == secure cookie
-    if (setcookie('sc', $cookieVal, $expirationTimeInSec, "/", "localhost", true, true)) {
+    if (setcookie('sc', $cookieVal, $expirationTimeInSec, "/", "errolmarkland.com", true, true)) {
         $_SESSION['token'] = $token;
         $_SESSION['token_time'] = $tokenTime;
     }
