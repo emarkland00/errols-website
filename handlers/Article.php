@@ -11,7 +11,7 @@
 
             $items = array();
             $article = new Article();
-            $query = "SELECT * FROM " . ArticleBase::$TABLE_NAME . " ORDER BY article_id DESC LIMIT $count";
+            $query = "SELECT * FROM " . ArticleBase::$TABLE_NAME . " ORDER BY timestamp DESC LIMIT $count";
             $result = $article->getAll($query);
             foreach ($result as $entry => $value) {
                 $items[] = Article::fillArticleModel($value);
