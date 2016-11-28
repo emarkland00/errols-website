@@ -2,32 +2,36 @@
     class PocketResponse {
         private $json;
 
+        private function __construct($json) {
+            $this->json = $json;
+        }
+
         public function getItemID() {
-            return getProperty("item_id");
+            return $this->getProperty("item_id");
         }
 
         public function getResolvedID() {
-            return getProperty("resolved_id");
+            return $this->getProperty("resolved_id");
         }
 
         public function getGivenURL() {
-            return getProperty("given_url");
+            return $this->getProperty("given_url");
         }
 
         public function getResolvedURL() {
-            return getProperty("resolved_url");
+            return $this->getProperty("resolved_url");
         }
 
         public function getGivenTitle() {
-            return getProperty("given_title");
+            return $this->getProperty("given_title");
         }
 
         public function getResolvedTitle() {
-            return getProperty("resolved_title");
+            return $this->getProperty("resolved_title");
         }
 
         public function isFavorite() {
-            return getProperty("favorite") == 1;
+            return $this->getProperty("favorite") == 1;
         }
 
         public function getStatus() {
@@ -47,56 +51,70 @@
         }
 
         public function getExcerpt() {
-            return getProperty("excerpt");
+            return $this->getProperty("excerpt");
         }
 
         public function isArticle() {
-            return getProperty("is_article") == 1;
+            return $this->getProperty("is_article") == 1;
         }
 
         public function containsImages() {
-            return getProperty("has_image") > 0;
+            return $this->getProperty("has_image") > 0;
         }
 
         public function containsVideos() {
-            return getProperty("has_video") > 0;
+            return $this->getProperty("has_video") > 0;
         }
 
         public function getWordCount() {
-            return getProperty("word_count");
+            return $this->getProperty("word_count");
         }
 
         public function getTags() {
-            return getProperty("tags");
+            return $this->getProperty("tags");
         }
 
         public function getAuthors() {
-            return getProperty("authors");
+            return $this->getProperty("authors");
+        }
+
+        public function getTimeAdded() {
+            return $this->getProperty("time_added");
+        }
+
+        public function getTimeUpdated() {
+            return $this->getProperty("time_updated");
+        }
+
+        public function getTimeRead() {
+            return $this->getProperty("time_read");
+        }
+
+        public function getTimeFavorited() {
+            return $this->getProperty("time_favorited");
         }
 
         public function getImages() {
-            $json = getProperty("images");
+            $json = $this->getProperty("images");
             if ($json == null) return array();
             return PocketResponseImage::createPocketResponseImages($json);
         }
 
         public function getVideos() {
-            $json = getProperty("videos");
+            $json = $this->getProperty("videos");
             if ($json == null) return array();
             return PocketResponseVideo::createPocketResponseVideos($json);
         }
 
         private function getProperty($name) {
-            return $json[$name];
+            return $this->json[$name];
         }
 
         public static function parsePocketResponse($rawString) {
-            $json = json_decode($rawSring);
+            $json = json_decode($rawString, true);
             $arr = array();
-            foreach ($json as $key => $value) {
-                $p = new PocketResponse();
-                $p->$json = $value;
-                $arr[] = $p;
+            foreach ($json["list"] as $key => $value) {
+                $arr[] = new PocketResponse($value);
             }
             return $arr;
         }
@@ -135,11 +153,11 @@
         }
 
         private function getValue($key) {
-            return $json[$key];
+            return $this->json[$key];
         }
 
         public static function createPocketResponseImages($json) {
-            $results = array()
+            $results = array();
             foreach ($json as $key => $value) {
                 $i = new PocketResponseImages();
                 $i->$json = $value;
@@ -182,7 +200,7 @@
         }
 
         private function getValue($key) {
-            return $json[$key];
+            return $this->json[$key];
         }
 
         public static function createPocketResponseVideos($json) {

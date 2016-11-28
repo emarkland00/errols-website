@@ -17,16 +17,16 @@
         public $count = null; // integer - Only return count number of items
         public $offset = null; // Used only with count; start returning from offset position of results
 
-        const $RETRIEVE_PATH = "/get";
+        private $RETRIEVE_PATH = "/get";
 
-        public function __construct($consumerKey, $accessToken, $baseURL) {
-            this->$consumerKey = $consumerKey;
-            this->$accessToken = $accessToken;
-            this->$baseURL = $baseURL;
+        function __construct($consumerKey, $accessToken, $baseURL) {
+            $this->consumerKey = $consumerKey;
+            $this->accessToken = $accessToken;
+            $this->baseURL = $baseURL;
         }
 
         public function createRequest() {
-            $ch = curl_init(this->$baseURL . PocketRequest::$RETRIEVE_PATH);
+            $ch = curl_init($this->baseURL . $this->RETRIEVE_PATH);
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
                 "Content-Type: application/json; charset=UTF-8",
@@ -34,20 +34,20 @@
             ));
 
             $arr = array(
-                "consumer_key" => this->$consumerKey,
-                "access_token" => this->$accessToken
+                "consumer_key" => $this->consumerKey,
+                "access_token" => $this->accessToken
             );
-            $arr = applyValue($arr, "state", this->$state);
-            $arr = applyValue($arr, "favorite", this->$favorite);
-            $arr = applyValue($arr, "tag", this->$tag);
-            $arr = applyValue($arr, "contentType", this->$contentType);
-            $arr = applyValue($arr, "sort", this->$sort);
-            $arr = applyValue($arr, "detailType", this->$detailType);
-            $arr = applyValue($arr, "search", this->$search);
-            $arr = applyValue($arr, "domain", this->$domain);
-            $arr = applyValue($arr, "since", this->$since);
-            $arr = applyValue($arr, "count", this->$count);
-            $arr = applyValue($arr, "offset", this->$offset);
+            $arr = $this->applyValue($arr, "state", $this->state);
+            $arr = $this->applyValue($arr, "favorite", $this->favorite);
+            $arr = $this->applyValue($arr, "tag", $this->tag);
+            $arr = $this->applyValue($arr, "contentType", $this->contentType);
+            $arr = $this->applyValue($arr, "sort", $this->sort);
+            $arr = $this->applyValue($arr, "detailType", $this->detailType);
+            $arr = $this->applyValue($arr, "search", $this->search);
+            $arr = $this->applyValue($arr, "domain", $this->domain);
+            $arr = $this->applyValue($arr, "since", $this->since);
+            $arr = $this->applyValue($arr, "count", $this->count);
+            $arr = $this->applyValue($arr, "offset", $this->offset);
             curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($arr));
 
             // ensure that we get server response
