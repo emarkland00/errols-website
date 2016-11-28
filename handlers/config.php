@@ -9,7 +9,6 @@ class Config
         $filepath = getenv(Config::$ENV);
         $raw_contents = file_get_contents($filepath);
         Config::$DETAILS = json_decode($raw_contents, true);
-        echo $filepath;
         return !(Config::$DETAILS == false);
     }
 
