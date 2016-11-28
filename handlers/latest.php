@@ -45,9 +45,18 @@ function clear_session() {
 
 function get_results($count) {
     $client = new PocketClient();
-    $arr = $client=>getArticles();
-    print_r($arr);
-    return json_encode($arr);
+    $arr = $client->getArticles();
+    $res = array();
+    foreach ($arr as $a) {
+        $host = parse_url($a->getGivenURL(), PHP_URL_HOST);
+        $res[] = array(
+            'title' => $a->getResolvedTitle(),
+            'url' => $a->getResolvedURL(),
+            'source' => $host,
+            'timestamp' => $a->getTimeAdded()
+        );
+    }
+    return json_encode($res);
 }
 
 if (is_valid_request()) {
@@ -61,7 +70,6 @@ if (is_valid_request()) {
         }
     }
 
-    header('Content-type: application/json');
     echo get_results($count);
 } else {
     header('HTTP/1.1 400 Bad Request', true, 400);
