@@ -22,6 +22,7 @@
 
             // apply filters
             $r->detailType = "simple";
+            $r->tag = "tracker";
 
             $request = $r->createRequest();
             if (!($result = curl_exec($request))) {
