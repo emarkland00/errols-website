@@ -75,7 +75,7 @@
                 <div class="row" id="latest-entry-content"></div>
             </div>
             <footer>
-                Powered by the <a href="https://github.com/emarkland/article-tracker" target="_blank">Article-tracker</a>.
+                Powered by the <a href="https://getpocket.com/" target="_blank">Pocket API</a>.
             </footer>
         </article>
     </div>
