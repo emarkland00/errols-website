@@ -2,6 +2,7 @@
 session_start();
 
 require_once("Article.php");
+require_once("PocketClient.php");
 
 function is_valid_request() {
     // token existence
@@ -43,15 +44,9 @@ function clear_session() {
 }
 
 function get_results($count) {
-    $arr = array();
-    foreach (Article::getLatestArticles($count) as $article) {
-        $arr[] = array(
-            'title' => $article->getName(),
-            'url' => $article->getUrl(),
-            'source' => $article->getSource(),
-            'timestamp' => $article->getTimestamp()
-        );
-    }
+    $client = new PocketClient();
+    $arr = $client=>getArticles();
+    print_r($arr);
     return json_encode($arr);
 }
 
