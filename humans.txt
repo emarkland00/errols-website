@@ -2,15 +2,15 @@
 
 Feel free to reach out to me for any questions or suggestions.
 
-# AUTHOR 
+# AUTHOR
     Webmaster: Errol Markland
     Site: errolmarkland.com
-    Contact: errolmarkland.com/contact.php
+    Contact: errolmarkland.com#contact
     Twitter: @mr_markland
     From: New York, NY USA
 
-# SITE 
-    Last-updated: 2013/07/17
+# SITE
+    Last-updated: 2016/07/16
     Language: English
     Standards: HTML5, CSS3, PHP5, JS
-    IDE: Eclipse-PHP, FileZilla
+    Editor: Atom

@@ -2,5 +2,13 @@
 *.project
 *.metadata
 
-# directories
-less/
+#directories
+*.settings/
+*.buildpath
+*.idea/
+
+.DS_Store
+
+#config files
+*.ini
+*.json
