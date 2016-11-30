@@ -23,7 +23,7 @@
             // apply filters
             $r->detailType = "simple";
             $r->tag = "tracker";
-            $r->count= 3
+            $r->count= 3;
 
             $request = $r->createRequest();
             if (!($result = curl_exec($request))) {
