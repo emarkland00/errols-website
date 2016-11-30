@@ -30,6 +30,7 @@
 
         <!--[if lte IE 8]><script src="/js/ie/html5shiv.js"></script><![endif]-->
         <link rel="stylesheet" href="/style/main.css" />
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
         <!--[if lte IE 8]><link rel="stylesheet" href="/style/ie8.css" /><![endif]-->
         <!--[if lte IE 9]><link rel="stylesheet" href="/style/ie9.css" /><![endif]-->
     </head>
