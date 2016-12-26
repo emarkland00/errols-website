@@ -14,12 +14,6 @@
 ?>
 
 <!DOCTYPE HTML>
-<!--
-    Miniport by HTML5 UP
-    html5up.net | @n33co
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -31,6 +25,7 @@
         <!--[if lte IE 8]><script src="/js/ie/html5shiv.js"></script><![endif]-->
         <link rel="stylesheet" href="/style/main.css" />
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="author" href="humans.txt" />
         <!--[if lte IE 8]><link rel="stylesheet" href="/style/ie8.css" /><![endif]-->
         <!--[if lte IE 9]><link rel="stylesheet" href="/style/ie9.css" /><![endif]-->
     </head>
@@ -86,11 +81,10 @@
                 <header>
                   <h2>Projects</h2>
                   <p>
-          					Some of the projects I've worked on can be found at my
-          					<a href="https://github.com/emarkland" target="_blank">Github</a>.
-          				</p>
-
-          				<p>In the future, I'll make life a bit easier by actually listing the projects I've done here.</p>
+      			      Some of the projects I've worked on can be found at my
+                      <a href="https://github.com/emarkland" target="_blank">Github</a>.
+      			  </p>
+      			  <p>In the future, I'll make life a bit easier by actually listing the projects I've done here.</p>
                 </header>
             </article>
         </div>
@@ -105,46 +99,6 @@
                 <div>
                     <div class="row">
                         <div class="12u">
-                            <form id='contact-form'>
-                                <div>
-                                    <div class="row">
-                                        <div class="6u 12u(mobile)">
-                                            <input type="text" name="name" id="name" placeholder="Name" />
-                                        </div>
-                                        <div class="6u 12u(mobile)">
-                                            <input type="text" name="email" id="email" placeholder="Email" />
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="12u">
-                                            <input type="text" name="subject" id="subject" placeholder="Subject" />
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="12u">
-                                            <textarea name="message" id="message" placeholder="Message"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="row 200%">
-                                        <div class="12u">
-                                            <ul class="actions">
-                                                <li>
-                                                    <button type="submit" id='submit-button'>Send Message</button>
-                                                </li>
-                                                <li>
-                                                    <button type="reset" class="alt">Clear Form</button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="12u">
-                            <hr />
-                            <h3>Find me on ...</h3>
                             <ul class="social">
                                 <li>
                                     <a href="https://www.facebook.com/emark00" target="_blank" class="icon fa-facebook">
@@ -182,12 +136,13 @@
                 </div>
                 <footer>
                     <ul id="copyright">
+                    	&copy; 2016 Errol Markland. All rights reserved
                         <!-- Show fun fact based on today's date. Use number's api? -->
                     </ul>
+                    <a href="humans.txt"><img src="/images/humanstxt.png"></a>
                 </footer>
             </article>
         </div>
-
 
         <!-- Scripts -->
         <script src="/js/libs/jquery-2.1.1.min.js"></script>
@@ -208,3 +163,9 @@
         <script src="/js/ga.js"></script>
     </body>
 </html>
+
+<!--
+    Miniport by HTML5 UP
+    html5up.net | @n33co
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
