@@ -57,7 +57,7 @@
 
     function createEntry(json) {
         if (_compiledTemplate === null) {
-            _compiledTemplate = Handlebars.compile(template);
+            _compiledTemplate = Handlebars.templates.article;
         }
         return _compiledTemplate(json);
     };
