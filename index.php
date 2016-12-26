@@ -7,7 +7,7 @@
     $cookieVal = md5($token ^ $tokenTime);
 
     // sc == secure cookie
-    if (setcookie('sc', $cookieVal, $expirationTimeInSec, "/", "localhost", true, true)) {
+    if (setcookie('sc', $cookieVal, $expirationTimeInSec, "/", $_SERVER['SERVER_NAME'], true, true)) {
         $_SESSION['token'] = $token;
         $_SESSION['token_time'] = $tokenTime;
     }
@@ -35,7 +35,6 @@
         <!--[if lte IE 9]><link rel="stylesheet" href="/style/ie9.css" /><![endif]-->
     </head>
     <body>
-
         <nav id="nav">
             <ul class="container">
                 <li><a href="#top">Top</a></li>
