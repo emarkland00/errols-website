@@ -6,7 +6,7 @@
 
         private static function loadConfig() {
             if (Config::$DETAILS != null) return true;
-            $config_file = Config::$SITE;
+            $config_file = getenv(Config::$ENV);
             $raw_contents = file_get_contents($config_file);
             Config::$DETAILS = json_decode($raw_contents, true);
             return !(Config::$DETAILS == false);
