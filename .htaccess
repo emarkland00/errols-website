@@ -13,7 +13,7 @@ RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # /resume --> straight to pdf
-RewriteRule ^resume$ errol_markland_resume.pdf [NC]
+RewriteRule ^resume$ errol_resume.pdf [NC]
 
 # Remove file ending (/index.php -> /index)
 RewriteRule ^([a-zA-Z]+)$ $1.php [NC]
