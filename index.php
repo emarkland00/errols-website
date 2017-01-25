@@ -36,6 +36,7 @@
                 <li><a href="#articles">Articles</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="/resume">Resume</a></li>
             </ul>
         </nav>
 
@@ -45,7 +46,7 @@
                 <div class="row">
                     <div class="4u 12u(mobile)">
                         <span class="image fit">
-                            <img src="/images/me.jpg" alt="My picture" />
+                            <img src="/images/me_jan_2017.png" alt="My picture" />
                         </span>
                     </div>
                     <div class="8u 12u(mobile)">
