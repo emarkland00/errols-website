@@ -6,11 +6,10 @@
 
 Options -Indexes
 
+# IP to domain (https)
 RewriteEngine on
-
-# Redirect traffic over HTTPS
-RewriteCond %{HTTPS} !=on
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTP_HOST} !^errolmarkland.com
+RewriteRule (.*) https://errolmarkland.com/$1 [R=301,L]
 
 # /resume --> straight to pdf
 RewriteRule ^resume$ errol_resume.pdf [NC]
