@@ -137,7 +137,7 @@
                 </div>
                 <footer>
                     <ul id="copyright">
-                    	&copy; 2016 Errol Markland. All rights reserved
+                    	&copy; 2017 Errol Markland. All rights reserved
                         <!-- Show fun fact based on today's date. Use number's api? -->
                     </ul>
                     <a href="humans.txt"><img src="/images/humanstxt.png"></a>
