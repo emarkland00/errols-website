@@ -44,7 +44,7 @@ function clear_session() {
 }
 
 function get_memcached() {
-    if (!class_exist('Memcached')) {
+    if (!class_exists('Memcached')) {
         return null;
     }
     $mc = new Memcached();
