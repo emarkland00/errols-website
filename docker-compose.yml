@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  site:
+    build: .
+    ports:
+      - "80:80"
+    links:
+      - memcached
+    environment:
+      - MEMCACHED_IP=memcached
+      - MEMCACHED_PORT=11211
+  memcached:
+    image: memcached:alpine
+    expose:
+      - "11211"

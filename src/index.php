@@ -6,8 +6,15 @@
     $expirationTimeInSec = $tokenTime + 10; // 30 secs from now
     $cookieVal = md5($token ^ $tokenTime);
 
-    // sc == secure cookie
-    if (setcookie('sc', $cookieVal, $expirationTimeInSec, "/", $_SERVER['SERVER_NAME'], true, true)) {
+    $serverName = $_SERVER['SERVER_NAME'];
+    $secureCookie = true;
+    $httpOnlyCookie = true;
+    if (in_array($serverName, array("localhost", "127.0.0.1", "::1"))) {
+	$secureCookie = false;
+	$httpOnlyCookie = false;
+    }
+
+    if (setcookie('sc', $cookieVal, $expirationTimeInSec, "/", $_SERVER['SERVER_NAME'], $secureCookie, $httpOnlyCookie)) {
         $_SESSION['token'] = $token;
         $_SESSION['token_time'] = $tokenTime;
     }

@@ -48,7 +48,9 @@ function get_memcached() {
         return null;
     }
     $mc = new Memcached();
-    $mc->addServer("127.0.0.1", 11211);
+    $memcachedHost = getenv("MEMCACHED_IP") ?? "127.0.0.1";
+    $memcachedPort = getenv("MEMCACHED_PORT") ?? 11211;
+    $mc->addServer($memcachedHost, $memcachedPort);
     return $mc;
 }
 
