@@ -9,8 +9,7 @@ services:
       - memcached
     environment:
       - MEMCACHED_IP=memcached
-
-
+      - MEMCACHED_PORT=11211
   memcached:
     image: memcached:alpine
     expose:

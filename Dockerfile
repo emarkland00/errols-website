@@ -6,6 +6,9 @@ RUN pecl install memcached && echo 'extension = memcached.so' > /usr/local/etc/p
 
 COPY src/ /var/www/html
 
+# remove .htaccess file (running this behind nginx reverse-proxy)
+RUN rm /var/www/html/.htaccess
+
 # Add config file to site
 COPY config.json /etc/config/config.json
 ENV SITE=/etc/config/config.json
