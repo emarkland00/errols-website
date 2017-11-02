@@ -1,15 +1,17 @@
-# docker compose version
-version: "2.0"
+version: "3"
 
-# site services
 services:
   site:
     build: .
     ports:
       - "80:80"
+    links:
+      - memcached
+    environment:
+      - MEMCACHED_IP=memcached
+
+
   memcached:
     image: memcached:alpine
-    ports:
-      - "11211:11211"
-    mem_limit: 64m
-    command: memcached -m 4m
+    expose:
+      - "11211"
