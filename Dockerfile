@@ -12,5 +12,5 @@ RUN rm /var/www/html/.htaccess
 # Add config file to site
 COPY /etc/config/config.json /etc/config/config.json
 COPY config.json /etc/config/config.json
-CMD chmod 400 /etc/config/config.json
+RUN [ -f /etc/config/config.json ] && chmod 400 /etc/config/config.json
 ENV SITE=/etc/config/config.json
