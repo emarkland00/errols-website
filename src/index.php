@@ -10,8 +10,8 @@
     $secureCookie = true;
     $httpOnlyCookie = true;
     if (in_array($serverName, array("localhost", "127.0.0.1", "::1"))) {
-	$secureCookie = false;
-	$httpOnlyCookie = false;
+	     $secureCookie = false;
+       $httpOnlyCookie = false;
     }
 
     if (setcookie('sc', $cookieVal, $expirationTimeInSec, "/", $_SERVER['SERVER_NAME'], $secureCookie, $httpOnlyCookie)) {
@@ -30,7 +30,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <!--[if lte IE 8]><script src="/js/ie/html5shiv.js"></script><![endif]-->
-        <link rel="stylesheet" href="/style/main.css" />
+        <link rel="stylesheet" href="style/main.css" />
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
         <link rel="author" href="humans.txt" />
         <!--[if lte IE 8]><link rel="stylesheet" href="/style/ie8.css" /><![endif]-->
@@ -43,7 +43,7 @@
                 <li><a href="#articles">Articles</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="/resume">Resume</a></li>
+                <li><a href="resume">Resume</a></li>
             </ul>
         </nav>
 
@@ -53,7 +53,7 @@
                 <div class="row">
                     <div class="4u 12u(mobile)">
                         <span class="image fit">
-                            <img src="/images/me_jan_2017.png" alt="My picture" />
+                            <img src="images/me_jan_2017.png" alt="My picture" />
                         </span>
                     </div>
                     <div class="8u 12u(mobile)">
@@ -147,28 +147,28 @@
                     	&copy; 2017 Errol Markland. All rights reserved
                         <!-- Show fun fact based on today's date. Use number's api? -->
                     </ul>
-                    <a href="humans.txt"><img src="/images/humanstxt.png"></a>
+                    <a href="humans.txt"><img src="images/humanstxt.png"></a>
                 </footer>
             </article>
         </div>
 
         <!-- Scripts -->
-        <script src="/js/libs/jquery-2.1.1.min.js"></script>
-        <script src="/js/jquery.scrolly.min.js"></script>
-        <script src="/js/libs/handlebars-v4.0.5.js"></script>
-        <script src="/js/libs/moment.min.js"></script>
-        <script src="/js/jquery.min.js"></script>
-        <script src="/js/jquery.scrolly.min.js"></script>
-        <script src="/js/skel.min.js"></script>
-        <script src="/js/skel-viewport.min.js"></script>
-        <script src="/js/util.js"></script>
+        <script src="js/libs/jquery-2.1.1.min.js"></script>
+        <script src="js/jquery.scrolly.min.js"></script>
+        <script src="js/libs/handlebars-v4.0.5.js"></script>
+        <script src="js/libs/moment.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.scrolly.min.js"></script>
+        <script src="js/skel.min.js"></script>
+        <script src="js/skel-viewport.min.js"></script>
+        <script src="js/util.js"></script>
         <!--[if lte IE 8]><script src="/js/ie/respond.min.js"></script><![endif]-->
 
-        <script src="/js/main.js"></script>
-        <script src="/js/article-template.js"></script>
-        <script src="/js/latest-entry.js"></script>
-        <script src="/js/contact.js"></script>
-        <script src="/js/ga.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/article-template.js"></script>
+        <script src="js/latest-entry.js"></script>
+        <script src="js/contact.js"></script>
+        <script src="js/ga.js"></script>
     </body>
 </html>
 
