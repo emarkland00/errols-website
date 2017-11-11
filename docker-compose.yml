@@ -4,7 +4,7 @@ services:
   site:
     build: .
     ports:
-      - "80:80"
+      - "8081:80"
     networks:
       - site_network
     environment:
