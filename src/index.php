@@ -162,14 +162,13 @@
         <script src="js/skel.min.js"></script>
         <script src="js/skel-viewport.min.js"></script>
         <script src="js/util.js"></script>
+        <script src="js/main.js"></script>
         <!--[if lte IE 8]><script src="/js/ie/respond.min.js"></script><![endif]-->
 
-        <script src="js/main.js"></script>
         <script src="js/article-template.js"></script>
         <script src="js/latest-entry.js"></script>
-        <script src="js/contact.js"></script>
         <script src="https://ssl.google-analytics.com/analytics.js" async id="ga"></script>
-        <script src="ga.js" async></script>
+        <script src="js/ga.js" async></script>
     </body>
 </html>
 
