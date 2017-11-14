@@ -10,7 +10,7 @@
         contentContainer.addClass('loader');
         $.ajax({
             type: 'POST',
-            url: '/handlers/latest.php',
+            url: '../handlers/latest.php',
             data: json,
             dataType: 'json'
         })
