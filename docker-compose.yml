@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  site:
+    build: .
+    ports:
+      - "8081:80"
+    networks:
+      - site_network
+    environment:
+      - MEMCACHED_IP=memcached
+      - MEMCACHED_PORT=11211
+    depends_on:
+      - memcached
+  memcached:
+    image: memcached:alpine
+    expose:
+      - "11211"
+    networks:
+      - site_network
+
+networks:
+    site_network:
+      driver: bridge
