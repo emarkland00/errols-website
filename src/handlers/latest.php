@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-require_once("Article.php");
 require_once("PocketClient.php");
 
 function is_valid_request() {
