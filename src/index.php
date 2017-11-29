@@ -90,7 +90,7 @@
                   <h2>Projects</h2>
                   <p>
       			      Some of the projects I've worked on can be found at my
-                      <a href="https://github.com/emarkland" target="_blank">Github</a>.
+                      <a href="https://github.com/emarkland00" target="_blank">Github</a>.
       			  </p>
       			  <p>In the future, I'll make life a bit easier by actually listing the projects I've done here.</p>
                 </header>
