@@ -3,6 +3,7 @@ version: "3"
 services:
   site:
     build: .
+    restart: always
     ports:
       - "8081:80"
     networks:
@@ -14,6 +15,7 @@ services:
       - memcached
   memcached:
     image: memcached:alpine
+    restart: always
     expose:
       - "11211"
     networks:
