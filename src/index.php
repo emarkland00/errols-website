@@ -53,7 +53,7 @@
                 <div class="row">
                     <div class="4u 12u(mobile)">
                         <span class="image fit">
-                            <img src="images/me_jan_2017.png" alt="My picture" />
+                            <img src="images/me_jan_2017.jpg" alt="My picture" />
                         </span>
                     </div>
                     <div class="8u 12u(mobile)">
