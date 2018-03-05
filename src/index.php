@@ -133,7 +133,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="https://github.com/emarkland" target="_blank" class="icon fa-github">
+                                    <a href="https://github.com/emarkland00" target="_blank" class="icon fa-github">
                                         <span class="label">Github</span>
                                     </a>
                                 </li>
